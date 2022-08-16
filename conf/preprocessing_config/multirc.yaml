@@ -1,0 +1,8 @@
+original:
+  _target_: our_datasets.Dataset
+  _partial_: True
+  columns: [paragraph, question, answer]
+generated:
+  _target_: our_datasets.Dataset
+  _partial_: True
+  columns: [paragraph, question, answer]

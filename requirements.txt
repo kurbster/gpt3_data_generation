@@ -1,0 +1,6 @@
+torch
+datasets
+transformers
+pandas
+scikit-learn
+hydra-core

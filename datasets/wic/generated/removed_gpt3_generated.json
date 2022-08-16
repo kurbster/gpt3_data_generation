@@ -1,0 +1,1546 @@
+{
+    "data": [
+        {
+            "sentence1": " He killed a terrorist.",
+            "sentence2": " He killed some time by reading some comic books.",
+            "word": "kill",
+            "label": "F"
+        },
+        {
+            "sentence1": " The impact shattered the glass.",
+            "sentence2": " As his words shattered me, I shattered.",
+            "word": "shatter",
+            "label": "F"
+        },
+        {
+            "sentence1": " The bus will back up to your destination.",
+            "sentence2": " The back of her shirt was torn.",
+            "word": "back",
+            "label": "F"
+        },
+        {
+            "sentence1": " Most of the countries in the European Union are now open to summer fruits and vegetables.",
+            "sentence2": " I wondered what the summer breeze would feel like.",
+            "word": "summer",
+            "label": "F"
+        },
+        {
+            "sentence1": " Pierre had to refine his thesis for his advisor.",
+            "sentence2": " Most of the neighborhoods in the fire have been refined to blacktop.",
+            "word": "refine",
+            "label": "F"
+        },
+        {
+            "sentence1": " You must push that elevator all the way down.",
+            "sentence2": " He didn't want to pushSentence 1",
+            "word": "push",
+            "label": "F"
+        },
+        {
+            "sentence1": " Many people like to take showers after work.",
+            "sentence2": " I need to shower before I go to work.",
+            "word": "shower",
+            "label": "F"
+        },
+        {
+            "sentence1": " The mountain is top of the list of things to do.",
+            "sentence2": " The top of the table is scorched.",
+            "word": "top",
+            "label": "F"
+        },
+        {
+            "sentence1": " The population ranges from age two to age fifty.",
+            "sentence2": " My voice ranged at least half a mile.",
+            "word": "range",
+            "label": "F"
+        },
+        {
+            "sentence1": " We would like a little shade over here, now.",
+            "sentence2": " This chair lies in a sheltered area, providing it with the best of both sun and shade.",
+            "word": "shade",
+            "label": "F"
+        },
+        {
+            "sentence1": " If I like the end result it'll be a good thing.",
+            "sentence2": " I like watermelon.",
+            "word": "like",
+            "label": "F"
+        },
+        {
+            "sentence1": " I need you to coordinate transport.",
+            "sentence2": " Let\u2019s coordinate our outfits!",
+            "word": "coordinate",
+            "label": "F"
+        },
+        {
+            "sentence1": " The band disbanded after the lead guitarist passed.",
+            "sentence2": " After the winter, the trail gets disbanded by plants.",
+            "word": "disband",
+            "label": "F"
+        },
+        {
+            "sentence1": " I had a momentary view of the girl.",
+            "sentence2": " There is no view from our window.",
+            "word": "view",
+            "label": "F"
+        },
+        {
+            "sentence1": " We need to cure disease.",
+            "sentence2": " It is important to make sure the cheese is cured long enough, otherwise it tastes like raw milk.",
+            "word": "cure",
+            "label": "F"
+        },
+        {
+            "sentence1": " High hedges hid the need for privacy.",
+            "sentence2": " She didn't want to hedge her bets.",
+            "word": "hedge",
+            "label": "F"
+        },
+        {
+            "sentence1": " The horses crashed into the fence.",
+            "sentence2": " John crashed his computer.The horses crashed into the fence.John's computer crashed.",
+            "word": "crash",
+            "label": "F"
+        },
+        {
+            "sentence1": " The group will try to negociate a deal.",
+            "sentence2": " He will try to negociate a table at a busy restaurant.",
+            "word": "negociate",
+            "label": "F"
+        },
+        {
+            "sentence1": " Let's go skiing later.",
+            "sentence2": " No one here knew how to ski.",
+            "word": "ski",
+            "label": "F"
+        },
+        {
+            "sentence1": " I'll show you how to locate the lost key.",
+            "sentence2": " The satellite will locate the lost ship.",
+            "word": "locate",
+            "label": "F"
+        },
+        {
+            "sentence1": " She fears she will fail her test.",
+            "sentence2": " Children's fears cannot be forgotten.",
+            "word": "fear",
+            "label": "F"
+        },
+        {
+            "sentence1": " Jenna snapped the picture.",
+            "sentence2": " Does a well known mannequin brand still snap in?I snapped this picture.Well-known brands in the fashion industry still snap in people in sometimes, right?",
+            "word": "snap",
+            "label": "F"
+        },
+        {
+            "sentence1": " They continued to quibble about the little things.",
+            "sentence2": " I will quibble with you about who goes first.",
+            "word": "quibble",
+            "label": "F"
+        },
+        {
+            "sentence1": " We were meeting up at the supermarket to purchase some goods.",
+            "sentence2": " They are meeting in the living to extend the TV cable.",
+            "word": "meet",
+            "label": "F"
+        },
+        {
+            "sentence1": " My job was to work security.",
+            "sentence2": " We must work harder to protect people.",
+            "word": "work",
+            "label": "F"
+        },
+        {
+            "sentence1": " The defense misplayed the ball and it dropped to the ground.",
+            "sentence2": " I'm sorry if I misplayed our last phone conversation.",
+            "word": "misplay",
+            "label": "F"
+        },
+        {
+            "sentence1": " You should bake these cookies at a lower heat so they don't burn.",
+            "sentence2": " The oven does not have a bake cycle.",
+            "word": "bake",
+            "label": "F"
+        },
+        {
+            "sentence1": " The roof was roughcast and needed repairs.",
+            "sentence2": " The man put a roughcast plaster on the wall.",
+            "word": "roughcast",
+            "label": "F"
+        },
+        {
+            "sentence1": " You'll need to appeal (verb- apply/petition in a specified, usually successful way) your parking ticket.",
+            "sentence2": " Hypnotic suggestion is not an appropriate means of appeal.Sentence 1",
+            "word": "appeal",
+            "label": "F"
+        },
+        {
+            "sentence1": " This sentence is processed in the brain.",
+            "sentence2": " Have you thought about processing the potatoes?",
+            "word": "process",
+            "label": "F"
+        },
+        {
+            "sentence1": " The crowd dispersed.",
+            "sentence2": " All of the goldfish dispersed.",
+            "word": "disperse",
+            "label": "F"
+        },
+        {
+            "sentence1": " I really don't care.",
+            "sentence2": " I care about what you think.",
+            "word": "care",
+            "label": "F"
+        },
+        {
+            "sentence1": " Children are cautioned not to detach the pieces of the bicycle.",
+            "sentence2": " It is the cold that detaches the ocean of ice from the shale rock.",
+            "word": "detach",
+            "label": "F"
+        },
+        {
+            "sentence1": " Allan always wanted an iphone.",
+            "sentence2": " Republicans want  to cut taxes Verb",
+            "word": "want",
+            "label": "F"
+        },
+        {
+            "sentence1": " The sky will stand the dark night.",
+            "sentence2": " I need to stand my jacket on.",
+            "word": "stand",
+            "label": "F"
+        },
+        {
+            "sentence1": " Humans can acknowledge their feelings.",
+            "sentence2": " I need an acknowledgement of the receipt of the check.",
+            "word": "acknowledge",
+            "label": "F"
+        },
+        {
+            "sentence1": " We offered Daniel the responsibility of assigning the desserts.",
+            "sentence2": " Lisa can't assign post dates to her assignments because she doesn't know the dates.",
+            "word": "assign",
+            "label": "F"
+        },
+        {
+            "sentence1": " Please enter your feedback for the service tonight.",
+            "sentence2": " They can't find the service elevator.",
+            "word": "service",
+            "label": "F"
+        },
+        {
+            "sentence1": " It would be impossible to know the cost of it.",
+            "sentence2": " You must know all of any laws that are relevant to your chosen career.",
+            "word": "know",
+            "label": "F"
+        },
+        {
+            "sentence1": " I can't stand people who fondle clothes.",
+            "sentence2": " Those ham hocks are too big to fondle.",
+            "word": "fondle",
+            "label": "F"
+        },
+        {
+            "sentence1": " The bridge would fail.",
+            "sentence2": " Your submission will fail.",
+            "word": "fail",
+            "label": "F"
+        },
+        {
+            "sentence1": " Programs will simplify the difficult aspects.",
+            "sentence2": " They will simplify their designs to reduce costs.",
+            "word": "simplify",
+            "label": "F"
+        },
+        {
+            "sentence1": " She changed course toward the port.",
+            "sentence2": " The company went out of business because the port was not operational.",
+            "word": "port",
+            "label": "F"
+        },
+        {
+            "sentence1": " They introduced Romeo and Juliet to one another.",
+            "sentence2": " Now that we're introduced, you can leave.",
+            "word": "introduce",
+            "label": "F"
+        },
+        {
+            "sentence1": " Michelle had already finished her third glass of wine when she decided that it would be a good idea to start fixing her guitar.",
+            "sentence2": " I'm sorry for the trouble I caused, but I'm sure it's fixable.",
+            "word": "fix",
+            "label": "F"
+        },
+        {
+            "sentence1": " The clockwise and counter-clockwise rain bands began to converge.",
+            "sentence2": " Shades of the same colors converge in mixed colors.",
+            "word": "converge",
+            "label": "F"
+        },
+        {
+            "sentence1": " You can shift a product platform.",
+            "sentence2": " A storm caused a shift in the balance of power.",
+            "word": "shift",
+            "label": "F"
+        },
+        {
+            "sentence1": " The crockery needs to be easily bend to pack well.",
+            "sentence2": " High pressure steam could make the molecules of the metal bend.",
+            "word": "bend",
+            "label": "F"
+        },
+        {
+            "sentence1": " The plane safely landed.",
+            "sentence2": " Approximations of the landmass gave way to more accurate parts.",
+            "word": "land",
+            "label": "F"
+        },
+        {
+            "sentence1": " They marked the cardinal directions on the maps.",
+            "sentence2": " He marked off the side on the receipt.",
+            "word": "mark",
+            "label": "F"
+        },
+        {
+            "sentence1": " A sound carries well through the passage.",
+            "sentence2": " Lemonade sounded good, but the grocery store was closed.",
+            "word": "sound",
+            "label": "F"
+        },
+        {
+            "sentence1": " It is common practice so avoid imminent danger.",
+            "sentence2": " You must avoid hair, fur, and particles of dirt on your printer.",
+            "word": "avoid",
+            "label": "F"
+        },
+        {
+            "sentence1": " I ask you to exhaust all possible options to resolve the conflict.",
+            "sentence2": " I have never been more exhaust.INTERVAL TRAININGInterval training is a form a physical exercise where a person completes a short bout of high intensity followed by a longer stint",
+            "word": "exhaust",
+            "label": "F"
+        },
+        {
+            "sentence1": " I almost choked on the pizza.",
+            "sentence2": " The engine was being choked so badly it wouldn't start.",
+            "word": "choke",
+            "label": "F"
+        },
+        {
+            "sentence1": " Why didn't you uncork the champagne?",
+            "sentence2": " How will you uncork the wine bottle?",
+            "word": "uncork",
+            "label": "F"
+        },
+        {
+            "sentence1": " I meant to call her.",
+            "sentence2": " No significant meteorological detail was meant to be conveyed in the forecast.",
+            "word": "mean",
+            "label": "F"
+        },
+        {
+            "sentence1": " People put puddles in coastal terrain.",
+            "sentence2": " I once swam in an orphan puddle outside Estonia.",
+            "word": "puddle",
+            "label": "F"
+        },
+        {
+            "sentence1": " Wade will play the harp.",
+            "sentence2": " Ball players need to play in the proper position in the field.",
+            "word": "play",
+            "label": "F"
+        },
+        {
+            "sentence1": " The tissue paper was spilled all over the floor.",
+            "sentence2": " He was spilling wine on the carpet.",
+            "word": "spill",
+            "label": "F"
+        },
+        {
+            "sentence1": " I stab him and then die with his knife in my hand.",
+            "sentence2": " Elton John died tragically.",
+            "word": "die",
+            "label": "F"
+        },
+        {
+            "sentence1": " The sentence in this example is in concord.",
+            "sentence2": " The sentence in this example is in concord.",
+            "word": "concord",
+            "label": "F"
+        },
+        {
+            "sentence1": " It takes a lot of courage to sow your own seeds.",
+            "sentence2": " They sow the seeds in the garden.",
+            "word": "sow",
+            "label": "F"
+        },
+        {
+            "sentence1": " As I lifted the paint can onto the ledge, I knew it wouldn't be enough.",
+            "sentence2": " Most people say they cannot lift more than 50 pounds at the most.",
+            "word": "lift",
+            "label": "F"
+        },
+        {
+            "sentence1": " I like to prepare for any situation.",
+            "sentence2": " No, I didn't prepare for that.",
+            "word": "prepare",
+            "label": "F"
+        },
+        {
+            "sentence1": " I want to make an application for the job.",
+            "sentence2": " I'll send you my application.",
+            "word": "application",
+            "label": "F"
+        },
+        {
+            "sentence1": " She gave him a tip on what to do next.",
+            "sentence2": " He left her the four percent tip.Sentence 1",
+            "word": "tip",
+            "label": "F"
+        },
+        {
+            "sentence1": " Were any objects recovered?",
+            "sentence2": " They produced an object on an easel.",
+            "word": "object",
+            "label": "F"
+        },
+        {
+            "sentence1": " The field being plowed is barren-looking.",
+            "sentence2": " The field was now his.",
+            "word": "field",
+            "label": "F"
+        },
+        {
+            "sentence1": " Montesquieu was a French baron.",
+            "sentence2": " She became a baroness, unexpectedly.",
+            "word": "baron",
+            "label": "F"
+        },
+        {
+            "sentence1": " His reading of Dickens is depressingly vulgar.",
+            "sentence2": " Her readings on Freud were stirring.",
+            "word": "reading",
+            "label": "F"
+        },
+        {
+            "sentence1": " A bevy of smiling nurses greeted me.",
+            "sentence2": " The scattered bevy of security guards occupied their respective positions.",
+            "word": "bevy",
+            "label": "F"
+        },
+        {
+            "sentence1": " Her long hair skimmed her bare shoulders offering a tantalizing glimpse of her sleeveless dress while the waist of her skirt brushed the floor, hinting at the length of her fringe.",
+            "sentence2": " Press on the fringe of the rug with the iron to erase the imprint of the",
+            "word": "fringe",
+            "label": "F"
+        },
+        {
+            "sentence1": " He has a dry sense of humor.",
+            "sentence2": " He mixed humor with pathos.",
+            "word": "humor",
+            "label": "F"
+        },
+        {
+            "sentence1": " She's six months pregnant and about to give birth.",
+            "sentence2": " Her birth was remarked on by all.",
+            "word": "birth",
+            "label": "F"
+        },
+        {
+            "sentence1": " The confluence of the rivers.",
+            "sentence2": " The confluence of opinion.",
+            "word": "confluence",
+            "label": "F"
+        },
+        {
+            "sentence1": " We must secure our beachheads.",
+            "sentence2": " He's defending the beachhead.",
+            "word": "beachhead",
+            "label": "F"
+        },
+        {
+            "sentence1": " The Japanese judge.",
+            "sentence2": " One Israeli judge was not present.",
+            "word": "judge",
+            "label": "F"
+        },
+        {
+            "sentence1": " He had to take out a loan for property to purchase.",
+            "sentence2": " Impeachment from the property of the freehold.",
+            "word": "property",
+            "label": "F"
+        },
+        {
+            "sentence1": " No artist's inwardness can withstand analysis.",
+            "sentence2": " His deep inwardness was intuitive and shrouded in mystery.",
+            "word": "inwardness",
+            "label": "F"
+        },
+        {
+            "sentence1": " The history of the rock and roll period.",
+            "sentence2": " The hard rock band was a little difficult.",
+            "word": "rock",
+            "label": "F"
+        },
+        {
+            "sentence1": " The significance of this vote is obvious.",
+            "sentence2": " What are the social significance of the movie \"Midnight Cowboy\"?",
+            "word": "significance",
+            "label": "F"
+        },
+        {
+            "sentence1": " Surprised that no one from the media were covering the story, He watched as the coverage from another network.",
+            "sentence2": " But the storm's coverage is a total mystery.",
+            "word": "coverage",
+            "label": "F"
+        },
+        {
+            "sentence1": " I graduated from High School last year.",
+            "sentence2": " He had been a senior manager for five years before losing his job.",
+            "word": "year",
+            "label": "F"
+        },
+        {
+            "sentence1": " The adultery case attracted widespread attention.",
+            "sentence2": " They broke up because of the long-standing adultery.",
+            "word": "adultery",
+            "label": "F"
+        },
+        {
+            "sentence1": " Her missus is a pain.",
+            "sentence2": " We all loved his missus.",
+            "word": "missus",
+            "label": "F"
+        },
+        {
+            "sentence1": " The limitation on his freedom made him angry.",
+            "sentence2": " The engineering limitations of the bridge prevented him from crossing.",
+            "word": "limitation",
+            "label": "F"
+        },
+        {
+            "sentence1": " This sum is too large.",
+            "sentence2": " It is an even lower sum.",
+            "word": "sum",
+            "label": "F"
+        },
+        {
+            "sentence1": " Some people cut off their own branch of the family tree.",
+            "sentence2": " She liked the thawing branch...",
+            "word": "branch",
+            "label": "F"
+        },
+        {
+            "sentence1": " He grabbed her by the neck.",
+            "sentence2": " When was the last time you seen his neck?",
+            "word": "neck",
+            "label": "F"
+        },
+        {
+            "sentence1": " She was wearing the most exquisite of clothes.",
+            "sentence2": " We're looking for clothes that wear well.",
+            "word": "wear",
+            "label": "F"
+        },
+        {
+            "sentence1": " What are you rubbing the glass with?",
+            "sentence2": " I just got back from the \"rub.\"",
+            "word": "rub",
+            "label": "F"
+        },
+        {
+            "sentence1": " The derivation from the Spanish.",
+            "sentence2": " The derivation from Alice in Wonderland?",
+            "word": "derivation",
+            "label": "F"
+        },
+        {
+            "sentence1": " She gasped out her last breath.",
+            "sentence2": " She breathed a sigh of relief.",
+            "word": "breath",
+            "label": "F"
+        },
+        {
+            "sentence1": " I wanted to wait a little bit longer but they gave me no chance to return.",
+            "sentence2": " Joe was about to return to his home, where he wished to devote himself to science.",
+            "word": "return",
+            "label": "F"
+        },
+        {
+            "sentence1": " The cop on the right seemed unconcerned.",
+            "sentence2": " The law is on the right side.",
+            "word": "right",
+            "label": "F"
+        },
+        {
+            "sentence1": " I need a loan.",
+            "sentence2": " The interest will more than cover the cost of the loan.",
+            "word": "loan",
+            "label": "F"
+        },
+        {
+            "sentence1": " This is my hand.",
+            "sentence2": " He lost his favorite toy when she let go of his hand.",
+            "word": "hand",
+            "label": "F"
+        },
+        {
+            "sentence1": " The structure is beautiful in an older sort of way.",
+            "sentence2": " His structure has shown that dinosaurs got vertically into the tar pits.",
+            "word": "structure",
+            "label": "F"
+        },
+        {
+            "sentence1": " My stomach lurched, my eyes were glued to the screen, my mouth agape with shock.",
+            "sentence2": " I heard you saying my name but it came as a shock.",
+            "word": "shock",
+            "label": "F"
+        },
+        {
+            "sentence1": " She looked at him in horror, her once white soul now tainted by his words.",
+            "sentence2": " Her soul left with barely a whisper of justice.",
+            "word": "soul",
+            "label": "F"
+        },
+        {
+            "sentence1": " His mother was his only family.",
+            "sentence2": " Every year she would send us gifts from her mother.",
+            "word": "mother",
+            "label": "F"
+        },
+        {
+            "sentence1": " The plan for the British Royal Family.",
+            "sentence2": " The plan to reform the US healthcare system.",
+            "word": "plan",
+            "label": "F"
+        },
+        {
+            "sentence1": "They ordered the reversal of the judgement.",
+            "sentence2": "This artist is well known for his often surrealistic paintings with reversals, like the Mona Lisa with her dog in the foreground.",
+            "word": "reversal",
+            "label": "F"
+        },
+        {
+            "sentence1": " The clear, refreshing water splashed upon his face.",
+            "sentence2": " People lined the water to perform the purification ritual.",
+            "word": "water",
+            "label": "F"
+        },
+        {
+            "sentence1": " Aaron's unit was being attacked.",
+            "sentence2": " Roberta's unit had been out on a patrol.",
+            "word": "unit",
+            "label": "F"
+        },
+        {
+            "sentence1": " An explosion in the news.",
+            "sentence2": " This year's World Cup was one of the most exciting explosions in sport.Antoine Fuqua remains unusually seductive and exciting with this latest recreation of a 1994 Broadway cult success.This year's World Cup was one",
+            "word": "explosion",
+            "label": "F"
+        },
+        {
+            "sentence1": " I admire his courage.",
+            "sentence2": " She sings of the courage of heroes",
+            "word": "courage",
+            "label": "F"
+        },
+        {
+            "sentence1": " Every Thanksgiving there were at least 6 invitations that came in the mail.",
+            "sentence2": " He knew his dinner invitation had gone out several days before.",
+            "word": "invitation",
+            "label": "F"
+        },
+        {
+            "sentence1": " I read about her concern for the environment.",
+            "sentence2": " His new concerns flooded her with disappointment.",
+            "word": "concern",
+            "label": "F"
+        },
+        {
+            "sentence1": " His key made the lock turn.",
+            "sentence2": " She handed the key to him.",
+            "word": "key",
+            "label": "F"
+        },
+        {
+            "sentence1": " She promised time to weaponday.",
+            "sentence2": " Police discovered the weapon's traces at the scene.Noun",
+            "word": "weapon",
+            "label": "F"
+        },
+        {
+            "sentence1": " I woke up and went for a shower.",
+            "sentence2": " They took a shower after their workout.",
+            "word": "shower",
+            "label": "F"
+        },
+        {
+            "sentence1": " Buy the polka-dot top.",
+            "sentence2": " Put your messages at the top of the list.",
+            "word": "top",
+            "label": "F"
+        },
+        {
+            "sentence1": " but the hard, dry, winter winds whipped her freckled face raw as she climbed to the cabin.",
+            "sentence2": " as she sniffed her burnt face.",
+            "word": "face",
+            "label": "F"
+        },
+        {
+            "sentence1": " The girl had a swollen tongue.",
+            "sentence2": " His tongue is blue.",
+            "word": "tongue",
+            "label": "F"
+        },
+        {
+            "sentence1": " She was busy, so she asked him to get a coffee break.",
+            "sentence2": " There is a five-minute break between exams.",
+            "word": "break",
+            "label": "F"
+        },
+        {
+            "sentence1": " The exercise after practice helps the muscles to get stronger.",
+            "sentence2": " His essay was exercises in juvenile bravado.",
+            "word": "exercise",
+            "label": "F"
+        },
+        {
+            "sentence1": " The corner of the table.",
+            "sentence2": " Her skin was burning up from his touch on her corner.",
+            "word": "corner",
+            "label": "F"
+        },
+        {
+            "sentence1": " She needs to find cover from the shade.",
+            "sentence2": " We shade out areas we want to keep cool.",
+            "word": "shade",
+            "label": "F"
+        },
+        {
+            "sentence1": " Naturally, truth was not so easily attained.",
+            "sentence2": " The book is based on the truth.",
+            "word": "truth",
+            "label": "F"
+        },
+        {
+            "sentence1": " The wind made it bitterly cold outside.",
+            "sentence2": " India is in the grip of a severe cold wave.",
+            "word": "cold",
+            "label": "F"
+        },
+        {
+            "sentence1": " I don't like to cash in all of my tokens on one game.",
+            "sentence2": " He searched for some token of recollection of them all, of theNoun",
+            "word": "token",
+            "label": "F"
+        },
+        {
+            "sentence1": " They have been in love since they were kids.",
+            "sentence2": " It was the most sincere love letter I have ever read.",
+            "word": "love",
+            "label": "F"
+        },
+        {
+            "sentence1": " The thought hung out in her mind.",
+            "sentence2": " I had a terrible thought.",
+            "word": "thought",
+            "label": "F"
+        },
+        {
+            "sentence1": " It's just an unproven dogma.",
+            "sentence2": " The Whigs were his willing accomplices in this dogma.",
+            "word": "dogma",
+            "label": "F"
+        },
+        {
+            "sentence1": " The winter season.",
+            "sentence2": " Spring was in full season now.",
+            "word": "season",
+            "label": "F"
+        },
+        {
+            "sentence1": " There is great deference shown by the lower classes towards their superiors.",
+            "sentence2": " I'll grant him that deference.",
+            "word": "deference",
+            "label": "F"
+        },
+        {
+            "sentence1": " Their at-home study session.",
+            "sentence2": " She enrolled in an online study course.",
+            "word": "study",
+            "label": "F"
+        },
+        {
+            "sentence1": " The school was vastly inferior to the speck of dust.",
+            "sentence2": " Stay away so these specks don't get on the rug.",
+            "word": "speck",
+            "label": "F"
+        },
+        {
+            "sentence1": " People disgusted in their usage of trojans should switch to condoms.",
+            "sentence2": " The trojan horse in the war against Troy legend was used in deceit to sneak in an enemy.",
+            "word": "trojan",
+            "label": "T"
+        },
+        {
+            "sentence1": " Jack pulling the old trick of pretending to blow his nose.",
+            "sentence2": " It was a tricky one to answer, but I am sure that eventually the hotel keeper will fall for the same trick .",
+            "word": "trick",
+            "label": "T"
+        },
+        {
+            "sentence1": " On Netflix, you can search for TV shows including Sherlock, or inclusion of details.",
+            "sentence2": " You will not be qualified for membership if you do not meet the criteria of inclusion.",
+            "word": "inclusion",
+            "label": "T"
+        },
+        {
+            "sentence1": " Despite this, he played his role.",
+            "sentence2": " The volume printed by the printer's driver's role.",
+            "word": "role",
+            "label": "T"
+        },
+        {
+            "sentence1": " What did your boss say to get you that job?",
+            "sentence2": " I've always wanted to be the boss.",
+            "word": "boss",
+            "label": "T"
+        },
+        {
+            "sentence1": " It was considerably less than he\u2019d intended but apart from a few, brief sequences, there were no other available related footage.",
+            "sentence2": " In the last ten years he\u2019d collected almost two hundred fifty hours of footage from concerts, television appearances, and interviews",
+            "word": "footage",
+            "label": "T"
+        },
+        {
+            "sentence1": " High traffic resulted in the loss of thousands of memberships .",
+            "sentence2": " These two corporations issued individual memberships to secure their future.",
+            "word": "membership",
+            "label": "T"
+        },
+        {
+            "sentence1": " Her parents had had it renovated, with a hardwood floor.",
+            "sentence2": " Search crews discovered a human skeleton on a second story floor of a burned out building.",
+            "word": "floor",
+            "label": "T"
+        },
+        {
+            "sentence1": " We are living in a walled bubble.",
+            "sentence2": " Of her house, strangely enough, all that remained was the foundation , the ground-glass panels, the walls insuring the enclosure .",
+            "word": "wall",
+            "label": "T"
+        },
+        {
+            "sentence1": " This year's new trendy drink was already on sale in some grocery stores - some even put it out on the shelves today.",
+            "sentence2": " I'll be by later on today.",
+            "word": "today",
+            "label": "T"
+        },
+        {
+            "sentence1": " The cancer has been in remission for two years now.",
+            "sentence2": " In an effort to avoid a relapse, the bishop wished that God would grant him a remission from the Latin sentence.",
+            "word": "remission",
+            "label": "T"
+        },
+        {
+            "sentence1": " Long summery evenings are giving way to crisp mornings where comfort can be found.",
+            "sentence2": " Patricia wanted to leave the valley of Daberk, the outpost of great discomfort.",
+            "word": "comfort",
+            "label": "T"
+        },
+        {
+            "sentence1": " A survey of the citizens opinions revealed the possibility of 100% sales.",
+            "sentence2": " Eye buy survey 98% of your day.",
+            "word": "survey",
+            "label": "T"
+        },
+        {
+            "sentence1": " Eventually, he couldn't handle his partners ' trouble any more.",
+            "sentence2": " He's left me in all this trouble .",
+            "word": "trouble",
+            "label": "T"
+        },
+        {
+            "sentence1": " The homeowner noticed that one of the doors was unlocked.",
+            "sentence2": " Storm's crowing was heard through the cracked open door.",
+            "word": "door",
+            "label": "T"
+        },
+        {
+            "sentence1": " The word \"infantry\" is a word from the vocabulary of the military person.",
+            "sentence2": " The vocabulary constructed for the book is excellent.",
+            "word": "vocabulary",
+            "label": "T"
+        },
+        {
+            "sentence1": " Toward the end of his life, he was looked upon as more of a celebrity, with various connections to the popular culture of the late 20th century.",
+            "sentence2": " He was able to pinpoint the connection between the two.",
+            "word": "connection",
+            "label": "T"
+        },
+        {
+            "sentence1": " A fire crew extinguished a stubborn fire in a rubbish dump.",
+            "sentence2": " A former firefighter faced 25 years in prison after setting fires with crude oil",
+            "word": "fire",
+            "label": "T"
+        },
+        {
+            "sentence1": " Finally, inserting the card's component completed the process.",
+            "sentence2": " Each component of the chair is made in the same way.",
+            "word": "component",
+            "label": "T"
+        },
+        {
+            "sentence1": " As soon as it began to look like bankruptcy was likely, the fortunes of the small business declined.",
+            "sentence2": " The board of directors declared bankruptcy with nervous stares borne of recent lawsuits.",
+            "word": "bankruptcy",
+            "label": "T"
+        },
+        {
+            "sentence1": " Alex could not keep his name secret for long.",
+            "sentence2": " The speaker could remember the exact date when his daughter was given her name.",
+            "word": "name",
+            "label": "T"
+        },
+        {
+            "sentence1": " Bob was so consumed by slack work that he forgot to luncheon .",
+            "sentence2": " The family had a roll of extra slack in the kitchen.",
+            "word": "slack",
+            "label": "T"
+        },
+        {
+            "sentence1": " The defending team 's one point score in the final minute would not be sufficient to win in a tie.",
+            "sentence2": " The baseball team got a ten run score in the fourth inning",
+            "word": "score",
+            "label": "T"
+        },
+        {
+            "sentence1": " The only difference between henna and indigo is in the intensity of their colors.",
+            "sentence2": " The difference between green and blue is that green light always mixes with yellow.",
+            "word": "difference",
+            "label": "T"
+        },
+        {
+            "sentence1": " This planet orbits so close to its sun.",
+            "sentence2": " The ISS orbits Earth at a height of 250 miles.",
+            "word": "orbit",
+            "label": "T"
+        },
+        {
+            "sentence1": " These cockroaches are not vermin; they are my pets.",
+            "sentence2": " The vermin wouldn't allow us to simply wander through their domain.",
+            "word": "vermin",
+            "label": "T"
+        },
+        {
+            "sentence1": " On the morning of the 18th, an echo of the voice of Fate was heard.",
+            "sentence2": " I couldn't tell how far the echo was coming from.",
+            "word": "echo",
+            "label": "T"
+        },
+        {
+            "sentence1": " The depth of color can be adjusted by using a diffuser.",
+            "sentence2": " We dove down to see the depth of the wreck.",
+            "word": "depth",
+            "label": "T"
+        },
+        {
+            "sentence1": " He was calmed by the wet cloth her used to soothe away the dryness in her throat.",
+            "sentence2": " Research has shown that more than 80% of sore throat cases are caused by viruses or bacteria.",
+            "word": "throat",
+            "label": "T"
+        },
+        {
+            "sentence1": " The safety of the vast majority of skiers and snowboarders is critical.",
+            "sentence2": " The reports of the safety committee are in the in-box.",
+            "word": "safety",
+            "label": "T"
+        },
+        {
+            "sentence1": " The ground was covered with snow.",
+            "sentence2": " Beneath the first layer of topsoil, their first discovery of topsoil was over five feet of hard crackling ground .",
+            "word": "ground",
+            "label": "T"
+        },
+        {
+            "sentence1": " The door had some residual restraint that some wouldn't want to tamper with.",
+            "sentence2": " One of the exercises had some hand restraints hidden just behind a fake bookcase.",
+            "word": "restraint",
+            "label": "T"
+        },
+        {
+            "sentence1": " It took a better part of the day to plaster the chicken guts off the walls of the lakeside hall.",
+            "sentence2": " The students stopped to admire the dinosaur footprints in the limestone hall.",
+            "word": "hall",
+            "label": "T"
+        },
+        {
+            "sentence1": " I used this formula in the last chapter.",
+            "sentence2": " That famous formula for estimating weight?",
+            "word": "formula",
+            "label": "T"
+        },
+        {
+            "sentence1": " Which gift did you give her again?",
+            "sentence2": " They always complained about her gift giving.",
+            "word": "gift",
+            "label": "T"
+        },
+        {
+            "sentence1": " Just like Kerry did, Bush took a pledge for stricter CO2 regulation.",
+            "sentence2": " And like Kerry, Bush took a pledge against \"soft money.\"",
+            "word": "pledge",
+            "label": "T"
+        },
+        {
+            "sentence1": " The stories unfold like texts on one's phone.",
+            "sentence2": " The photographs are dotted with the out-of-focus texts of the surrounding city.",
+            "word": "text",
+            "label": "T"
+        },
+        {
+            "sentence1": " He pulled her nearer, reached for the knot in the scarf, his hands unwinding the fabric while he restored the tear in their intimate connection.",
+            "sentence2": " His eyes wet with tears, he looked back at Humphrey, thinking of all the years they had spent together.",
+            "word": "tear",
+            "label": "T"
+        },
+        {
+            "sentence1": " After reading the novel, I'm feeling a little cut out from the world.",
+            "sentence2": " That iron should be replaced because it's been cut from the water tank.",
+            "word": "cut",
+            "label": "T"
+        },
+        {
+            "sentence1": " The water table \u2019s meaning in geology is to identify underground water-bearing bedrock.",
+            "sentence2": " His speech had the same impact with a meaning that scientists felt.",
+            "word": "meaning",
+            "label": "T"
+        },
+        {
+            "sentence1": " He does not wish to make any further acquisition until he had cleared the shelves of his warehouses.",
+            "sentence2": " The world of sports is awash with acquisition.",
+            "word": "acquisition",
+            "label": "T"
+        },
+        {
+            "sentence1": " I fed the pigs slice after slice of stock branded beef.",
+            "sentence2": " The stock market crashed in 1929.",
+            "word": "stock",
+            "label": "T"
+        },
+        {
+            "sentence1": " I was disappointed by the teacher's absence from the board.",
+            "sentence2": " Tyler tucked his finished project into his bag and left it behind because of the teacher's absence.",
+            "word": "absence",
+            "label": "T"
+        },
+        {
+            "sentence1": " The people started laughing.",
+            "sentence2": " All people are different.",
+            "word": "people",
+            "label": "T"
+        },
+        {
+            "sentence1": " The snow was quickly covering the treacherous patches of ice left by the snorter that had blasted through hours ago.",
+            "sentence2": " Jake was riding the bumper of the car in front of him, afraid that the snorter coming up behind would breakdown.",
+            "word": "snorter",
+            "label": "T"
+        },
+        {
+            "sentence1": " Mothers who sent their sons to the war's frontline were devastated by the loss.",
+            "sentence2": " She never complains that I don't spend enough time with her, even though I'm often at war with my boss.",
+            "word": "war",
+            "label": "T"
+        },
+        {
+            "sentence1": " I have the same respect for this dictionary as I do for any book on any bookshelf.",
+            "sentence2": " The coach demanded complete respect from the players on the field.",
+            "word": "respect",
+            "label": "T"
+        },
+        {
+            "sentence1": " The farmer showed no liking for the young Duke.",
+            "sentence2": " The Duke showed no liking for the young farmer.",
+            "word": "liking",
+            "label": "T"
+        },
+        {
+            "sentence1": " Louise left the pharmacy with her prescription .",
+            "sentence2": " Erica picked up her prescription at the pharmacy.",
+            "word": "prescription",
+            "label": "T"
+        },
+        {
+            "sentence1": " The Senate Republican leadership changed their procedural rules.",
+            "sentence2": " We need to make some changes in the system .",
+            "word": "change",
+            "label": "T"
+        },
+        {
+            "sentence1": " There were so many windows, grand and tall, grand and tall, a stunning marvel of a building.",
+            "sentence2": " A tall, wide window afforded a beautiful view of a cheerful garden with a tall fountain where a small family of deer drank from their covered cylindrical pop-",
+            "word": "window",
+            "label": "T"
+        },
+        {
+            "sentence1": " Her goal is to deliver you customer satisfaction.",
+            "sentence2": " The new iPhone has won industry satisfaction.",
+            "word": "satisfaction",
+            "label": "T"
+        },
+        {
+            "sentence1": " Mixed floral arrangements, on the other hand, can highlight and complement the occasion.",
+            "sentence2": " I find that on some occasions, at some high tides, we're able to see the light on the opposite shore.",
+            "word": "occasion",
+            "label": "T"
+        },
+        {
+            "sentence1": " The research he presented as part of his undergraduate thesis received a degree of criticism.",
+            "sentence2": " I wish our company had a level 8 degree of competence.",
+            "word": "degree",
+            "label": "T"
+        },
+        {
+            "sentence1": " She's devoted her life to the institution of marriage.",
+            "sentence2": " A new equity-birthing entity might be just the neighborhood institution our cities need.",
+            "word": "institution",
+            "label": "T"
+        },
+        {
+            "sentence1": " We have a containment protocol in place.",
+            "sentence2": " He has a containment device that keeps pests in trenches trenches.",
+            "word": "containment",
+            "label": "T"
+        },
+        {
+            "sentence1": " We took off to get the score before the run started.",
+            "sentence2": " I went for beer during the two minute run.",
+            "word": "run",
+            "label": "T"
+        },
+        {
+            "sentence1": " We enjoyed decent visibility until the morning fog rolled in.",
+            "sentence2": " If visibility is good, you'll be able to notice much more when riding.",
+            "word": "visibility",
+            "label": "T"
+        },
+        {
+            "sentence1": " If you want an example of how the funds are allocated, then I\u2019ll send one over.",
+            "sentence2": " They need to do more research, not rely on the examples of the past.",
+            "word": "example",
+            "label": "T"
+        },
+        {
+            "sentence1": " It is hard to avoid a head-on collision.",
+            "sentence2": " There is always a chance of a collision, even when your hands are on the wheel.",
+            "word": "collision",
+            "label": "T"
+        },
+        {
+            "sentence1": " He enjoys a high sex drive.",
+            "sentence2": " We talked sex versus any other current topic.",
+            "word": "sex",
+            "label": "T"
+        },
+        {
+            "sentence1": " A great oral history class with lots of group assignment is too much class time for me to take on.",
+            "sentence2": " He wore the same brown corduroy jacket for class every day, but he never wore denim jeans.",
+            "word": "class",
+            "label": "T"
+        },
+        {
+            "sentence1": " Dew leached the clay pipe's field.",
+            "sentence2": " The bacteria leached the salt.",
+            "word": "leach",
+            "label": "T"
+        },
+        {
+            "sentence1": " He controls the smoke cloud to avoid other people passing by.",
+            "sentence2": " She controls her behaviour to avoid dangerous situations.",
+            "word": "control",
+            "label": "T"
+        },
+        {
+            "sentence1": " She lashed out at her brother.",
+            "sentence2": " The rebels lashed in vain for a better world.",
+            "word": "lash",
+            "label": "T"
+        },
+        {
+            "sentence1": " I sit down on the bench to lay down.",
+            "sentence2": " I lay around the house not doing much.",
+            "word": "lay",
+            "label": "T"
+        },
+        {
+            "sentence1": " His touch will no longer be welcome.",
+            "sentence2": " Where have you been touching?",
+            "word": "touch",
+            "label": "T"
+        },
+        {
+            "sentence1": " We are pinging your server.",
+            "sentence2": " This ping-pong ball is annoying.",
+            "word": "ping",
+            "label": "T"
+        },
+        {
+            "sentence1": " We match shapes with shapes.",
+            "sentence2": " He matched the woman's face with the newspaper.",
+            "word": "match",
+            "label": "T"
+        },
+        {
+            "sentence1": " The picture had such excellent balance and poise.",
+            "sentence2": " She poised the arrow that arrow that was knocked from her hand.",
+            "word": "poise",
+            "label": "T"
+        },
+        {
+            "sentence1": " I'll write an explanation for you.",
+            "sentence2": " You can write down the order.",
+            "word": "write",
+            "label": "T"
+        },
+        {
+            "sentence1": " He laughs loudly.",
+            "sentence2": " I laugh loudly.",
+            "word": "laugh",
+            "label": "T"
+        },
+        {
+            "sentence1": " I was fired from my job.",
+            "sentence2": " The company fired him.",
+            "word": "fire",
+            "label": "T"
+        },
+        {
+            "sentence1": " I cast a spell.",
+            "sentence2": " She cast a glance his way.",
+            "word": "cast",
+            "label": "T"
+        },
+        {
+            "sentence1": " We had breakfast.",
+            "sentence2": " He spent the morning eating breakfast.",
+            "word": "breakfast",
+            "label": "T"
+        },
+        {
+            "sentence1": " Rigoberto removes the callouses from his feet.",
+            "sentence2": " She removed the blood from her arm with a cotton ball.",
+            "word": "remove",
+            "label": "T"
+        },
+        {
+            "sentence1": " I will refund your money.",
+            "sentence2": " I want my money refunded.",
+            "word": "refund",
+            "label": "T"
+        },
+        {
+            "sentence1": " The rock star cleaned his mansion with a toothbrush.",
+            "sentence2": " She's a whiz at outdoor cooking and kitchen clean-up.",
+            "word": "clean",
+            "label": "T"
+        },
+        {
+            "sentence1": " The moon orbits the earth.",
+            "sentence2": " We orbit the sun.",
+            "word": "orbit",
+            "label": "T"
+        },
+        {
+            "sentence1": " They provide that you have reached a certain date of life to make a withdrawal from your 401k.",
+            "sentence2": " He provided homeschooling for his son.",
+            "word": "provide",
+            "label": "T"
+        },
+        {
+            "sentence1": " Emily slit her wrists with a razor blade.",
+            "sentence2": " Edward would daydream of slitting his wrists out in the open sea.",
+            "word": "slit",
+            "label": "T"
+        },
+        {
+            "sentence1": " Honey paid for the dog to be treated.",
+            "sentence2": " They treated their daughter with respect.",
+            "word": "treat",
+            "label": "T"
+        },
+        {
+            "sentence1": " I try to erase the feelings of regret.",
+            "sentence2": " I will erase this letter also.",
+            "word": "erase",
+            "label": "T"
+        },
+        {
+            "sentence1": " They lobbed the ball across the field.",
+            "sentence2": " She lobbed the question back at him.",
+            "word": "lob",
+            "label": "T"
+        },
+        {
+            "sentence1": " She cut her long hair down to her chin.",
+            "sentence2": " He cut the rope.",
+            "word": "cut",
+            "label": "T"
+        },
+        {
+            "sentence1": " I was able to crystallize my thoughts for this meeting.",
+            "sentence2": " She crystallized her faith in chess.",
+            "word": "crystallize",
+            "label": "T"
+        },
+        {
+            "sentence1": " I volunteered to go.",
+            "sentence2": " She volunteered to enter the beauty competition.",
+            "word": "volunteer",
+            "label": "T"
+        },
+        {
+            "sentence1": " Glue some pieces of tissue paper on top of the clay so as not to add more clay on top.",
+            "sentence2": " I added milk and sugar to my coffee.",
+            "word": "add",
+            "label": "T"
+        },
+        {
+            "sentence1": " I drill the metal.",
+            "sentence2": " She drilled her nail into his hand.",
+            "word": "drill",
+            "label": "T"
+        },
+        {
+            "sentence1": " The garb harvester presses the clothes in the field.",
+            "sentence2": " We can't press clothes in the field.Many clothes in the field.",
+            "word": "press",
+            "label": "T"
+        },
+        {
+            "sentence1": " I can hear someone cracking their knuckles outside.",
+            "sentence2": " I crack the eggs to scramble them.",
+            "word": "crack",
+            "label": "T"
+        },
+        {
+            "sentence1": " He mounted his horse confidently.",
+            "sentence2": " We mounted the horse.",
+            "word": "mount",
+            "label": "T"
+        },
+        {
+            "sentence1": " He cuddled the cat to his chest.",
+            "sentence2": " They cuddled under the covers.",
+            "word": "cuddle",
+            "label": "T"
+        },
+        {
+            "sentence1": " They approached the corpse.",
+            "sentence2": " I easily approached the words on the page.",
+            "word": "approach",
+            "label": "T"
+        },
+        {
+            "sentence1": " Thank goodness she patched a hole in her jeans.",
+            "sentence2": " They patched the saddle blanket in a pocket also in contemplation of a future singletrack ride.",
+            "word": "patch",
+            "label": "T"
+        },
+        {
+            "sentence1": " I will always continue to support you.",
+            "sentence2": " Always continue to learn as much as you can.",
+            "word": "continue",
+            "label": "T"
+        },
+        {
+            "sentence1": " They will blaze a trail.",
+            "sentence2": " They blazed away the weeds.",
+            "word": "blaze",
+            "label": "T"
+        },
+        {
+            "sentence1": " He tried to normalize his demeanor.",
+            "sentence2": " These people desire to normalize the truth of something.",
+            "word": "normalize",
+            "label": "T"
+        },
+        {
+            "sentence1": " I guard my rice fields all night.",
+            "sentence2": " Herb guards the produce.",
+            "word": "guard",
+            "label": "T"
+        },
+        {
+            "sentence1": " We try to visit my parents on Sundays.",
+            "sentence2": " I visited him on Monday.",
+            "word": "visit",
+            "label": "T"
+        },
+        {
+            "sentence1": " Lisa head out to the field to work.",
+            "sentence2": " But when she got to the field she discovered it was mud.",
+            "word": "field",
+            "label": "T"
+        },
+        {
+            "sentence1": " I try to tolerate spicy foods.",
+            "sentence2": " He can't tolerate his father's harangues about politics.",
+            "word": "tolerate",
+            "label": "T"
+        },
+        {
+            "sentence1": " The time has come to prove your love.",
+            "sentence2": " It proved to be many months since I left.",
+            "word": "prove",
+            "label": "T"
+        },
+        {
+            "sentence1": " She took her boat out of the wharf.",
+            "sentence2": " He came wharf pounding again.",
+            "word": "wharf",
+            "label": "T"
+        },
+        {
+            "sentence1": " Animals use to be savage and we left them to their business, and they would tame and keep the number of natural predators in an area down.",
+            "sentence2": " Humans were never like this and we found ways to tame the world around us.",
+            "word": "tame",
+            "label": "T"
+        },
+        {
+            "sentence1": " Pat strengthened the pot with spoonfuls of sugar, flour, and butter.",
+            "sentence2": " The winds strengthened.",
+            "word": "strengthen",
+            "label": "T"
+        },
+        {
+            "sentence1": " They rendered it clean.",
+            "sentence2": " He rendered her unconscious.",
+            "word": "render",
+            "label": "T"
+        },
+        {
+            "sentence1": " I regret booking this show.",
+            "sentence2": " I regret laughing.",
+            "word": "regret",
+            "label": "T"
+        },
+        {
+            "sentence1": " I rotate my camera as it moves across the ground.",
+            "sentence2": " Corporate flights were scheduled to rotate back and forth monthly.",
+            "word": "rotate",
+            "label": "T"
+        },
+        {
+            "sentence1": " She uses her scarf to freshen up her outfit.",
+            "sentence2": " It was no use trying to freshen up the dirt-covered lamb.Another set of sentences with one common verb in each sentence can be given with another common verb below.Verb",
+            "word": "freshen",
+            "label": "T"
+        },
+        {
+            "sentence1": " I fiddled with the key.",
+            "sentence2": " He fiddled with the lock for a couple of minutes before it clicked.",
+            "word": "fiddle",
+            "label": "T"
+        },
+        {
+            "sentence1": " I never blow my money.",
+            "sentence2": " It blows my mind.",
+            "word": "blow",
+            "label": "T"
+        },
+        {
+            "sentence1": " You must behave.",
+            "sentence2": " A cat behaves by looking for food.",
+            "word": "behave",
+            "label": "T"
+        },
+        {
+            "sentence1": " I can't stand to see you wearing such a clowny top!",
+            "sentence2": " I often wear too-tight shoes.",
+            "word": "wear",
+            "label": "T"
+        },
+        {
+            "sentence1": " Peruvian construct their homes of adobe brick.",
+            "sentence2": " Leonidas constructed his home of timber.",
+            "word": "construct",
+            "label": "T"
+        },
+        {
+            "sentence1": " They ditched their teacher and went off on their own.",
+            "sentence2": " I managed to ditch my obligations and leave.",
+            "word": "ditch",
+            "label": "T"
+        },
+        {
+            "sentence1": " I return his embrace.",
+            "sentence2": " I'll return the coat.",
+            "word": "return",
+            "label": "T"
+        },
+        {
+            "sentence1": " Foraging is popular with campers.",
+            "sentence2": " He camped out on the couch.",
+            "word": "camp",
+            "label": "T"
+        },
+        {
+            "sentence1": " His mother bestowed (present tense) him the car.",
+            "sentence2": " Spat crammed the microphone and bestowed (past tense) her prayer.",
+            "word": "bestow",
+            "label": "T"
+        },
+        {
+            "sentence1": " My review of your recent purchase was offset by your terrible customer service.",
+            "sentence2": " His often-seen nepotism offsets whatever good advice he's given.A way to offset their terrible customer service is to have excellent customer support.For English, using",
+            "word": "offset",
+            "label": "T"
+        },
+        {
+            "sentence1": " I will loosen your grasp.",
+            "sentence2": " I loosened my grip on the handlebars.",
+            "word": "loosen",
+            "label": "T"
+        },
+        {
+            "sentence1": " I was dragged to the party unwillingly.",
+            "sentence2": " I was dragged to the party unwillingly.",
+            "word": "drag",
+            "label": "T"
+        },
+        {
+            "sentence1": " I stepped on a worm.",
+            "sentence2": " She stepped gingerly downstairs.",
+            "word": "step",
+            "label": "T"
+        },
+        {
+            "sentence1": " He suffered from systemic curse.",
+            "sentence2": " I suffered from heartbreak.",
+            "word": "suffer",
+            "label": "T"
+        },
+        {
+            "sentence1": " I will not permit the children to go out on a school night.",
+            "sentence2": " She did not permit her voice to rise to a scream.",
+            "word": "permit",
+            "label": "T"
+        },
+        {
+            "sentence1": " The butter and chocolate chips felt as if they were about to melt and mix together.",
+            "sentence2": " The snow was melting as we walked outside.",
+            "word": "melt",
+            "label": "T"
+        },
+        {
+            "sentence1": " The idea was watered down.",
+            "sentence2": " He watered the ground to kill the weeds.",
+            "word": "water",
+            "label": "T"
+        },
+        {
+            "sentence1": " They agreed to kill the horse.",
+            "sentence2": " The horse killed the man.",
+            "word": "kill",
+            "label": "T"
+        }
+    ]
+}

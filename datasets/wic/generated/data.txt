@@ -1,0 +1,411 @@
+word	sentence1	sentence2
+kill	 He killed a terrorist.	 He killed some time by reading some comic books.
+finance	 We need some more financial support.	 We found that cancer cells had more financial support.
+shatter	 The impact shattered the glass.	 As his words shattered me, I shattered.
+back	 The bus will back up to your destination.	 The back of her shirt was torn.
+summer	 Most of the countries in the European Union are now open to summer fruits and vegetables.	 I wondered what the summer breeze would feel like.
+stir	 Stir the sauce for five minutes.	 Maintain peace won't come from stirring things up.
+rake	 The leaves need to RAKED.	 He said to take out the garbage.
+refine	 Pierre had to refine his thesis for his advisor.	 Most of the neighborhoods in the fire have been refined to blacktop.
+push	 You must push that elevator all the way down.	 He didn't want to pushSentence 1
+shower	 Many people like to take showers after work.	 I need to shower before I go to work.
+top	 The mountain is top of the list of things to do.	 The top of the table is scorched.
+face	 She was left with nothing but the face of her daughter.	 I've never seen it rain so hard.
+break	 It's after 10 o'clock.	 Cars break the sound barrier all the time.
+exercise	 Exercise produces endorphins.	 Exercise reduces stress.
+click	 It is harder to quickly click on the close the window now that the address is in an input box.	
+flick	 Flip the water off of the table mat.	 Keep your eyes on the ball.
+range	 The population ranges from age two to age fifty.	 My voice ranged at least half a mile.
+eyeball	 Keep an eye on my stuff.	 Your prescription needs to be eyeballed again.He didn't know how to eyeball a nerve transplant.
+shade	 We would like a little shade over here, now.	 This chair lies in a sheltered area, providing it with the best of both sun and shade.
+like	 If I like the end result it'll be a good thing.	 I like watermelon.
+coordinate	 I need you to coordinate transport.	 Let’s coordinate our outfits!
+find	 I think we found the problem.	 We found an odd pattern.
+disband	 The band disbanded after the lead guitarist passed.	 After the winter, the trail gets disbanded by plants.
+purchase	 My company paid $2,500 for this trade show booth.	 I'm too ashamed to purchase any of the clothes displayed in front of me.
+straighten	 You must straighten your bed in the morning.	 Fastening a chain around a straight, horizontal track.
+view	 I had a momentary view of the girl.	 There is no view from our window.
+cure	 We need to cure disease.	 It is important to make sure the cheese is cured long enough, otherwise it tastes like raw milk.
+paste	 Elmer's glue is made to paste two materials together.	 Pasta is the glue that binds the sauce and pasta to create a tasty dish.
+intermingle	 My life has been immersed in scientific research.	 The holiday blend intermingles brightly colored breads with vivid jams.
+substantiate	 This will substantiate my point.Sentence 2	 I want proof of authenticity.
+repair	 Repairs to bridges can be expensive.	 I've never been able to repair a zipper.
+hedge	 High hedges hid the need for privacy.	 She didn't want to hedge her bets.
+crash	 The horses crashed into the fence.	 John crashed his computer.The horses crashed into the fence.John's computer crashed.
+vegetate	 The victim received a tragic shock  Sentence 2	 Sound carries well over water Sentence 2
+negociate	 The group will try to negociate a deal.	 He will try to negociate a table at a busy restaurant.
+ski	 Let's go skiing later.	 No one here knew how to ski.
+locate	 I'll show you how to locate the lost key.	 The satellite will locate the lost ship.
+fear	 She fears she will fail her test.	 Children's fears cannot be forgotten.
+snap	 Jenna snapped the picture.	 Does a well known mannequin brand still snap in?I snapped this picture.Well-known brands in the fashion industry still snap in people in sometimes, right?
+sweep	 I looked for dirt and swept it up.	 The shop girl was caught sweeping the floor.
+quibble	 They continued to quibble about the little things.	 I will quibble with you about who goes first.
+meet	 We were meeting up at the supermarket to purchase some goods.	 They are meeting in the living to extend the TV cable.
+work	 My job was to work security.	 We must work harder to protect people.
+misplay	 The defense misplayed the ball and it dropped to the ground.	 I'm sorry if I misplayed our last phone conversation.
+bake	 You should bake these cookies at a lower heat so they don't burn.	 The oven does not have a bake cycle.
+militate	 His encouragement militated for fairness in the contest.	 There was an insurgence around the military standard around which the discussion opened.
+roughcast	 The roof was roughcast and needed repairs.	 The man put a roughcast plaster on the wall.
+appeal	 You'll need to appeal (verb- apply/petition in a specified, usually successful way) your parking ticket.	 Hypnotic suggestion is not an appropriate means of appeal.Sentence 1
+process	 This sentence is processed in the brain.	 Have you thought about processing the potatoes?
+disperse	 The crowd dispersed.	 All of the goldfish dispersed.
+care	 I really don't care.	 I care about what you think.
+speak	 The speaker must speak clearly and loudly to be heard.	 It is important to listen when you are spoken to.
+breathe	 The lungs inhale the oxygen in the ambient air.	 He breathed deeply in comfort.
+distribute	 Not everyone is distributing their wealth equally.	 Air currents distribute the warm and cold air.
+detach	 Children are cautioned not to detach the pieces of the bicycle.	 It is the cold that detaches the ocean of ice from the shale rock.
+want	 Allan always wanted an iphone.	 Republicans want  to cut taxes Verb
+mince	 I can't find the freshly minced herbs.	 That doesn't sound like a very merry Christmas.
+rise	 Hot coffee will rise to the top.	 He left because he rose from indifference.
+haul	 The robbers hauled the cart of jewels away.	 Since she was too little to cart any supplies, my sister helped by stirring the paint in my cart.
+drive	 I used to all the way drive to work.	 We were driving to New York in less than two hours.
+thrust	 Thrust cannot act across space.	 Thrust crosses the earth's neck to neck.
+ruffle	 Have you seen my coat?	 Her skirt's hem rippled in front of him.
+bind	 They bound all the money with paper.	 The caterpillar silk is used to bind the flexible diaphragm of the brass instrument.
+stand	 The sky will stand the dark night.	 I need to stand my jacket on.
+spin	 Your clothes are spun to create fabric.	 His plans were spinning out of control.
+acknowledge	 Humans can acknowledge their feelings.	 I need an acknowledgement of the receipt of the check.
+assign	 We offered Daniel the responsibility of assigning the desserts.	 Lisa can't assign post dates to her assignments because she doesn't know the dates.
+service	 Please enter your feedback for the service tonight.	 They can't find the service elevator.
+know	 It would be impossible to know the cost of it.	 You must know all of any laws that are relevant to your chosen career.
+fondle	 I can't stand people who fondle clothes.	 Those ham hocks are too big to fondle.
+read	 My grandfather would read to me every night.	 Eat healthily and you will feel better.
+fail	 The bridge would fail.	 Your submission will fail.
+simplify	 Programs will simplify the difficult aspects.	 They will simplify their designs to reduce costs.
+port	 She changed course toward the port.	 The company went out of business because the port was not operational.
+think	 The monks thought monks were perfect.	 I want to think that everything will work out.
+raise	 The curtains blew in the breeze and I told them to stop raising their voices.	 The news raised concern for going so far.
+enter	 Sydney and Travis entered the theatre.	 The new sentence went into effect yesterday.
+introduce	 They introduced Romeo and Juliet to one another.	 Now that we're introduced, you can leave.
+fix	 Michelle had already finished her third glass of wine when she decided that it would be a good idea to start fixing her guitar.	 I'm sorry for the trouble I caused, but I'm sure it's fixable.
+converge	 The clockwise and counter-clockwise rain bands began to converge.	 Shades of the same colors converge in mixed colors.
+shift	 You can shift a product platform.	 A storm caused a shift in the balance of power.
+drip	 The rain slowed to a feeble drip.	 The number of pints of blood on the floor had increased.
+bend	 The crockery needs to be easily bend to pack well.	 High pressure steam could make the molecules of the metal bend.
+land	 The plane safely landed.	 Approximations of the landmass gave way to more accurate parts.
+mark	 They marked the cardinal directions on the maps.	 He marked off the side on the receipt.
+sound	 A sound carries well through the passage.	 Lemonade sounded good, but the grocery store was closed.
+consult	 Consult your doctor today.	 Consult the map on how to exit.
+avoid	 It is common practice so avoid imminent danger.	 You must avoid hair, fur, and particles of dirt on your printer.
+exhaust	 I ask you to exhaust all possible options to resolve the conflict.	 I have never been more exhaust.INTERVAL TRAININGInterval training is a form a physical exercise where a person completes a short bout of high intensity followed by a longer stint
+unionize	 International trade unions banned the unionization of domestic workforce in some countries.	 The unionization of some STEM workers is controversial.
+choke	 I almost choked on the pizza.	 The engine was being choked so badly it wouldn't start.
+convert	 Conversion rates affect company earnings.	 The first rule of microwaving stainless steel is to not convert it.
+uncork	 Why didn't you uncork the champagne?	 How will you uncork the wine bottle?
+mean	 I meant to call her.	 No significant meteorological detail was meant to be conveyed in the forecast.
+puddle	 People put puddles in coastal terrain.	 I once swam in an orphan puddle outside Estonia.
+stuff	 She broke the TV and swore a lot, then smuggled the stuff in the back of a pickup truck.	 Last night at the library, I borrowed a book or two and a couple of DVDs.Sentence 1
+play	 Wade will play the harp.	 Ball players need to play in the proper position in the field.
+spill	 The tissue paper was spilled all over the floor.	 He was spilling wine on the carpet.
+insulate	 The new insulation will make the building more habitable.	 We had to insulate the room.
+rustle	 Caterpillars rustle through leaves on warm days.	 The rustling of the feldspar rocks made it difficult for the spectroscopist to obtain an interference spectrum.
+die	 I stab him and then die with his knife in my hand.	 Elton John died tragically.
+concord	 The sentence in this example is in concord.	 The sentence in this example is in concord.
+sow	 It takes a lot of courage to sow your own seeds.	 They sow the seeds in the garden.
+lift	 As I lifted the paint can onto the ledge, I knew it wouldn't be enough.	 Most people say they cannot lift more than 50 pounds at the most.
+prepare	 I like to prepare for any situation.	 No, I didn't prepare for that.
+heat	 Heat the pot on the stove.	 Heat eventually escapes from gravitational fields.
+application	 I want to make an application for the job.	 I'll send you my application.
+house	Sentence 2	Sentence 1
+feast	 The feast he prepared was lovely.	 The Feasts of Lights are three days of joy.
+tip	 She gave him a tip on what to do next.	 He left her the four percent tip.Sentence 1
+procession	 The celebrants process through the aisle with solemn dignity.	 Processions of mourners streamed past the chapel holding their flowers aloft.- The processions of mourners streamed past the chapel holding their flowers aloft.
+communication	 Communication has always continued to evolve.	 The problems associated with communication can be difficult at times.
+object	 Were any objects recovered?	 They produced an object on an easel.
+field	 The field being plowed is barren-looking.	 The field was now his.
+baron	 Montesquieu was a French baron.	 She became a baroness, unexpectedly.
+call	 Do you want me to call you later?	 Kathy looked up in frustration, stomped out of the room and slammed the door.
+reading	 His reading of Dickens is depressingly vulgar.	 Her readings on Freud were stirring.
+excitement	 I feel excited.	 I know she is excited about this idea.
+bevy	 A bevy of smiling nurses greeted me.	 The scattered bevy of security guards occupied their respective positions.
+utility	 There is a shortage of fresh water because of the lack of a workable plan for a modern utility.	 The Grand Duke graciously shewed us a range of utilities in the tender pink light of the early spring.
+fringe	 Her long hair skimmed her bare shoulders offering a tantalizing glimpse of her sleeveless dress while the waist of her skirt brushed the floor, hinting at the length of her fringe.	 Press on the fringe of the rug with the iron to erase the imprint of the
+humor	 He has a dry sense of humor.	 He mixed humor with pathos.
+birth	 She's six months pregnant and about to give birth.	 Her birth was remarked on by all.
+confluence	 The confluence of the rivers.	 The confluence of opinion.
+beachhead	 We must secure our beachheads.	 He's defending the beachhead.
+judge	 The Japanese judge.	 One Israeli judge was not present.
+property	 He had to take out a loan for property to purchase.	 Impeachment from the property of the freehold.
+inwardness	 No artist's inwardness can withstand analysis.	 His deep inwardness was intuitive and shrouded in mystery.
+rock	 The history of the rock and roll period.	 The hard rock band was a little difficult.
+wealth	 She possessed great wealth.	 They lived in penury.
+outwardness	 looking our the window.	 The outward appearance of truth.
+significance	 The significance of this vote is obvious.	" What are the social significance of the movie ""Midnight Cowboy""?"
+person	 Not a soul was to be seen.	 This is a personal matter.
+vault	" ""There's no place like home."""	 Your family keeps generations of memories safe in its highly secure vault.
+coverage	 Surprised that no one from the media were covering the story, He watched as the coverage from another network.	 But the storm's coverage is a total mystery.
+year	 I graduated from High School last year.	 He had been a senior manager for five years before losing his job.
+adultery	 The adultery case attracted widespread attention.	 They broke up because of the long-standing adultery.
+header	 The football player dribbled and kicked the ball and sent it in a high angled downwards header down the center line toward the goal.	 The music was playing in a wavering and sailing way and Mickey Bassey was singing in her low, sultry voice
+center	 The Centre Centreville.	 The Newark Center.
+missus	 Her missus is a pain.	 We all loved his missus.
+limitation	 The limitation on his freedom made him angry.	 The engineering limitations of the bridge prevented him from crossing.
+sum	 This sum is too large.	 It is an even lower sum.
+charger	 It was just an early-morning charger to the Acme store.	 He had worked out a way to surround himself with air.
+branch	 Some people cut off their own branch of the family tree.	 She liked the thawing branch...
+neck	 He grabbed her by the neck.	 When was the last time you seen his neck?
+wear	 She was wearing the most exquisite of clothes.	 We're looking for clothes that wear well.
+rub	 What are you rubbing the glass with?	" I just got back from the ""rub."""
+derivation	 The derivation from the Spanish.	 The derivation from Alice in Wonderland?
+breath	 She gasped out her last breath.	 She breathed a sigh of relief.
+return	 I wanted to wait a little bit longer but they gave me no chance to return.	 Joe was about to return to his home, where he wished to devote himself to science.
+pass	 Rory Maclachlan passed the ball to Adrian Hoopton.	 Pass it back.
+quarter	" ""No,"" I said, and shook my head."	 and reached and took its thumb and index finger and twirled it into a quarter-inch or so-they were long, long fingers-
+peeler	 The peeler came off in her hand.	 I don't know where you can find a frying pan these days.
+right	 The cop on the right seemed unconcerned.	 The law is on the right side.
+gravitation	 Gravity is a law of gravitation.	 Gravity was a 2003 film that Robert Zemeckis directed.
+copy	 The War and Peace in French is 584 pages in its printed edition.	 He photocopied her.
+loan	 I need a loan.	 The interest will more than cover the cost of the loan.
+hand	 This is my hand.	 He lost his favorite toy when she let go of his hand.
+structure	 The structure is beautiful in an older sort of way.	 His structure has shown that dinosaurs got vertically into the tar pits.
+drag	 Live drag queens at the ball.	 Trina has a cherry red airbrushed Ford with a paint job that could be classified as a criminal assault.
+shock	 My stomach lurched, my eyes were glued to the screen, my mouth agape with shock.	 I heard you saying my name but it came as a shock.
+soul	 She looked at him in horror, her once white soul now tainted by his words.	 Her soul left with barely a whisper of justice.
+title	 his title passes over to his eldest daughter.	 He gave me a dark stare and flashed his silver teeth in a mock smile.
+mother	 His mother was his only family.	 Every year she would send us gifts from her mother.
+principle	 I want to know, forthwith, the principle involved.	 Let every wife be subordinate to her husband.
+plan	 The plan for the British Royal Family.	 The plan to reform the US healthcare system.
+reversal	They ordered the reversal of the judgement.	This artist is well known for his often surrealistic paintings with reversals, like the Mona Lisa with her dog in the foreground.
+didacticism	 Readers will be bored by the didactic tone.	 I found this essay to be didactic.
+water	 The clear, refreshing water splashed upon his face.	 People lined the water to perform the purification ritual.
+vote	 A vote for Brian.	 A show of hands for Jenny?
+unit	 Aaron's unit was being attacked.	 Roberta's unit had been out on a patrol.
+carnival	 Throughout the five-day carnival, citizens of the city do not work.	 For forty-days Celibrada plays with dolls on the eve before Ash Wednesday.
+explosion	 An explosion in the news.	 This year's World Cup was one of the most exciting explosions in sport.Antoine Fuqua remains unusually seductive and exciting with this latest recreation of a 1994 Broadway cult success.This year's World Cup was one
+shot	 Please put your hands where I can see them.	 He felt her anger punch through him with a shot of pure adrenaline.
+matter	 Matter is all around us.	 The issue is a matter of considerable debate.
+courage	 I admire his courage.	 She sings of the courage of heroes
+invitation	 Every Thanksgiving there were at least 6 invitations that came in the mail.	 He knew his dinner invitation had gone out several days before.
+concern	 I read about her concern for the environment.	 His new concerns flooded her with disappointment.
+key	 His key made the lock turn.	 She handed the key to him.
+weapon	 She promised time to weaponday.	 Police discovered the weapon's traces at the scene.Noun
+cycle	 Cyclist Sue's cycle.	 Pulling the refuse cart endlessly around the city's meager cycling rings.
+push	 Quite a determined push.	 She shoved him into the bushes.
+shower	 I woke up and went for a shower.	 They took a shower after their workout.
+state	 The State of Texas.	 His state of mind.
+bid	 The studio took their bid for the job.	 I understand that you claimed this morning that our opening offer is to high.
+top	 Buy the polka-dot top.	 Put your messages at the top of the list.
+face	 but the hard, dry, winter winds whipped her freckled face raw as she climbed to the cabin.	 as she sniffed her burnt face.
+tongue	 The girl had a swollen tongue.	 His tongue is blue.
+break	 She was busy, so she asked him to get a coffee break.	 There is a five-minute break between exams.
+division	 the population of the UK and Ireland and the population of Great Britain and Northern Ireland.	 The school did not break the boys into divisions.
+grave	 It was these long, long walks that told him of his love.	 She went straight to her small round grave, where she knelt and prayed.
+exercise	 The exercise after practice helps the muscles to get stronger.	 His essay was exercises in juvenile bravado.
+corner	 The corner of the table.	 Her skin was burning up from his touch on her corner.
+range	 Had central heating and a kitchen accessory to help you with your baking soda and vinegar range, these liquids.	 The little show I gave you the other day was the result of months of preparation, a few fortunate breaks, and a whole lot of hard work.
+pursuit	 Her delicate sensibilities were offended by the sight.	 The pursuit of happiness was guaranteed only to the Americans.
+shade	 She needs to find cover from the shade.	 We shade out areas we want to keep cool.
+truth	 Naturally, truth was not so easily attained.	 The book is based on the truth.
+cold	 The wind made it bitterly cold outside.	 India is in the grip of a severe cold wave.
+token	 I don't like to cash in all of my tokens on one game.	 He searched for some token of recollection of them all, of theNoun
+love	 They have been in love since they were kids.	 It was the most sincere love letter I have ever read.
+thought	 The thought hung out in her mind.	 I had a terrible thought.
+dogma	 It's just an unproven dogma.	 The Whigs were his willing accomplices in this dogma.
+season	 The winter season.	 Spring was in full season now.
+deference	 There is great deference shown by the lower classes towards their superiors.	 I'll grant him that deference.
+study	 Their at-home study session.	 She enrolled in an online study course.
+speck	 The school was vastly inferior to the speck of dust.	 Stay away so these specks don't get on the rug.
+trojan	 People disgusted in their usage of trojans should switch to condoms.	 The trojan horse in the war against Troy legend was used in deceit to sneak in an enemy.
+trick	 Jack pulling the old trick of pretending to blow his nose.	 It was a tricky one to answer, but I am sure that eventually the hotel keeper will fall for the same trick .
+inclusion	 On Netflix, you can search for TV shows including Sherlock, or inclusion of details.	 You will not be qualified for membership if you do not meet the criteria of inclusion.
+role	 Despite this, he played his role.	 The volume printed by the printer's driver's role.
+boss	 What did your boss say to get you that job?	 I've always wanted to be the boss.
+footage	 It was considerably less than he’d intended but apart from a few, brief sequences, there were no other available related footage.	 In the last ten years he’d collected almost two hundred fifty hours of footage from concerts, television appearances, and interviews
+membership	 High traffic resulted in the loss of thousands of memberships .	 These two corporations issued individual memberships to secure their future.
+floor	 Her parents had had it renovated, with a hardwood floor.	 Search crews discovered a human skeleton on a second story floor of a burned out building.
+wall	 We are living in a walled bubble.	 Of her house, strangely enough, all that remained was the foundation , the ground-glass panels, the walls insuring the enclosure .
+miracle	 Medical experts studied the process and were unable to determine the cause of the miracles.	 Simeon and Anna and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and and
+today	 This year's new trendy drink was already on sale in some grocery stores - some even put it out on the shelves today.	 I'll be by later on today.
+remission	 The cancer has been in remission for two years now.	 In an effort to avoid a relapse, the bishop wished that God would grant him a remission from the Latin sentence.
+comfort	 Long summery evenings are giving way to crisp mornings where comfort can be found.	 Patricia wanted to leave the valley of Daberk, the outpost of great discomfort.
+sake	 For the time being, can we move this meeting to another day?	 We may take this into account for the sake of fairness.
+tune	 My dog won't stop howling to the tune of one song.	 The conductor found her violin's tuning to be perfect.
+survey	 A survey of the citizens opinions revealed the possibility of 100% sales.	 Eye buy survey 98% of your day.
+entreaty	"""Please leave your entreaties at the door,"" she said."	They made entreaties of their subjects to obey them.
+proficiency	 Breaking his long silence, the lemur at last demonstrated his proficiency in the king's tongue.	 He beckons to teach people in their own language, not just English, simple expressionsNoun
+queen	 Lot 's wife became a pillar of salt when she denied the angel like the Queen in the British stories.	 A marble queen dominates the skyline.
+competition	 His company was in competition with Ammon.	 The Algorithmic Problem Solving Competition is on its sixth sequel.
+trouble	 Eventually, he couldn't handle his partners ' trouble any more.	 He's left me in all this trouble .
+door	 The homeowner noticed that one of the doors was unlocked.	 Storm's crowing was heard through the cracked open door.
+vocabulary	" The word ""infantry"" is a word from the vocabulary of the military person."	 The vocabulary constructed for the book is excellent.
+readiness	 Please offer your full cooperation to help us with this transition, as we need to be as ready as possible as soon as possible for this deployment.	 He resolved to do all he could to be ready as soon as possible.
+connection	 Toward the end of his life, he was looked upon as more of a celebrity, with various connections to the popular culture of the late 20th century.	 He was able to pinpoint the connection between the two.
+fire	 A fire crew extinguished a stubborn fire in a rubbish dump.	 A former firefighter faced 25 years in prison after setting fires with crude oil
+traffic	 Current average speeds clocked from traffic cams all around the town.	 Another school of cars just zoomed by us.
+component	 Finally, inserting the card's component completed the process.	 Each component of the chair is made in the same way.
+form	 The form on the deck looked solid to me.	 The law imposes stringent all-encompassing requirements for documentation or proof of financial stability.
+bankruptcy	 As soon as it began to look like bankruptcy was likely, the fortunes of the small business declined.	 The board of directors declared bankruptcy with nervous stares borne of recent lawsuits.
+tendency	 Before the tendency towards increasing different political views reached critical demand, the government still had the power to stop the earthquake.	 Today, high-end HP computers are not cheap.
+name	 Alex could not keep his name secret for long.	 The speaker could remember the exact date when his daughter was given her name.
+slack	 Bob was so consumed by slack work that he forgot to luncheon .	 The family had a roll of extra slack in the kitchen.
+score	 The defending team 's one point score in the final minute would not be sufficient to win in a tie.	 The baseball team got a ten run score in the fourth inning
+staple	 He chilled on the beach , staring at the shining green wave where the currents met at the edge of the beach .	 The sugar beet was nurtured then stabbed though with thin wire pierced on either side of the green plant at it raced to the top of the grey field
+difference	 The only difference between henna and indigo is in the intensity of their colors.	 The difference between green and blue is that green light always mixes with yellow.
+orbit	 This planet orbits so close to its sun.	 The ISS orbits Earth at a height of 250 miles.
+vermin	 These cockroaches are not vermin; they are my pets.	 The vermin wouldn't allow us to simply wander through their domain.
+echo	 On the morning of the 18th, an echo of the voice of Fate was heard.	 I couldn't tell how far the echo was coming from.
+depth	 The depth of color can be adjusted by using a diffuser.	 We dove down to see the depth of the wreck.
+education	 Due to education, he decided to get back to college.	 Education plays an important part in his life.
+likelihood	 The chances of someone being in a given location in a certain time frame is a key calculation for a search and rescue team.	 While the high probability of someone being near home when they have been kidnapped increases the chance for a quick and safe rescue, the low likelihood of
+throat	 He was calmed by the wet cloth her used to soothe away the dryness in her throat.	 Research has shown that more than 80% of sore throat cases are caused by viruses or bacteria.
+safety	 The safety of the vast majority of skiers and snowboarders is critical.	 The reports of the safety committee are in the in-box.
+ground	 The ground was covered with snow.	 Beneath the first layer of topsoil, their first discovery of topsoil was over five feet of hard crackling ground .
+ear	 Her ear was the only sensitive organ that survived.	 He's afraid to show her his insecurities.
+convention	 The historian denounced the convenant as folly.	 The convenant is sure to increase sales.
+restraint	 The door had some residual restraint that some wouldn't want to tamper with.	 One of the exercises had some hand restraints hidden just behind a fake bookcase.
+hall	 It took a better part of the day to plaster the chicken guts off the walls of the lakeside hall.	 The students stopped to admire the dinosaur footprints in the limestone hall.
+formula	 I used this formula in the last chapter.	 That famous formula for estimating weight?
+dent	 Remove excess water with towel and fill with up to 2 inches of rice dish soap for thirty minutes.	 A light jolt causes up to $8,000 worth of damage, but cars can be saved by the application of dents.Sentence 1
+hegemony	 Hegemony is currently dominated by the United States.	 India is expected to overtake the U.S. as the world's soon-to-be foremost hegemon.
+gift	 Which gift did you give her again?	 They always complained about her gift giving.
+pledge	 Just like Kerry did, Bush took a pledge for stricter CO2 regulation.	" And like Kerry, Bush took a pledge against ""soft money."""
+history	 Act of succession - an event in which a monarch dies and the throne is usurped, or sometimes voluntarily surrendered, by a relative or by someone outside the immediate family of the monarch.	The sequence of id event 
+reenactment	They're going to reenact the Civil War tomorrow at Patterson Park.	 The shirt included a reenactment of a woman suffragette.
+tautology	 Wilson was a man of simple tastes , he barely knew the meaning of the word 'tautology'  Sentence 2	 restSentence 1
+text	 The stories unfold like texts on one's phone.	 The photographs are dotted with the out-of-focus texts of the surrounding city.
+tear	 He pulled her nearer, reached for the knot in the scarf, his hands unwinding the fabric while he restored the tear in their intimate connection.	 His eyes wet with tears, he looked back at Humphrey, thinking of all the years they had spent together.
+squeeze	 His sister gripped his arm until the pain was too much to stand.	 He reached for her but her fingers squeezed him tight.
+sale	  How long is the sale at the mall ?	  The one-day blitz -
+panel	 We will assess applications before interviewing any applicants.	 The proposed programme will focus on teaching them how to work with high potential students.
+softness	 Running fingers through her silky hair, he knew she was the one.	 He watched her long fingers moving across his back, stroking, easing, loosening knots of tension.
+cut	 After reading the novel, I'm feeling a little cut out from the world.	 That iron should be replaced because it's been cut from the water tank.
+memorability	 It is important to remember that while some things may be more memorably than others, the brain learns more easily when alarm bells start ringing.	 My new haircut makes me look less memorable at first glance, but there's no hiding it in this crowd.
+clap	 At the head of the room, he encountered a round man with one arm in a cast, who no doubt knew how to handle his claps.	 She was generally enjoying her applause.
+meaning	 The water table ’s meaning in geology is to identify underground water-bearing bedrock.	 His speech had the same impact with a meaning that scientists felt.
+acquisition	 He does not wish to make any further acquisition until he had cleared the shelves of his warehouses.	 The world of sports is awash with acquisition.
+trombone	 I bought it at a yard sale for $15.	 No more than five of them were in the school orchestra.
+stock	 I fed the pigs slice after slice of stock branded beef.	 The stock market crashed in 1929.
+absence	 I was disappointed by the teacher's absence from the board.	 Tyler tucked his finished project into his bag and left it behind because of the teacher's absence.
+threat	 There is no need to panic.	 Every so often, I get a threatening email.
+people	 The people started laughing.	 All people are different.
+snorter	 The snow was quickly covering the treacherous patches of ice left by the snorter that had blasted through hours ago.	 Jake was riding the bumper of the car in front of him, afraid that the snorter coming up behind would breakdown.
+war	 Mothers who sent their sons to the war's frontline were devastated by the loss.	 She never complains that I don't spend enough time with her, even though I'm often at war with my boss.
+respect	 I have the same respect for this dictionary as I do for any book on any bookshelf.	 The coach demanded complete respect from the players on the field.
+shtik	 Sammy was curious about what Shtik had mentioned while he was going to get cigarettes.	 So, I sliced a couple of each type of fruit and then I cut the cheese into shtik's too.
+waste	 Waste can represent a huge expense for a business.	 Communities also produce waste.
+liking	 The farmer showed no liking for the young Duke.	 The Duke showed no liking for the young farmer.
+prescription	 Louise left the pharmacy with her prescription .	 Erica picked up her prescription at the pharmacy.
+production	 Production and fabrication account for 54% of Fremont Industries' operating costs.Sentence 2	 houseSentence 1
+change	 The Senate Republican leadership changed their procedural rules.	 We need to make some changes in the system .
+window	 There were so many windows, grand and tall, grand and tall, a stunning marvel of a building.	 A tall, wide window afforded a beautiful view of a cheerful garden with a tall fountain where a small family of deer drank from their covered cylindrical pop-
+satisfaction	 Her goal is to deliver you customer satisfaction.	 The new iPhone has won industry satisfaction.
+occasion	 Mixed floral arrangements, on the other hand, can highlight and complement the occasion.	 I find that on some occasions, at some high tides, we're able to see the light on the opposite shore.
+metric	 There's now even Metric by Jimmy Buffett album.	 But at least it's in Metric.
+engagement	 Before spending an eternity with their daughter-in-law, they wanted to date other people.	 The gentleman made it clear he wasn't about to propose to their daughter for lack of enviable quality engagement.
+degree	 The research he presented as part of his undergraduate thesis received a degree of criticism.	 I wish our company had a level 8 degree of competence.
+crunch	 Eating raw veggies gives you a wonderful fresh crunch.	 The crisp green leaves crackled like fire in frost Noun
+lightning	 Lightning flashes in the sky outside.	 They watched it across the course occasional flashes of lightning.
+institution	 She's devoted her life to the institution of marriage.	 A new equity-birthing entity might be just the neighborhood institution our cities need.
+containment	 We have a containment protocol in place.	 He has a containment device that keeps pests in trenches trenches.
+run	 We took off to get the score before the run started.	 I went for beer during the two minute run.
+visibility	 We enjoyed decent visibility until the morning fog rolled in.	 If visibility is good, you'll be able to notice much more when riding.
+example	 If you want an example of how the funds are allocated, then I’ll send one over.	 They need to do more research, not rely on the examples of the past.
+now	 Now is the moment for open and honest vocabulary.	 We hope to find success in now and we do not want to ruin our goals.
+reproduction	 I’ve never seen anything of the sort before, but word on the street is that some people are able to reproduce memories.	 Ever since she was old enough to reproduce drawings herself, her father would push pins into the paper for her.
+sight	 He gave her one good look, then hurried away.	 Please come less than a mile past the orange tree, make a left at the red brick, and you'll get the first sight of the ocean.
+collision	 It is hard to avoid a head-on collision.	 There is always a chance of a collision, even when your hands are on the wheel.
+sex	 He enjoys a high sex drive.	 We talked sex versus any other current topic.
+class	 A great oral history class with lots of group assignment is too much class time for me to take on.	 He wore the same brown corduroy jacket for class every day, but he never wore denim jeans.
+helm	 It's my first time skippering a boat.	 The helm of this ship was very fragile.
+leach	 Dew leached the clay pipe's field.	 The bacteria leached the salt.
+control	 He controls the smoke cloud to avoid other people passing by.	 She controls her behaviour to avoid dangerous situations.
+get	 I am trying to get out of debts.	 They got me halfway to Tennessee.
+empty	 My doctor instructed me to empty my bowels before my appointment.	 I emptied the jar on the window sill.
+build	 The builders built a bridge over the lake.	 She built herself a lovely cabinet.
+lash	 She lashed out at her brother.	 The rebels lashed in vain for a better world.
+lay	 I sit down on the bench to lay down.	 I lay around the house not doing much.
+touch	 His touch will no longer be welcome.	 Where have you been touching?
+ping	 We are pinging your server.	 This ping-pong ball is annoying.
+shelve	 We're trying to get her to shelve her novel.	 I have something to put on your bookshelf.
+match	 We match shapes with shapes.	 He matched the woman's face with the newspaper.
+poise	 The picture had such excellent balance and poise.	 She poised the arrow that arrow that was knocked from her hand.
+empathize	 Empathize with my problems, will you?	 When they produce amusing comments, do not empathize with them by smiling; but, on the contrary, let your eyebrows knit together violently.Sentence 1
+shake	 We shook off our pursuers.	 The bartender has shaken the drinks too much.
+write	 I'll write an explanation for you.	 You can write down the order.
+laugh	 He laughs loudly.	 I laugh loudly.
+fire	 I was fired from my job.	 The company fired him.
+couple	 They are just hanging out together.	 They are just hanging out together.
+cast	 I cast a spell.	 She cast a glance his way.
+breakfast	 We had breakfast.	 He spent the morning eating breakfast.
+remove	 Rigoberto removes the callouses from his feet.	 She removed the blood from her arm with a cotton ball.
+eat	 I want to eat before I leave.	 They ate while walking.
+hold	 I can't hold it!	 She's shared shared the load.
+refund	 I will refund your money.	 I want my money refunded.
+clean	 The rock star cleaned his mansion with a toothbrush.	 She's a whiz at outdoor cooking and kitchen clean-up.
+orbit	 The moon orbits the earth.	 We orbit the sun.
+provide	 They provide that you have reached a certain date of life to make a withdrawal from your 401k.	 He provided homeschooling for his son.
+slit	 Emily slit her wrists with a razor blade.	 Edward would daydream of slitting his wrists out in the open sea.
+smell	 I don't try to push though.	 This place smells terrible!
+treat	 Honey paid for the dog to be treated.	 They treated their daughter with respect.
+underestimate	 I think he overestimated how much work he could handle.	 It would be very easy to underestimate the beauty of such a large scene such as this.
+erase	 I try to erase the feelings of regret.	 I will erase this letter also.
+lob	 They lobbed the ball across the field.	 She lobbed the question back at him.
+cut	 She cut her long hair down to her chin.	 He cut the rope.
+tell	 I told the man the time.	 He told me a sad story.
+crystallize	 I was able to crystallize my thoughts for this meeting.	 She crystallized her faith in chess.
+flip	 Flipping channels, it struck me how horrible reality TV is.	 Falling just shy of the mailbox, he flipped the ball into the neighbor's yard.
+volunteer	 I volunteered to go.	 She volunteered to enter the beauty competition.
+spend	 The spend the day being as happy as can be.	They spent a whole night out.
+add	 Glue some pieces of tissue paper on top of the clay so as not to add more clay on top.	 I added milk and sugar to my coffee.
+drill	 I drill the metal.	 She drilled her nail into his hand.
+press	 The garb harvester presses the clothes in the field.	 We can't press clothes in the field.Many clothes in the field.
+crack	 I can hear someone cracking their knuckles outside.	 I crack the eggs to scramble them.
+mount	 He mounted his horse confidently.	 We mounted the horse.
+waste	 Waste not, want not.	 I don't want to waste a trip to the library.
+winnow	 With Brad's help, they winnowed out what they needed.	 Put away all the good pieces.
+cuddle	 He cuddled the cat to his chest.	 They cuddled under the covers.
+approach	 They approached the corpse.	 I easily approached the words on the page.
+patch	 Thank goodness she patched a hole in her jeans.	 They patched the saddle blanket in a pocket also in contemplation of a future singletrack ride.
+keep	 I keep this piece of paper in my pocket.	 I use this coin in water.
+continue	 I will always continue to support you.	 Always continue to learn as much as you can.
+assemble	 I will not assemble the chairs.	 Assemble your words better.
+blaze	 They will blaze a trail.	 They blazed away the weeds.
+catch	 You'll catch your death of cold dressed like that.	She subconsciously began looking for her dad and caught her brother kissing one of their female classmates.
+normalize	 He tried to normalize his demeanor.	 These people desire to normalize the truth of something.
+guard	 I guard my rice fields all night.	 Herb guards the produce.
+shoot	 The shooting paralyzed him with fear.	 I missed my shot.
+visit	 We try to visit my parents on Sundays.	 I visited him on Monday.
+field	 Lisa head out to the field to work.	 But when she got to the field she discovered it was mud.
+tolerate	 I try to tolerate spicy foods.	 He can't tolerate his father's harangues about politics.
+prove	 The time has come to prove your love.	 It proved to be many months since I left.
+wharf	 She took her boat out of the wharf.	 He came wharf pounding again.
+tame	 Animals use to be savage and we left them to their business, and they would tame and keep the number of natural predators in an area down.	 Humans were never like this and we found ways to tame the world around us.
+strangle	 Dorothy had him in the ropes.	 She strangled him with her hands.
+strengthen	 Pat strengthened the pot with spoonfuls of sugar, flour, and butter.	 The winds strengthened.
+render	 They rendered it clean.	 He rendered her unconscious.
+bring	 It doesn't bring joy.	 We brought it back to life again.
+regret	 I regret booking this show.	 I regret laughing.
+rotate	 I rotate my camera as it moves across the ground.	 Corporate flights were scheduled to rotate back and forth monthly.
+freshen	 She uses her scarf to freshen up her outfit.	 It was no use trying to freshen up the dirt-covered lamb.Another set of sentences with one common verb in each sentence can be given with another common verb below.Verb
+levy	 The council levied an import tax on the cigarettes.	 I am levying a charge on customers of five dollars.
+retrograde	 She tried to keep her thoughts away from the darkness baring down.	 The eclipse began to rearrange the stars again.
+fiddle	 I fiddled with the key.	 He fiddled with the lock for a couple of minutes before it clicked.
+produce	 Unique designs are born of this screen.	 She produced some delicious sandwiches.
+screen	 Screen coverage is important for horse racing.	 He screened his eyes and watched her.
+blow	 I never blow my money.	 It blows my mind.
+arouse	 His presence aroused her.	 She arroused his suspicions.
+behave	 You must behave.	 A cat behaves by looking for food.
+ensure	 We ensured the car was in top condition.	 I’ll be ensuring people follow the rules.
+sanitize	 Sanitize the children before you bring them into the area.	 I hope you sanitized your plate.
+wear	 I can't stand to see you wearing such a clowny top!	 I often wear too-tight shoes.
+construct	 Peruvian construct their homes of adobe brick.	 Leonidas constructed his home of timber.
+ditch	 They ditched their teacher and went off on their own.	 I managed to ditch my obligations and leave.
+translate	 Translate from one language to another.	 She translated from one letter to the next.
+return	 I return his embrace.	 I'll return the coat.
+camp	 Foraging is popular with campers.	 He camped out on the couch.
+pound	 Pound the dough!.	 Pound on the door!
+see	 I saw the crook in the corner.	 He saw the girl sitting at the bar.
+ply	 He plied his trade on outside tables.	 Mark tried to ply me for information.
+bestow	 His mother bestowed (present tense) him the car.	 Spat crammed the microphone and bestowed (past tense) her prayer.
+offset	 My review of your recent purchase was offset by your terrible customer service.	 His often-seen nepotism offsets whatever good advice he's given.A way to offset their terrible customer service is to have excellent customer support.For English, using
+loosen	 I will loosen your grasp.	 I loosened my grip on the handlebars.
+drag	 I was dragged to the party unwillingly.	 I was dragged to the party unwillingly.
+step	 I stepped on a worm.	 She stepped gingerly downstairs.
+suffer	 He suffered from systemic curse.	 I suffered from heartbreak.
+fly	 The bird flew over the moon.	 The bomb flew into the television.
+extend	 I extend this feeling of intrigueSentence 2	 growSentence 1
+permit	 I will not permit the children to go out on a school night.	 She did not permit her voice to rise to a scream.
+melt	 The butter and chocolate chips felt as if they were about to melt and mix together.	 The snow was melting as we walked outside.
+dissent	 He was elected because he abstained from the vote.	 I dissent because plea deals are often fake.
+water	 The idea was watered down.	 He watered the ground to kill the weeds.
+kill	 They agreed to kill the horse.	 The horse killed the man.

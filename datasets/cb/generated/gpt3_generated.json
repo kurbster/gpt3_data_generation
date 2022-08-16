@@ -1,0 +1,474 @@
+{
+    "data": [
+        {
+            "premise": "Subsequent to the Conquest, however, the Marches came completely under the dominance of William's most trusted Norman barons, including Bernard de Neufmarch\u00e9, Roger of Montgomery in Shropshire and Hugh Lupus in Cheshire. These Normans began a long period of slow conquest during which almost all of Wales was at some point subject to Norman interference. Norman words, such as baron (barwn), first entered Welsh at that time.",
+            "hypothesis": " the Normans began a long period of slow conquest during which almost all of Wales was at some point subject to Norman interference.",
+            "label": 2
+        },
+        {
+            "premise": "For example, consider the deterministic sorting algorithm quicksort. This solves the problem of sorting a list of integers that is given as the input. The worst-case is when the input is sorted or sorted in reverse order, and the algorithm takes time O(n2) for this case.",
+            "hypothesis": " this solves the problem of sorting a list of integers that is given as the input",
+            "label": 0
+        },
+        {
+            "premise": "Earlier papers studying problems solvable by Turing machines with specific bounded resources include  John Myhill's definition of linear bounded automata (Myhill 1960), Raymond Smullyan's study of rudimentary sets (1961), as well as Hisao Yamada's paper on real-time computations (1962). Somewhat earlier, Boris Trakhtenbrot (1956), a pioneer in the field from the USSR, studied another specific complexity measure. As he remembers:",
+            "hypothesis": " Boris Trakhtenbrot (1956) studied another specific complexity measure.",
+            "label": 0
+        },
+        {
+            "premise": "What intractability means in practice is open to debate. Saying that a problem is not in P does not imply that all large cases of the problem are hard or even that most of them are.",
+            "hypothesis": " all large cases of the problem are hard",
+            "label": 1
+        },
+        {
+            "premise": "However, some computational problems are easier to analyze in terms of more unusual resources. For example, a non-deterministic Turing machine is a computational model that is allowed to branch out to check many different possibilities at once. The non-deterministic Turing machine has very little to do with how we physically want to compute algorithms, but its branching exactly captures many of the mathematical models we want to analyze, so that non-deterministic time is a very important resource in analyzing computational problems.",
+            "hypothesis": " non-deterministic time is a very important resource in analyzing computational problems",
+            "label": 2
+        },
+        {
+            "premise": "Decision problems are one of the central objects of study in computational complexity theory. A decision problem is a special type of computational problem whose answer is either yes or no, or alternately either 1 or 0. A decision problem can be viewed as a formal language, where the members of the language are instances whose output is yes, and the non-members are those instances whose output is no. The objective is to decide, with the aid of an algorithm, whether a given input string is a member of the formal language under consideration.",
+            "hypothesis": " a given input string is a member of the formal language under consideration",
+            "label": 0
+        },
+        {
+            "premise": "The question of whether P equals NP is one of the most important open questions in theoretical computer science because of the wide implications of a solution. If the answer is yes, many important problems can be shown to have more efficient solutions. These include various types of integer programming problems in operations research, many problems in logistics, protein structure prediction in biology, and the ability to find formal proofs of pure mathematics theorems.",
+            "hypothesis": " P does not equal NP",
+            "label": 0
+        },
+        {
+            "premise": "College sports are also popular in southern California. The UCLA Bruins and the USC Trojans both field teams in NCAA Division I in the Pac-12 Conference, and there is a longtime rivalry between the schools.",
+            "hypothesis": " College sports are also popular in southern California",
+            "label": 0
+        },
+        {
+            "premise": "Southern California, often abbreviated SoCal, is a geographic and cultural region that generally comprises California's southernmost 10 counties. The region is traditionally described as \"eight counties\", based on demographics and economic ties: Imperial, Los Angeles, Orange, Riverside, San Bernardino, San Diego, Santa Barbara, and Ventura. The more extensive 10-county definition, including Kern and San Luis Obispo counties, is also used based on historical political divisions.",
+            "hypothesis": " SoCal is a geographic and cultural region that generally comprises California's southernmost 10 counties.",
+            "label": 0
+        },
+        {
+            "premise": "BSkyB utilises the VideoGuard pay-TV scrambling system owned by NDS, a Cisco Systems company. There are tight controls over use of VideoGuard decoders; they are not available as stand-alone DVB CAMs (conditional-access modules).",
+            "hypothesis": " BSkyB does not utilise the VideoGuard pay-TV scrambling system",
+            "label": 0
+        },
+        {
+            "premise": "The agreements include fixed annual carriage fees of \u00a330m for the channels with both channel suppliers able to secure additional capped payments if their channels meet certain performance-related targets. Currently there is no indication as to whether the new deal includes the additional Video On Demand and High Definition content which had previously been offered by BSkyB. As part of the agreements, both BSkyB and Virgin Media agreed to terminate all High Court proceedings against each other relating to the carriage of their respective basic channels.",
+            "hypothesis": " the new deal does not include the additional Video On Demand and High Definition content which had previously been offered by BSkyB",
+            "label": 0
+        },
+        {
+            "premise": "Following a lengthy legal battle with the European Commission, which deemed the exclusivity of the rights to be against the interests of competition and the consumer, BSkyB's monopoly came to an end from the 2007\u201308 season. In May 2006, the Irish broadcaster Setanta Sports was awarded two of the six Premier League packages that the English FA offered to broadcasters.",
+            "hypothesis": " BSkyB's monopoly came to an end from the 2007-08 season",
+            "label": 2
+        },
+        {
+            "premise": "Immigrants arrived from all over the world to search for gold, especially from Ireland and China. Many Chinese miners worked in Victoria, and their legacy is particularly strong in Bendigo and its environs. Although there was some racism directed at them, there was not the level of anti-Chinese violence that was seen at the Lambing Flat riots in New South Wales. However, there was a riot at Buckland Valley near Bright in 1857.",
+            "hypothesis": " there was a riot at Buckland Valley near Bright in 1857",
+            "label": 2
+        },
+        {
+            "premise": "More than 26,000 square kilometres (10,000 sq mi) of Victorian farmland are sown for grain, mostly in the state's west. More than 50% of this area is sown for wheat, 33% for barley and 7% for oats. A further 6,000 square kilometres (2,300 sq mi) is sown for hay.",
+            "hypothesis": " a further 6,000 square kilometres (2,300 sq mi) is sown for hay.",
+            "label": 0
+        },
+        {
+            "premise": "Prior to European settlement, the area now constituting Victoria was inhabited by a large number of Aboriginal peoples, collectively known as the Koori. With Great Britain having claimed the entire Australian continent east of the 135th meridian east in 1788, Victoria was included in the wider colony of New South Wales.",
+            "hypothesis": " the area now constituting Victoria was inhabited by a large number of Aboriginal peoples",
+            "label": 0
+        },
+        {
+            "premise": "Montpellier was among the most important of the 66 \"villes de s\u00fbret\u00e9\" that the Edict of 1598 granted to the Huguenots. The city's political institutions and the university were all handed over to the Huguenots.",
+            "hypothesis": " Montpellier was among the most important of the 66 \"villes de s\u00fbret\u00e9\" that the Edict of 1598 granted to the Huguenots.",
+            "label": 0
+        },
+        {
+            "premise": "Although the reciprocating steam engine is no longer in widespread commercial use, various companies are exploring or exploiting the potential of the engine as an alternative to internal combustion engines. The company Energiprojekt AB in Sweden has made progress in using modern materials for harnessing the power of steam.",
+            "hypothesis": " the company Energiprojekt AB in Sweden has made progress in using modern materials for harnessing the power of steam.",
+            "label": 0
+        },
+        {
+            "premise": "The most useful instrument for analyzing the performance of steam engines is the steam engine indicator. Early versions were in use by 1851, but the most successful indicator was developed for the high speed engine inventor and manufacturer Charles Porter by Charles Richard and exhibited at London Exhibition in 1862.",
+            "hypothesis": " the most successful indicator was developed for the high speed engine inventor and manufacturer Charles Porter",
+            "label": 0
+        },
+        {
+            "premise": "Around 1800 Richard Trevithick and, separately, Oliver Evans in 1801 introduced engines using high-pressure steam; Trevithick obtained his high-pressure engine patent in 1802. These were much more powerful for a given cylinder size than previous engines and could be made small enough for transport applications. Thereafter, technological developments and improvements in manufacturing techniques (partly brought about by the adoption of the steam engine as a power source) resulted in the design of more efficient engines that could be smaller, faster, or more powerful, depending on the intended application.",
+            "hypothesis": " technological developments and improvements in manufacturing techniques resulted in the design of more efficient engines",
+            "label": 0
+        },
+        {
+            "premise": "The first commercially successful true engine, in that it could generate power and transmit it to a machine, was the atmospheric engine, invented by Thomas Newcomen around 1712. It was an improvement over Savery's steam pump, using a piston as proposed by Papin. Newcomen's engine was relatively inefficient, and in most cases was used for pumping water.",
+            "hypothesis": " the first commercially successful true engine was the atmospheric engine, invented by Thomas Newcomen",
+            "label": 0
+        },
+        {
+            "premise": "The history of the steam engine stretches back as far as the first century AD; the first recorded rudimentary steam engine being the aeolipile described by Greek mathematician Hero of Alexandria. In the following centuries, the few steam-powered \"engines\" known were, like the aeolipile, essentially experimental devices used by inventors to demonstrate the properties of steam. A rudimentary steam turbine device was described by Taqi al-Din in 1551 and by Giovanni Branca in 1629.",
+            "hypothesis": " the first recorded rudimentary steam engine was the aeolipile described by Greek mathematician Hero of Alexandria",
+            "label": 0
+        },
+        {
+            "premise": "Land-based steam engines could exhaust much of their steam, as feed water was usually readily available. Prior to and during World War I, the expansion engine dominated marine applications where high vessel speed was not essential. It was however superseded by the British invention steam turbine where speed was required, for instance in warships, such as the dreadnought battleships, and ocean liners. HMS Dreadnought of 1905 was the first major warship to replace the proven technology of the reciprocating engine with the then-novel steam turbine.",
+            "hypothesis": " steam turbines superseded land-based steam engines",
+            "label": 2
+        },
+        {
+            "premise": "The element is found in almost all biomolecules that are important to (or generated by) life. Only a few common complex biomolecules, such as squalene and the carotenes, contain no oxygen.",
+            "hypothesis": " the element is found in almost all biomolecules that are important to (or generated by) life",
+            "label": 0
+        },
+        {
+            "premise": "Oxygen presents two spectrophotometric absorption bands peaking at the wavelengths 687 and 760 nm. Some remote sensing scientists have proposed using the measurement of the radiance coming from vegetation canopies in those bands to characterize plant health status from a satellite platform. This approach exploits the fact that in those bands it is possible to discriminate the vegetation's reflectance from its fluorescence, which is much weaker.",
+            "hypothesis": " it is possible to discriminate the vegetation's reflectance from its fluorescence",
+            "label": 0
+        },
+        {
+            "premise": "Trioxygen (O\n3) is usually known as ozone and is a very reactive allotrope of oxygen that is damaging to lung tissue. Ozone is produced in the upper atmosphere when O\n2 combines with atomic oxygen made by the splitting of O\n2 by ultraviolet (UV) radiation. Since ozone absorbs strongly in the UV region of the spectrum, the ozone layer of the upper atmosphere functions as a protective radiation shield for the planet. Near the Earth's surface, it is a pollutant formed as a by-product of automobile exhaust.",
+            "hypothesis": " ozone is a pollutant formed as a by-product of automobile exhaust",
+            "label": 2
+        },
+        {
+            "premise": "The embargo had a negative influence on the US economy by causing immediate demands to address the threats to U.S. energy security. On an international level, the price increases changed competitive positions in many industries, such as automobiles. Macroeconomic problems consisted of both inflationary and deflationary impacts.",
+            "hypothesis": " the embargo had a negative influence on the US economy",
+            "label": 0
+        },
+        {
+            "premise": "In 1973, Nixon named William E. Simon as the first Administrator of the Federal Energy Office, a short-term organization created to coordinate the response to the embargo. Simon allocated states the same amount of domestic oil for 1974 that each had consumed in 1972, which worked for states whose populations were not increasing.",
+            "hypothesis": " if a state's population was not increasing, then they would be allocated the same amount of domestic oil for 1974 as they had consumed in 1972",
+            "label": 0
+        },
+        {
+            "premise": "The Social Chapter is a chapter of the 1997 Treaty of Amsterdam covering social policy issues in European Union law. The basis for the Social Chapter was developed in 1989 by the \"social partners\" representatives, namely UNICE, the employers' confederation, the European Trade Union Confederation (ETUC) and CEEP, the European Centre of Public Enterprises.",
+            "hypothesis": " the Social Chapter is a chapter of the 1997 Treaty of Amsterdam covering social policy issues in European Union law",
+            "label": 0
+        },
+        {
+            "premise": "Fourth, national courts have a duty to interpret domestic law \"as far as possible in the light of the wording and purpose of the directive\". Textbooks (though not the Court itself) often called this \"indirect effect\". In Marleasing SA v La Comercial SA the Court of Justice held that a Spanish Court had to interpret its general Civil Code provisions, on contracts lacking cause or defrauding creditors, to conform with the First Company Law Directive article 11, that required incorporations would only be nullified for a fixed list of reasons. The Court of Justice quickly acknowledged that the duty of interpretation cannot contradict plain words in a national statute.",
+            "hypothesis": " a Spanish Court had to interpret its general Civil Code provisions, on contracts lacking cause or defrauding creditors, to conform with the First Company Law Directive article 11",
+            "label": 2
+        },
+        {
+            "premise": "To make new legislation, TFEU article 294 defines the \"ordinary legislative procedure\" that applies for most EU acts. The essence is there are three readings, starting with a Commission proposal, where the Parliament must vote by a majority of all MEPs (not just those present) to block or suggest changes, and the Council must vote by qualified majority to approve changes, but by unanimity to block Commission amendment.",
+            "hypothesis": " the Parliament must vote by a majority of all MEPs to block or suggest changes",
+            "label": 0
+        },
+        {
+            "premise": "Following the Cretaceous\u2013Paleogene extinction event, the extinction of the dinosaurs and the wetter climate may have allowed the tropical rainforest to spread out across the continent. From 66\u201334 Mya, the rainforest extended as far south as 45\u00b0.",
+            "hypothesis": " the rainforest extended as far south as 45\u00b0",
+            "label": 0
+        },
+        {
+            "premise": "To accurately map the Amazon's biomass and subsequent carbon related emissions, the classification of tree growth stages within different parts of the forest is crucial. In 2006 Tatiana Kuplich organized the trees of the Amazon into four categories: (1) mature forest, (2) regenerating forest [less than three years], (3) regenerating forest [between three and five years of regrowth], and (4) regenerating forest [eleven to eighteen years of continued development]. The researcher used a combination of Synthetic aperture radar (SAR) and Thematic Mapper (TM) to accurately place the different portions of the Amazon into one of the four classifications.",
+            "hypothesis": " the researcher used a combination of Synthetic aperture radar (SAR) and Thematic Mapper (TM) to accurately place the different portions of the Amazon into one of the four classifications",
+            "label": 0
+        },
+        {
+            "premise": "Most Platyctenida have oval bodies that are flattened in the oral-aboral direction, with a pair of tentilla-bearing tentacles on the aboral surface. They cling to and creep on surfaces by everting the pharynx and using it as a muscular \"foot\".",
+            "hypothesis": " they cling to and creep on surfaces by everting the pharynx and using it as a muscular \"foot\"",
+            "label": 0
+        },
+        {
+            "premise": "The tentacles of cydippid ctenophores are typically fringed with tentilla (\"little tentacles\"), although a few genera have simple tentacles without these sidebranches. The tentacles and tentilla are densely covered with microscopic colloblasts that capture prey by sticking to it.",
+            "hypothesis": " the tentacles and tentilla are densely covered with microscopic colloblasts",
+            "label": 0
+        },
+        {
+            "premise": "For a phylum with relatively few species, ctenophores have a wide range of body plans. Coastal species need to be tough enough to withstand waves and swirling sediment particles, while some oceanic species are so fragile that it is very difficult to capture them intact for study. In addition oceanic species do not preserve well, and are known mainly from photographs and from observers' notes. Hence most attention has until recently concentrated on three coastal genera \u2013 Pleurobrachia, Beroe and Mnemiopsis.",
+            "hypothesis": " ctenophores have a wide range of body plans",
+            "label": 0
+        },
+        {
+            "premise": "Homes from the early 20th century line this boulevard in the heart of the historic Alta Vista Tract. The section of Huntington Boulevard between First Street on the west to Cedar Avenue on the east is the home to many large, stately homes.",
+            "hypothesis": " the section of Huntington Boulevard between First Street on the west to Cedar Avenue on the east is the home to many large, stately homes.",
+            "label": 0
+        },
+        {
+            "premise": "As of the census of 2000, there were 427,652 people, 140,079 households, and 97,915 families residing in the city. The population density was 4,097.9 people per square mile (1,582.2/km\u00b2). There were 149,025 housing units at an average density of 1,427.9 square miles (3,698 km2). The racial makeup of the city was 50.2% White, 8.4% Black or African American, 1.6% Native American, 11.2% Asian (about a third of which is Hmong), 0.1% Pacific Islander, 23.4% from other races, and 5.2% from two or more races.",
+            "hypothesis": " the population of the city was 427,652 in 2000",
+            "label": 0
+        },
+        {
+            "premise": "The Black Death is thought to have originated in the arid plains of Central Asia, where it then travelled along the Silk Road, reaching Crimea by 1343. From there, it was most likely carried by Oriental rat fleas living on the black rats that were regular passengers on merchant ships.",
+            "hypothesis": " the Black Death originated in the arid plains of Central Asia",
+            "label": 0
+        },
+        {
+            "premise": "It is recognised that an epidemiological account of the plague is as important as an identification of symptoms, but researchers are hampered by the lack of reliable statistics from this period. Most work has been done on the spread of the plague in England, and even estimates of overall population at the start vary by over 100% as no census was undertaken between the time of publication of the Domesday Book and the year 1377. Estimates of plague victims are usually extrapolated from figures from the clergy.",
+            "hypothesis": " there are no reliable statistics from this period",
+            "label": 0
+        },
+        {
+            "premise": "In 1466, perhaps 40,000 people died of the plague in Paris. During the 16th and 17th centuries, the plague was present in Paris around 30 per cent of the time. The Black Death ravaged Europe for three years before it continued on into Russia, where the disease was present somewhere in the country 25 times between 1350 to 1490.",
+            "hypothesis": " the plague was present in Russia around 25 times between 1350 to 1490",
+            "label": 2
+        },
+        {
+            "premise": "All of these processes do not necessarily occur in a single environment, and do not necessarily occur in a single order. The Hawaiian Islands, for example, consist almost entirely of layered basaltic lava flows. The sedimentary sequences of the mid-continental United States and the Grand Canyon in the southwestern United States contain almost-undeformed stacks of sedimentary rocks that have remained in place since Cambrian time. Other areas are much more geologically complex.",
+            "hypothesis": " the Hawaiian Islands consist almost entirely of layered basaltic lava flows",
+            "label": 0
+        },
+        {
+            "premise": "Among the most well-known experiments in structural geology are those involving orogenic wedges, which are zones in which mountains are built along convergent tectonic plate boundaries. In the analog versions of these experiments, horizontal layers of sand are pulled along a lower surface into a back stop, which results in realistic-looking patterns of faulting and the growth of a critically tapered (all angles remain the same) orogenic wedge. Numerical models work in the same way as these analog models, though they are often more sophisticated and can include patterns of erosion and uplift in the mountain belt. This helps to show the relationship between erosion and the shape of the mountain range.",
+            "hypothesis": " the shape of the mountain range is related to erosion",
+            "label": 1
+        },
+        {
+            "premise": "The principle of faunal succession is based on the appearance of fossils in sedimentary rocks. As organisms exist at the same time period throughout the world, their presence or (sometimes) absence may be used to provide a relative age of the formations in which they are found. Based on principles laid out by William Smith almost a hundred years before the publication of Charles Darwin's theory of evolution, the principles of succession were developed independently of evolutionary thought. The principle becomes quite complex, however, given the uncertainties of fossilization, the localization of fossil types due to lateral changes in habitat (facies change in sedimentary strata), and that not all fossils may be found globally at the same time.",
+            "hypothesis": " the principle of faunal succession is based on the appearance of fossils in sedimentary rocks",
+            "label": 0
+        },
+        {
+            "premise": "The word pharmacy is derived from its root word pharma which was a term used since the 15th\u201317th centuries. However, the original Greek roots from pharmakos imply sorcery or even poison. In addition to pharma responsibilities, the pharma offered general medical advice and a range of services that are now performed solely by other specialist practitioners, such as surgery and midwifery. The pharma (as it was referred to) often operated through a retail shop which, in addition to ingredients for medicines, sold tobacco and patent medicines.",
+            "hypothesis": " the root word pharma was used since the 15th-17th centuries",
+            "label": 0
+        },
+        {
+            "premise": "In some rural areas in the United Kingdom, there are dispensing physicians who are allowed to both prescribe and dispense prescription-only medicines to their patients from within their practices. The law requires that the GP practice be located in a designated rural area and that there is also a specified, minimum distance (currently 1.6 kilometres) between a patient's home and the nearest retail pharmacy. This law also exists in Austria for general physicians if the nearest pharmacy is more than 4 kilometers away, or where none is registered in the city.",
+            "hypothesis": " the law requires that the GP practice be located in a designated rural area",
+            "label": 0
+        },
+        {
+            "premise": "It has been argued that the term \"civil disobedience\" has always suffered from ambiguity and in modern times, become utterly debased. Marshall Cohen notes, \"It has been used to describe everything from bringing a test-case in the federal courts to taking aim at a federal official. Indeed, for Vice President Agnew it has become a code-word describing the activities of muggers, arsonists, draft evaders, campaign hecklers, campus militants, anti-war demonstrators, juvenile delinquents and political assassins.\"",
+            "hypothesis": " the term \"civil disobedience\" has always suffered from ambiguity",
+            "label": 0
+        },
+        {
+            "premise": "Large-scale construction requires collaboration across multiple disciplines. An architect normally manages the job, and a construction manager, design engineer, construction engineer or project manager supervises it. For the successful execution of a project, effective planning is essential. Those involved with the design and execution of the infrastructure in question must consider zoning requirements, the environmental impact of the job, the successful scheduling, budgeting, construction-site safety, availability and transportation of building materials, logistics, inconvenience to the public caused by construction delays and bidding, etc.",
+            "hypothesis": " an architect normally manages the job",
+            "label": 0
+        },
+        {
+            "premise": "The modern trend in design is toward integration of previously separated specialties, especially among large firms. In the past, architects, interior designers, engineers, developers, construction managers, and general contractors were more likely to be entirely separate companies, even in the larger firms. Presently, a firm that is nominally an \"architecture\" or \"construction management\" firm may have experts from all related fields as employees, or to have an associated company that provides each necessary skill.",
+            "hypothesis": " a firm that is nominally an \"architecture\" or \"construction management\" firm may have experts from all related fields as employees",
+            "label": 2
+        },
+        {
+            "premise": "A construction project is a complex net of contracts and other legal obligations, each of which all parties must carefully consider. A contract is the exchange of a set of obligations between two or more parties, but it is not so simple a matter as trying to get the other side to agree to as much as possible in exchange for as little as possible.",
+            "hypothesis": " trying to get the other side to agree to as much as possible in exchange for as little as possible is a simple matter",
+            "label": 0
+        },
+        {
+            "premise": "Several project structures can assist the owner in this integration, including design-build, partnering and construction management. In general, each of these project structures allows the owner to integrate the services of architects, interior designers, engineers and constructors throughout design and construction. In response, many companies are growing beyond traditional offerings of design or construction services alone and are placing more emphasis on establishing relationships with other necessary participants through the design-build process.",
+            "hypothesis": " design-build, partnering and construction management allow the owner to integrate the services of architects, interior designers, engineers and constructors throughout design and construction.",
+            "label": 2
+        },
+        {
+            "premise": "Construction is the process of constructing a building or infrastructure. Construction differs from manufacturing in that manufacturing typically involves mass production of similar items without a designated purchaser, while construction typically takes place on location for a known client. Construction as an industry comprises six to nine percent of the gross domestic product of developed countries. Construction starts with planning,[citation needed] design, and financing and continues until the project is built and ready for use.",
+            "hypothesis": " construction is the process of constructing a building or infrastructure",
+            "label": 0
+        },
+        {
+            "premise": "Construction projects can suffer from preventable financial problems. Underbids happen when builders ask for too little money to complete the project. Cash flow problems exist when the present amount of funding cannot cover the current costs for labour and materials, and because they are a matter of having sufficient funds at a specific time, can arise even when the overall total is enough.",
+            "hypothesis": " cash flow problems can arise even when the overall total is enough",
+            "label": 2
+        },
+        {
+            "premise": "In the United Kingdom and several other Commonwealth countries including Australia and Canada, the use of the term is generally restricted to primary and secondary educational levels; it is almost never used of universities and other tertiary institutions. Private education in North America covers the whole gamut of educational activity, ranging from pre-school to tertiary level institutions. Annual tuition fees at K-12 schools range from nothing at so called 'tuition-free' schools to more than $45,000 at several New England preparatory schools.",
+            "hypothesis": " the term 'university' is never used of universities and other tertiary institutions",
+            "label": 0
+        },
+        {
+            "premise": "Harvard was formed in 1636 by vote of the Great and General Court of the Massachusetts Bay Colony. It was initially called \"New College\" or \"the college at New Towne\". In 1638, the college became home for North America's first known printing press, carried by the ship John of London.",
+            "hypothesis": " Harvard was formed in 1636 by vote of the Great and General Court of the Massachusetts Bay Colony",
+            "label": 0
+        },
+        {
+            "premise": "When a consolidation referendum was held in 1967, voters approved the plan. On October 1, 1968, the governments merged to create the Consolidated City of Jacksonville. Fire, police, health & welfare, recreation, public works, and housing & urban development were all combined under the new government.",
+            "hypothesis": " the Consolidated City of Jacksonville was created on October 1, 1968",
+            "label": 1
+        },
+        {
+            "premise": "French Huguenot explorer Jean Ribault charted the St. Johns River in 1562 calling it the River of May because he discovered it in May. Ribault erected a stone column near present-day Jacksonville claiming the newly discovered land for France. In 1564, Ren\u00e9 Goulaine de Laudonni\u00e8re established the first European settlement, Fort Caroline, on the St. Johns near the main village of the Saturiwa.",
+            "hypothesis": " Fort Caroline was established on the St. Johns near the main village of the Saturiwa.",
+            "label": 0
+        },
+        {
+            "premise": "In the 1910s, New York\u2013based filmmakers were attracted to Jacksonville's warm climate, exotic locations, excellent rail access, and cheap labor. Over the course of the decade, more than 30 silent film studios were established, earning Jacksonville the title of \"Winter Film Capital of the World\". However, the emergence of Hollywood as a major film production center ended the city's film industry.",
+            "hypothesis": " the emergence of Hollywood as a major film production center ended the city's film industry.",
+            "label": 2
+        },
+        {
+            "premise": "During Reconstruction and the Gilded Age, Jacksonville and nearby St. Augustine became popular winter resorts for the rich and famous. Visitors arrived by steamboat and later by railroad.",
+            "hypothesis": " Jacksonville and nearby St. Augustine became popular winter resorts for the rich and famous.",
+            "label": 0
+        },
+        {
+            "premise": "A job where there are many workers willing to work a large amount of time (high supply) competing for a job that few require (low demand) will result in a low wage for that job. This is because competition between workers drives down the wage.",
+            "hypothesis": " a low wage will result from competition between workers",
+            "label": 1
+        },
+        {
+            "premise": "The University of Chicago is governed by a board of trustees. The Board of Trustees oversees the long-term development and plans of the university and manages fundraising efforts, and is composed of 50 members including the university President. Directly beneath the President are the Provost, fourteen Vice Presidents (including the Chief Financial Officer, Chief Investment Officer, and Dean of Students of the university), the Directors of Argonne National Laboratory and Fermilab, the Secretary of the university, and the Student Ombudsperson.",
+            "hypothesis": " the Student Ombudsperson is beneath the Directors of Argonne National Laboratory and Fermilab in the governance of the University of Chicago",
+            "label": 2
+        },
+        {
+            "premise": "The average Mongol garrison family of the Yuan dynasty seems to have lived a life of decaying rural leisure, with income from the harvests of their Chinese tenants eaten up by costs of equipping and dispatching men for their tours of duty. The Mongols practiced debt slavery, and by 1290 in all parts of the Mongol Empire commoners were selling their children into slavery.",
+            "hypothesis": " the Mongols practiced debt slavery",
+            "label": 2
+        },
+        {
+            "premise": "Genghis Khan united the Mongol and Turkic tribes of the steppes and became Great Khan in 1206. He and his successors expanded the Mongol empire across Asia.",
+            "hypothesis": " Genghis Khan united the Mongol and Turkic tribes of the steppes",
+            "label": 0
+        },
+        {
+            "premise": "The Yuan undertook extensive public works. Among Kublai Khan's top engineers and scientists was the astronomer Guo Shoujing, who was tasked with many public works projects and helped the Yuan reform the lunisolar calendar to provide an accuracy of 365.2425 days of the year, which was only 26 seconds off the modern Gregorian calendar's measurement.",
+            "hypothesis": " the Yuan reformed the lunisolar calendar to provide an accuracy of 365.2425 days of the year",
+            "label": 1
+        },
+        {
+            "premise": "The immune system protects organisms from infection with layered defenses of increasing specificity. In simple terms, physical barriers prevent pathogens such as bacteria and viruses from entering the organism. If a pathogen breaches these barriers, the innate immune system provides an immediate, but non-specific response. Innate immune systems are found in all plants and animals.",
+            "hypothesis": " physical barriers prevent pathogens from entering the organism.",
+            "label": 0
+        },
+        {
+            "premise": "Larger drugs (>500 Da) can provoke a neutralizing immune response, particularly if the drugs are administered repeatedly, or in larger doses. This limits the effectiveness of drugs based on larger peptides and proteins (which are typically larger than 6000 Da).",
+            "hypothesis": " this limits the effectiveness of drugs based on larger peptides and proteins",
+            "label": 0
+        },
+        {
+            "premise": "The executive summary of the WG I Summary for Policymakers report says they are certain that emissions resulting from human activities are substantially increasing the atmospheric concentrations of the greenhouse gases, resulting on average in an additional warming of the Earth's surface. They calculate with confidence that CO2 has been responsible for over half the enhanced greenhouse effect. They predict that under a \"business as usual\" (BAU) scenario, global mean temperature will increase by about 0.3 \u00b0C per decade during the [21st] century. They judge that global mean surface air temperature has increased by 0.3 to 0.6 \u00b0C over the last 100 years, broadly consistent with prediction of climate models, but also of the same magnitude as natural climate variability.",
+            "hypothesis": " under a \"business as usual\" (BAU) scenario, global mean temperature will increase by about 0.3 \u00b0C per decade during the [21st] century",
+            "label": 2
+        },
+        {
+            "premise": "Each chapter has a number of authors who are responsible for writing and editing the material. A chapter typically has two \"coordinating lead authors\", ten to fifteen \"lead authors\", and a somewhat larger number of \"contributing authors\".",
+            "hypothesis": " a chapter typically has two \"coordinating lead authors\"",
+            "label": 0
+        },
+        {
+            "premise": "On 1 February 2007, the eve of the publication of IPCC's major report on climate, a study was published suggesting that temperatures and sea levels have been rising at or above the maximum rates proposed during the last IPCC report in 2001. The study compared IPCC 2001 projections on temperature and sea level change with observations. Over the six years studied, the actual temperature rise was near the top end of the range given by IPCC's 2001 projection, and the actual sea level rise was above the top of the range of the IPCC projection.",
+            "hypothesis": " the actual temperature rise was near the top end of the range given by IPCC's 2001 projection",
+            "label": 1
+        },
+        {
+            "premise": "A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself. A natural number greater than 1 that is not a prime number is called a composite number. For example, 5 is prime because 1 and 5 are its only positive integer factors, whereas 6 is composite because it has the divisors 2 and 3 in addition to 1 and 6. The fundamental theorem of arithmetic establishes the central role of primes in number theory: any integer greater than 1 can be expressed as a product of primes that is unique up to ordering.",
+            "hypothesis": " any integer greater than 1 can be expressed as a product of primes that is unique up to ordering",
+            "label": 0
+        },
+        {
+            "premise": "After the Greeks, little happened with the study of prime numbers until the 17th century. In 1640 Pierre de Fermat stated (without proof) Fermat's little theorem (later proved by Leibniz and Euler). Fermat also conjectured that all numbers of the form 22n + 1 are prime (they are called Fermat numbers) and he verified this up to n = 4 (or 216 + 1).",
+            "hypothesis": " all numbers of the form 22n + 1 are prime",
+            "label": 2
+        },
+        {
+            "premise": "The evolutionary strategy used by cicadas of the genus Magicicada make use of prime numbers. These insects spend most of their lives as grubs underground. They only pupate and then emerge from their burrows after 7, 13 or 17 years, at which point they fly about, breed, and then die after a few weeks at most.",
+            "hypothesis": " the evolutionary strategy used by cicadas of the genus Magicicada make use of prime numbers",
+            "label": 1
+        },
+        {
+            "premise": "The property of being prime (or not) is called primality. A simple but slow method of verifying the primality of a given number n is known as trial division. It consists of testing whether n is a multiple of any integer between 2 and . Algorithms much more efficient than trial division have been devised to test the primality of large numbers.",
+            "hypothesis": " n is a multiple of any integer between 2 and",
+            "label": 0
+        },
+        {
+            "premise": "The concept of prime number is so important that it has been generalized in different ways in various branches of mathematics. Generally, \"prime\" indicates minimality or indecomposability, in an appropriate sense. For example, the prime field is the smallest subfield of a field F containing both 0 and 1. It is either Q or the finite field with p elements, whence the name.",
+            "hypothesis": " the prime field is the smallest subfield of a field F containing both 0 and 1",
+            "label": 0
+        },
+        {
+            "premise": "In southern Europe, the stage was set in the Triassic Period of the Mesozoic Era, with the opening of the Tethys Ocean, between the Eurasian and African tectonic plates, between about 240 MBP and 220 MBP (million years before present). The present Mediterranean Sea descends from this somewhat larger Tethys sea.",
+            "hypothesis": " the present Mediterranean Sea descends from the Tethys sea",
+            "label": 0
+        },
+        {
+            "premise": "From here, the situation becomes more complicated, as the Dutch name Rijn no longer coincides with the main flow of water. Two thirds of the water flow volume of the Rhine flows farther west, through the Waal and then, via the Merwede and Nieuwe Merwede (De Biesbosch), merging with the Meuse, through the Hollands Diep and Haringvliet estuaries, into the North Sea. The Beneden Merwede branches off, near Hardinxveld-Giessendam and continues as the Noord, to join the Lek, near the village of Kinderdijk, to form the Nieuwe Maas; then flows past Rotterdam and continues via Het Scheur and the Nieuwe Waterweg, to the North Sea.",
+            "hypothesis": " the Dutch name Rijn coincides with the main flow of water",
+            "label": 0
+        },
+        {
+            "premise": "In the centre of Basel, the first major city in the course of the stream, is located the \"Rhine knee\"; this is a major bend, where the overall direction of the Rhine changes from West to North. Here the High Rhine ends.",
+            "hypothesis": " the High Rhine ends at the \"Rhine knee\"",
+            "label": 0
+        },
+        {
+            "premise": "Near Tamins-Reichenau the Anterior Rhine and the Posterior Rhine join and form the Rhine. The river makes a distinctive turn to the north near Chur. This section is nearly 86 km long, and descends from a height of 599 m to 396 m. It flows through a wide glacial alpine valley known as the Rhine Valley (German: Rheintal).",
+            "hypothesis": " the Rhine flows through a wide glacial alpine valley known as the Rhine Valley",
+            "label": 0
+        },
+        {
+            "premise": "The Upper Rhine region was changed significantly by a Rhine straightening program in the 19th Century. The rate of flow was increased and the ground water level fell significantly. Dead branches dried up and the amount of forests on the flood plains decreased sharply.",
+            "hypothesis": " the ground water level fell significantly",
+            "label": 1
+        },
+        {
+            "premise": "The election produced a majority SNP government, making this the first time in the Scottish Parliament where a party has commanded a parliamentary majority. The SNP took 16 seats from Labour, with many of their key figures not returned to parliament, although Labour leader Iain Gray retained East Lothian by 151 votes. The SNP took a further eight seats from the Liberal Democrats and one seat from the Conservatives. The SNP overall majority meant that there was sufficient support in the Scottish Parliament to hold a referendum on Scottish independence.",
+            "hypothesis": " the SNP will hold a referendum on Scottish independence",
+            "label": 2
+        },
+        {
+            "premise": "Bills can be introduced to Parliament in a number of ways; the Scottish Government can introduce new laws or amendments to existing laws as a bill; a committee of the Parliament can present a bill in one of the areas under its remit; a member of the Scottish Parliament can introduce a bill as a private member; or a private bill can be submitted to Parliament by an outside proposer. Most draft laws are government bills introduced by ministers in the governing party. Bills pass through Parliament in a number of stages:",
+            "hypothesis": " most draft laws are government bills introduced by ministers in the governing party",
+            "label": 0
+        },
+        {
+            "premise": "Whilst the permanent building at Holyrood was being constructed, the Parliament's temporary home was the General Assembly Hall of the Church of Scotland on the Royal Mile in Edinburgh. Official photographs and television interviews were held in the courtyard adjoining the Assembly Hall, which is part of the School of Divinity of the University of Edinburgh. This building was vacated twice to allow for the meeting of the Church's General Assembly.",
+            "hypothesis": " the building was vacated twice to allow for the meeting of the Church's General Assembly.",
+            "label": 0
+        },
+        {
+            "premise": "Despite periodic repression, the Brotherhood has become one of the most influential movements in the Islamic world, particularly in the Arab world. For many years it was described as \"semi-legal\" and was the only opposition group in Egypt able to field candidates during elections. In the Egyptian parliamentary election, 2011\u20132012, the political parties identified as \"Islamist\" (the Brotherhood's Freedom and Justice Party, Salafi Al-Nour Party and liberal Islamist Al-Wasat Party) won 75% of the total seats.",
+            "hypothesis": " the Brotherhood has become one of the most influential movements in the Islamic world, particularly in the Arab world",
+            "label": 1
+        },
+        {
+            "premise": "Bolshevik leaders had effectively reestablished a polity with roughly the same extent as that empire by 1921, however with an internationalist ideology: Lenin in particular asserted the right to limited self-determination for national minorities within the new territory. Beginning in 1923, the policy of \"Indigenization\" [korenizatsiia] was intended to support non-Russians develop their national cultures within a socialist framework.",
+            "hypothesis": " Lenin asserted the right to limited self-determination for national minorities within the new territory.",
+            "label": 2
+        },
+        {
+            "premise": "The definition of imperialism has not been finalized for centuries and was confusedly seen to represent the policies of major powers, or simply, general-purpose aggressiveness. Further on, some writers[who?]",
+            "hypothesis": " the definition of imperialism has not been finalized for centuries",
+            "label": 0
+        },
+        {
+            "premise": "Along with advancements in communication, Europe also continued to advance in military technology. European chemists made deadly explosives that could be used in combat, and with innovations in machinery they were able to manufacture improved firearms.",
+            "hypothesis": " with innovations in machinery they were able to manufacture improved firearms",
+            "label": 0
+        },
+        {
+            "premise": "A resurgence came in the late 19th century, with the Scramble for Africa and major additions in Asia and the Middle East. The British spirit of imperialism was expressed by Joseph Chamberlain and Lord Rosebury, and implemented in Africa by Cecil Rhodes. The pseudo-sciences of Social Darwinism and theories of race formed an ideological underpinning during this time.",
+            "hypothesis": " the British spirit of imperialism was expressed by Joseph Chamberlain and Lord Rosebury",
+            "label": 0
+        },
+        {
+            "premise": "Warsaw remained the capital of the Polish\u2013Lithuanian Commonwealth until 1796, when it was annexed by the Kingdom of Prussia to become the capital of the province of South Prussia. Liberated by Napoleon's army in 1806, Warsaw was made the capital of the newly created Duchy of Warsaw.",
+            "hypothesis": " Warsaw was the capital of the newly created Duchy of Warsaw",
+            "label": 0
+        },
+        {
+            "premise": "The basic unit of territorial division in Poland is a commune (gmina). A city is also a commune \u2013 but with the city charter. Both cities and communes are governed by a mayor \u2013 but in the communes the mayor is vogt (w\u00f3jt in Polish), however in the cities \u2013 burmistrz.",
+            "hypothesis": " a city is also a commune",
+            "label": 0
+        },
+        {
+            "premise": "Warsaw, especially its city centre (\u015ar\u00f3dmie\u015bcie), is home not only to many national institutions and government agencies, but also to many domestic and international companies. In 2006, 304,016 companies were registered in the city. Warsaw's ever-growing business community has been noticed globally, regionally, and nationally.",
+            "hypothesis": " Warsaw's business community has been noticed globally, regionally, and nationally.",
+            "label": 0
+        },
+        {
+            "premise": "Warsaw's mixture of architectural styles reflects the turbulent history of the city and country. During the Second World War, Warsaw was razed to the ground by bombing raids and planned destruction. After liberation, rebuilding began as in other cities of the communist-ruled PRL. Most of the historical buildings were thoroughly reconstructed.",
+            "hypothesis": " Warsaw was razed to the ground by bombing raids and planned destruction",
+            "label": 0
+        },
+        {
+            "premise": "The war was fought primarily along the frontiers between New France and the British colonies, from Virginia in the South to Nova Scotia in the North. It began with a dispute over control of the confluence of the Allegheny and Monongahela rivers, called the Forks of the Ohio, and the site of the French Fort Duquesne and present-day Pittsburgh, Pennsylvania. The dispute erupted into violence in the Battle of Jumonville Glen in May 1754, during which Virginia militiamen under the command of 22-year-old George Washington ambushed a French patrol.",
+            "hypothesis": " the dispute erupted into violence in the Battle of Jumonville Glen in May 1754",
+            "label": 0
+        },
+        {
+            "premise": "The War of the Austrian Succession (whose North American theater is known as King George's War) formally ended in 1748 with the signing of the Treaty of Aix-la-Chapelle. The treaty was primarily focused on resolving issues in Europe. The issues of conflicting territorial claims between British and French colonies in North America were turned over to a commission to resolve, but it reached no decision. Frontiers from between Nova Scotia and Acadia in the north, to the Ohio Country in the south, were claimed by both sides.",
+            "hypothesis": " the War of the Austrian Succession ended in 1748",
+            "label": 0
+        },
+        {
+            "premise": "Braddock (with George Washington as one of his aides) led about 1,500 army troops and provincial militia on an expedition in June 1755 to take Fort Duquesne. The expedition was a disaster. It was attacked by French and Indian soldiers ambushing them from up in trees and behind logs. Braddock called for a retreat.",
+            "hypothesis": " the retreat was called for",
+            "label": 0
+        },
+        {
+            "premise": "Newton's Second Law asserts the direct proportionality of acceleration to force and the inverse proportionality of acceleration to mass. Accelerations can be defined through kinematic measurements. However, while kinematics are well-described through reference frame analysis in advanced physics, there are still deep questions that remain as to what is the proper definition of mass.",
+            "hypothesis": " there is still deep questions that remain as to what is the proper definition of mass",
+            "label": 2
+        }
+    ]
+}
