@@ -15,11 +15,11 @@ do_predict: True
 
 model_name: "${hydra:env.model_name}"
 
-train_file: "/home/friends/Data_Generation_GPT3/datasets/${hydra:env.dataset_name}/generated/gpt3_generated.json"
+train_file: "datasets/${hydra:env.dataset_name}/generated/gpt3_generated.json"
 dataset_name: "${hydra:env.dataset_name}"
 
-cache_dir: "/home/friends/Data_Generation_GPT3/.cache"
-output_dir: "/home/friends/Data_Generation_GPT3/models/${hydra:env.dataset_name}/${hydra:env.model_name}"
+cache_dir: ".cache"
+output_dir: "models/${hydra:env.dataset_name}/${hydra:env.model_name}"
 
 text_column: "text"
 label_column: "label"
