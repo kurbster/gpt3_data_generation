@@ -108,8 +108,10 @@ def get_model_and_tokenizer(model_args: ModelArguments, data_args: DataTrainingA
         revision=model_args.model_revision,
     )
 
-    model_type = task_model_types[model_args.task.lower()]
-    model = model_type.from_pretrained(model_name, config=config)
+    # model_type = task_model_types[model_args.task.lower()]
+    # model = model_type.from_pretrained(model_name, config=config)
+    # Just use the AutoModel class now.
+    model = AutoModel.from_pretrained(model_name, config=config)
 
     logger.info(f'Len of tokenizer {len(tokenizer)}')
     model.resize_token_embeddings(len(tokenizer))
@@ -417,8 +419,9 @@ def run_model(
         logger.info(f'Type of test dataset {type(predict_dataset)}')
 
     # Data collator
-    data_collator_type = task_data_collator_types[model_args.task.lower()]
-    data_collator = data_collator_type(
+    # data_collator_type = task_data_collator_types[model_args.task.lower()]
+    # data_collator = data_collator_type(
+    data_collator = DataCollatorWithPadding(
         tokenizer,
         padding=padding,
         pad_to_multiple_of=8 if training_args.fp16 else None,

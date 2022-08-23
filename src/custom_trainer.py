@@ -23,8 +23,9 @@ class LogCallBack(TrainerCallback):
                 fname = eval_output_path / f'eval_results_epoch{epoch}.json'
                 with open(fname, 'w') as f:
                     json.dump(logs, f, indent=4)
-                # eval_logger.info(f'epoch: {epoch} eval acc: {logs["eval_accuracy"]} eval loss: {logs["eval_loss"]}')
-                eval_logger.info(f'epoch: {epoch} eval raw acc: {logs["eval_raw_accuracy"]} eval acc: {logs["eval_accuracy"]} eval loss: {logs["eval_loss"]}')
+                eval_logger.info(f'epoch: {epoch} eval acc: {logs["eval_accuracy"]} eval loss: {logs["eval_loss"]}')
+                # This was used for the old style of ReCoRD evaluation
+                # eval_logger.info(f'epoch: {epoch} eval raw acc: {logs["eval_raw_accuracy"]} eval acc: {logs["eval_accuracy"]} eval loss: {logs["eval_loss"]}')
 
 class LogMetricsTrainer(Trainer):
     def log_metrics(self, split, metrics):
