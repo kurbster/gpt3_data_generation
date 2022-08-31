@@ -65,6 +65,9 @@ class DataTrainingArguments:
     num_samples: int = field(
         metadata={"help": "The number of training samples to use for the original train dataset."}
     )
+    num_generated_samples: int = field(
+        default=-1, metadata={"help": "The number of training samples to use for the generated train dataset. -1 means sample everything."}
+    )
     random_seed: Optional[int] = field(
         default=42, metadata={"help": "Set the random seed for shuffling."}
     )
@@ -96,6 +99,9 @@ class DataTrainingArguments:
     label_column: Optional[str] = field(
         default="label",
         metadata={"help": "The name of the column in the datasets containing the summaries (for summarization)."},
+    )
+    train_files: Optional[str] = field(
+        default=None, metadata={"help": "The input training data file (a jsonlines or csv file)."}
     )
     train_file: Optional[str] = field(
         default=None, metadata={"help": "The input training data file (a jsonlines or csv file)."}

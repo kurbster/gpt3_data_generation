@@ -5,7 +5,7 @@ defaults:
   - _self_
 hydra:
   env:
-    model_name: "bert"
+    model_name: "bert-base-cased"
     dataset_name: "boolq"
     save_name: "${hydra:env.dataset_name}_${hydra:env.model_name}"
 
@@ -15,7 +15,11 @@ do_predict: True
 
 model_name: "${hydra:env.model_name}"
 
+# This is used by run_experiment.py file to run a singular experiment
 train_file: "datasets/${hydra:env.dataset_name}/generated/gpt3_generated.json"
+# This is used by main.py to run multiple experiments
+train_files:
+  - "datasets/${hydra:env.dataset_name}/generated/gpt3_generated.json"
 dataset_name: "${hydra:env.dataset_name}"
 
 cache_dir: ".cache"
