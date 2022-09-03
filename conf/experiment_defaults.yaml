@@ -8,7 +8,7 @@ text_column: "text"
 label_column: "label"
 
 save_total_limit: 1          # Save a max of 1 epoch
-preprocessing_num_workers: 8
+preprocessing_num_workers: 4
 
 metric_for_best_model: "accuracy"
 load_best_model_at_end: True # Load the best model at the end of training

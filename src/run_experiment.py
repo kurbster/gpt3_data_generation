@@ -1,4 +1,5 @@
 import os
+import sys
 import copy
 import logging
 import functools
@@ -6,10 +7,10 @@ import functools
 from typing import Callable, Set, Tuple, Union, List
 from pathlib import Path
 
-import pandas as pd
+MAIN_DIR = Path(__file__, '../..').resolve()
+sys.path.append(str(MAIN_DIR))
 
 import hydra
-import torch
 from transformers import (
     AutoConfig,
     AutoModel,
@@ -26,11 +27,9 @@ from transformers.trainer_utils import get_last_checkpoint
 
 from datasets import load_dataset, dataset_dict
 
-from sklearn.metrics import classification_report
-
-from config import ModelArguments, DataTrainingArguments
-from custom_trainer import LogCallBack, LogMetricsTrainer
-from util import setup_logging, get_auto_model_type
+from src.config import ModelArguments, DataTrainingArguments
+from src.custom_trainer import LogCallBack, LogMetricsTrainer
+from src.util import setup_logging, get_auto_model_type, get_trainer_type
 
 logger = logging.getLogger("myLogger")
 
@@ -60,6 +59,7 @@ def get_checkpoint(training_args: TrainingArguments) -> Union[None, str]:
 
 def get_model_and_tokenizer(model_args: ModelArguments, data_args: DataTrainingArguments, checkpoint: str) -> Tuple[AutoModel, AutoTokenizer]:
     model_name = checkpoint if checkpoint else model_args.model_name
+    logger.info('Loading Model Config')
     config = AutoConfig.from_pretrained(
         model_args.config_name if model_args.config_name else model_name,
         cache_dir=model_args.cache_dir,
@@ -67,6 +67,7 @@ def get_model_and_tokenizer(model_args: ModelArguments, data_args: DataTrainingA
         num_labels=data_args.num_labels,
     )
 
+    logger.info('Loading Tokenizer')
     tokenizer = AutoTokenizer.from_pretrained(
         model_args.tokenizer_name if model_args.tokenizer_name else model_name,
         cache_dir=model_args.cache_dir,
@@ -74,6 +75,7 @@ def get_model_and_tokenizer(model_args: ModelArguments, data_args: DataTrainingA
         revision=model_args.model_revision,
     )
 
+    logger.info('Loading Model')
     model_type = get_auto_model_type(model_args.model_name)
     model = model_type.from_pretrained(model_name, config=config)
 
@@ -168,14 +170,15 @@ def get_trainer(
     training_args: TrainingArguments,
     model: AutoModel,
     tokenizer: AutoTokenizer,
+    model_name: str,
     train_dataset,
     eval_dataset,
     data_collator,
     metric_function,
 ) -> Trainer:
     callbacks = get_callbacks(data_args)
-    # return Trainer(
-    return LogMetricsTrainer(
+    trainer_type = get_trainer_type(model_name)
+    return trainer_type(
         model=model,
         args=training_args,
         train_dataset=train_dataset,
@@ -235,42 +238,11 @@ def run_test_loop(
     trainer.save_metrics("predict", metrics)
 
     if trainer.is_world_process_zero():
-        results = predict_metric_func(predict_results)
-        logger.info(f'I am the prediction results: {results}')
-
-        preds = predict_results.predictions
-        preds = torch.from_numpy(preds)
-        y_pred_softmax = torch.log_softmax(preds, dim=1)
-        _, y_pred = torch.max(y_pred_softmax, dim=1)
-
-        predictions = list(map(lambda x: str(x.item()), y_pred))
-
-        output_prediction_file = os.path.join(training_args.output_dir, "generated_predictions.txt")
-        with open(output_prediction_file, "w") as writer:
-            writer.write("\n".join(predictions))
-
-        #Save label list and prediction list
-        label_list = predict_dataset[data_args.label_column]
-
-        df = pd.DataFrame()
-        df["labels"] = label_list
-        df["predictions"] = predictions
-        df["text"] = predict_dataset[data_args.text_column]
-        output_prediction_list_file = os.path.join(training_args.output_dir, "prediction_list.csv")
-        df.to_csv(output_prediction_list_file)
-
-        report = classification_report(label_list, y_pred, output_dict=True, zero_division=0)
-        df = pd.DataFrame(report).transpose()
-        output_result_file = os.path.join(training_args.output_dir, "performance.csv")
-        df.to_csv(output_result_file)
-
-        report_str = classification_report(label_list, y_pred, zero_division=0)
-        logger.info(f"\n{report_str}")
-
-        if data_args.dataset_name == 'record':
-            label_list = torch.ByteTensor(label_list)
-            num_correct = (y_pred == 1) & (label_list == 1)
-            logger.info(f'raw accuracy: {num_correct.sum().item() / (label_list == 1).sum().item()}')
+        predict_metric_func(
+            predict_results,
+            Path(training_args.output_dir),
+            predict_dataset[data_args.text_column]
+        )
 
 def run_model(
     model_args: ModelArguments,
@@ -308,9 +280,6 @@ def run_model(
         logger.info("There is nothing to do. Please pass `do_train`, `do_eval` and/or `do_predict`.")
         return
 
-    # Set max_target_length for training.
-    padding = "max_length" if data_args.pad_to_max_length else "longest"
-
     tokenizer_func = functools.partial(
         tokenizer, max_length=data_args.max_source_length,
         # padding=True, truncation=True
@@ -331,7 +300,6 @@ def run_model(
             training_args,
             data_args.max_train_samples
         )
-        logger.info(f'Type of train_dataset {type(train_dataset)}')
 
     if training_args.do_eval:
         logger.info("Preparing validation dataset")
@@ -342,7 +310,6 @@ def run_model(
             training_args,
             data_args.max_eval_samples
         )
-        logger.info(f'Type of validation dataset {type(eval_dataset)}')
 
     if training_args.do_predict:
         logger.info("Preparing test dataset")
@@ -353,11 +320,9 @@ def run_model(
             training_args,
             data_args.max_predict_samples
         )
-        logger.info(f'Type of test dataset {type(predict_dataset)}')
 
-    # Data collator
-    # data_collator_type = task_data_collator_types[model_args.task.lower()]
-    # data_collator = data_collator_type(
+    # Set max_target_length for training.
+    padding = "max_length" if data_args.pad_to_max_length else "longest"
     data_collator = DataCollatorWithPadding(
         tokenizer,
         padding=padding,
@@ -366,6 +331,7 @@ def run_model(
 
     trainer = get_trainer(
         training_args=training_args, model=model,
+        model_name=model_args.model_name,
         tokenizer=tokenizer, train_dataset=train_dataset,
         eval_dataset=eval_dataset, data_collator=data_collator,
         metric_function=metric_func, data_args=data_args
@@ -399,7 +365,6 @@ def run_model(
 
 @hydra.main(config_path="../conf", config_name="wic", version_base="1.2")
 def main(cfg):
-    # TODO:  Move parsing and setup to util.py
     parser = HfArgumentParser((ModelArguments, DataTrainingArguments, TrainingArguments))
     model_args, data_args, training_args = parser.parse_dict(cfg)
 
@@ -461,4 +426,7 @@ def main(cfg):
     )
 
 if __name__ == '__main__':
+    # Change cwd to the main dir so the outputs/ dir
+    # Is in the same place every run
+    os.chdir(MAIN_DIR)
     main()

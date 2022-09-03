@@ -6,9 +6,8 @@ from typing import Optional, Union
 from pathlib import Path
 
 import torch
-from transformers import Trainer, TrainerCallback
+from transformers import Trainer, TrainerCallback, Seq2SeqTrainer
 from transformers.tokenization_utils_base import PreTrainedTokenizerBase, PaddingStrategy
-
 
 logger =  logging.getLogger("transformers.trainer")
 eval_logger = logging.getLogger("evaluation")
@@ -26,6 +25,18 @@ class LogCallBack(TrainerCallback):
                 eval_logger.info(f'epoch: {epoch} eval acc: {logs["eval_accuracy"]} eval loss: {logs["eval_loss"]}')
                 # This was used for the old style of ReCoRD evaluation
                 # eval_logger.info(f'epoch: {epoch} eval raw acc: {logs["eval_raw_accuracy"]} eval acc: {logs["eval_accuracy"]} eval loss: {logs["eval_loss"]}')
+
+class LogMetricsSeq2SeqTrainer(Seq2SeqTrainer):
+    def log_metrics(self, split, metrics):
+        if not self.is_world_process_zero():
+            return
+
+        logger.info(f"***** {split} metrics *****")
+        metrics_formatted = self.metrics_format(metrics)
+        k_width = max(len(str(x)) for x in metrics_formatted.keys())
+        v_width = max(len(str(x)) for x in metrics_formatted.values())
+        for key in sorted(metrics_formatted.keys()):
+            logger.info(f"  {key: <{k_width}} = {metrics_formatted[key]:>{v_width}}")
 
 class LogMetricsTrainer(Trainer):
     def log_metrics(self, split, metrics):

@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
+import os
+import sys
 import logging
 
 from pathlib import Path
+
+MAIN_DIR = Path(__file__, '../..').resolve()
+sys.path.append(str(MAIN_DIR))
 
 import hydra
 
@@ -12,8 +17,8 @@ from transformers import (
     set_seed,
 )
 
-from config import ModelArguments, DataTrainingArguments
-from run_experiment import run_model
+from src.config import ModelArguments, DataTrainingArguments
+from src.run_experiment import run_model
 
 logger = logging.getLogger("myLogger")
 
@@ -32,8 +37,8 @@ def get_original_datasets(data_args: DataTrainingArguments, model_args: ModelArg
 
 def get_generated_dataset(train_file: Path, data_args: DataTrainingArguments, model_args: ModelArguments) -> dataset_dict:
     dataset = load_dataset(
-        train_file.suffix,
-        data_files=train_file,
+        train_file.suffix.strip('.'),
+        data_files=str(train_file),
         field="data",
         split="train",
         cache_dir=model_args.cache_dir
@@ -81,27 +86,27 @@ def main(cfg):
 
     # Get the metric function
     metric_function = hydra.utils.instantiate(cfg.metric)
-    predict_metric_func = hydra.utils.instantiate()
+    predict_metric_func = hydra.utils.instantiate(cfg.prediction_metric)
 
-    training_args.output_dir = main_output_dir / 'original'
-    logger.info('STARTING THE MODEL WITH THE ORIGINAL TRAIN DATA')
-    logger.info('*'*75)
-
-    run_model(
-        model_args,
-        data_args,
-        training_args,
-        datasets,
-        metric_func=metric_function,
-        predict_metric_func=predict_metric_func,
-        train_preprocessing_func=original_preprocessing,
-        test_preprocessing_func=original_preprocessing
-    )
+    if data_args.run_original:
+        training_args.output_dir = str(main_output_dir / 'original')
+        logger.info('STARTING THE MODEL WITH THE ORIGINAL TRAIN DATA')
+        logger.info('*'*75)
+        run_model(
+            model_args,
+            data_args,
+            training_args,
+            datasets,
+            metric_func=metric_function,
+            predict_metric_func=predict_metric_func,
+            train_preprocessing_func=original_preprocessing,
+            test_preprocessing_func=original_preprocessing
+        )
 
     if len(data_args.train_files) > 0:
         for train_file in data_args.train_files:
-            train_file = Path(train_file)
-            training_args.output_dir = main_output_dir / train_file.stem
+            train_file = MAIN_DIR / train_file
+            training_args.output_dir = str(main_output_dir / train_file.stem)
 
             datasets["train"] = get_generated_dataset(train_file, data_args, model_args)
 
@@ -117,4 +122,7 @@ def main(cfg):
             )
 
 if __name__ == '__main__':
+    # Change cwd to the main dir so the outputs/ dir
+    # Is in the same place every run
+    os.chdir(MAIN_DIR)
     main()

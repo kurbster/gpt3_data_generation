@@ -1,6 +1,6 @@
 original:
-  _target_: our_datasets.RecordOriginalDataset
+  _target_: src.our_datasets.RecordOriginalDataset
   _partial_: True
 generated:
-  _target_: our_datasets.RecordOriginalDataset
+  _target_: src.our_datasets.RecordOriginalDataset
   _partial_: True

@@ -52,6 +52,9 @@ class DataTrainingArguments:
     num_generated_samples: int = field(
         default=-1, metadata={"help": "The number of training samples to use for the generated train dataset. -1 means sample everything."}
     )
+    run_original: bool = field(
+        default=True, metadata={"help": "Whether or not to run training on the original dataset."}
+    )
     random_seed: Optional[int] = field(
         default=42, metadata={"help": "Set the random seed for shuffling."}
     )

@@ -1,8 +1,8 @@
 original:
-  _target_: our_datasets.Dataset
+  _target_: src.our_datasets.Dataset
   _partial_: True
   columns: [passage, question]
 generated:
-  _target_: our_datasets.BoolQGeneratedDataset
+  _target_: src.our_datasets.BoolQGeneratedDataset
   _partial_: True
   columns: [passage, question]

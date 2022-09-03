@@ -1,2 +1,2 @@
-_target_: "our_metrics.prediction_metrics"
+_target_: src.our_metrics.prediction_metrics
 _partial_: True

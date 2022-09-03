@@ -22,12 +22,17 @@ train_file: "datasets/${hydra:env.dataset_name}/gpt3_generated.json"
 # This is used by main.py to run multiple experiments
 train_files:
   - "datasets/${hydra:env.dataset_name}/gpt3_generated.json"
+  - "datasets/${hydra:env.dataset_name}/removed_gpt3_generated.json"
 dataset_name: "${hydra:env.dataset_name}"
 
 output_dir: "models/${hydra:env.dataset_name}/${hydra:env.model_name}"
 
 num_labels: 2
-num_samples: 410
+num_samples: 100
+num_generated_samples: 100
 
+run_original: False
 overwrite_cache: True
 overwrite_output_dir: True
+
+num_train_epochs: 1

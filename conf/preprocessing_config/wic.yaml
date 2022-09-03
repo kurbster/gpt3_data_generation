@@ -1,8 +1,8 @@
 original:
-  _target_: our_datasets.Dataset
+  _target_: src.our_datasets.Dataset
   _partial_: True
   columns: [sentence1, sentence2, word]
 generated:
-  _target_: our_datasets.WicGeneratedDataset
+  _target_: src.our_datasets.WicGeneratedDataset
   _partial_: True
   columns: [sentence1, sentence2, word]
