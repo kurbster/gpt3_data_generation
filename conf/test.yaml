@@ -1,7 +1,9 @@
 defaults:
   - outputs
+  - experiment_defaults
   - preprocessing_config: wic
   - metric: f1_score
+  - prediction_metric: ../metric/prediction_f1_score
   - _self_
 hydra:
   env:
@@ -16,46 +18,16 @@ do_predict: True
 model_name: "${hydra:env.model_name}"
 
 # This is used by run_experiment.py file to run a singular experiment
-train_file: "datasets/${hydra:env.dataset_name}/generated/gpt3_generated.json"
+train_file: "datasets/${hydra:env.dataset_name}/gpt3_generated.json"
 # This is used by main.py to run multiple experiments
 train_files:
-  - "datasets/${hydra:env.dataset_name}/generated/gpt3_generated.json"
+  - "datasets/${hydra:env.dataset_name}/gpt3_generated.json"
 dataset_name: "${hydra:env.dataset_name}"
 
-cache_dir: ".cache"
 output_dir: "models/${hydra:env.dataset_name}/${hydra:env.model_name}"
 
-text_column: "text"
-label_column: "label"
-
-logging_strategy: "epoch"
-save_strategy: "epoch"
-evaluation_strategy: "epoch"
-
-save_total_limit: 1         # Save a max of 1 epoch
-preprocessing_num_workers: 4
 num_labels: 2
+num_samples: 410
 
-metric_for_best_model: "accuracy"
-load_best_model_at_end: True # Load the best model at the end of training
-
-seed: 42
-per_device_eval_batch_size: 16
-per_device_train_batch_size: 4
-
+overwrite_cache: True
 overwrite_output_dir: True
-
-# Set to true if on a TPU
-#pad_to_max_length: True
-
-# Changed to a warmup ratio so we don't need to calcualte number of steps in code
-warmup_ratio: .10
-learning_rate: .000001
-num_train_epochs: 50
-#adam_beta1: 0.9
-#adam_beta2: 0.95
-
-early_stopping_patience: 50
-early_stopping_threshold: 0.0001
-
-overwrite_cache_dir: True

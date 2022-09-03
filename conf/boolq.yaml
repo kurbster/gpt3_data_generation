@@ -1,7 +1,9 @@
 defaults:
   - outputs
+  - experiment_defaults
   - preprocessing_config: boolq
   - metric: f1_score
+  - prediction_metric: ../metric/prediction_f1_score
   - _self_
 hydra:
   env:
@@ -16,41 +18,13 @@ do_predict: True
 model_name: "${hydra:env.model_name}"
 
 # This is used by run_experiment.py file to run a singular experiment
-train_file: "datasets/${hydra:env.dataset_name}/generated/gpt3_generated.json"
+train_file: "datasets/${hydra:env.dataset_name}/gpt3_generated.json"
 # This is used by main.py to run multiple experiments
 train_files:
-  - "datasets/${hydra:env.dataset_name}/generated/gpt3_generated.json"
+  - "datasets/${hydra:env.dataset_name}/gpt3_generated.json"
 dataset_name: "${hydra:env.dataset_name}"
 
-cache_dir: ".cache"
 output_dir: "models/${hydra:env.dataset_name}/${hydra:env.model_name}"
 
-text_column: "text"
-label_column: "label"
-
-save_strategy: "epoch"
-evaluation_strategy: "epoch"
-
-num_samples: 345
-
-save_total_limit: 1          # Save a max of 1 epoch
-preprocessing_num_workers: 4
 num_labels: 2
-
-metric_for_best_model: "accuracy"
-load_best_model_at_end: True # Load the best model at the end of training
-
-seed: 42
-per_device_eval_batch_size: 32
-per_device_train_batch_size: 4  # To match the 8 batch size of eariler experiments
-
-# Set to true if on a TPU
-#pad_to_max_length: True
-
-warmup_ratio: .20 # This would match the 11 epochs in eariler experiments
-learning_rate: .0000005 # 5e-7
-num_train_epochs: 200
-optim: "adamw_torch"
-
-early_stopping_patience: 75
-early_stopping_threshold: 0.0001
+num_samples: 345

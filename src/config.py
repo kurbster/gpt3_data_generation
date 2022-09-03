@@ -1,21 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional, Any
-from hydra.core.config_store import ConfigStore
-
-@dataclass
-class PartialInstantiableConfig:
-    _target_: str
-    _partial_: bool = True
-
-@dataclass
-class InstantiableConfig:
-    _target_: str
-    def __call__(self, *args: Any, **kwds: Any) -> Any:
-        raise NotImplemented
-
-@dataclass
-class DatasetConfig:
-    pass
+from typing import Optional
 
 @dataclass
 class ModelArguments:

@@ -5,11 +5,17 @@ from pathlib import Path
 
 import hydra
 
-from datasets import load_dataset, dataset_dict, Dataset
-from transformers import HfArgumentParser, TrainingArguments
+from datasets import load_dataset, dataset_dict
+from transformers import (
+    HfArgumentParser,
+    TrainingArguments,
+    set_seed,
+)
 
 from config import ModelArguments, DataTrainingArguments
 from run_experiment import run_model
+
+logger = logging.getLogger("myLogger")
 
 def get_original_datasets(data_args: DataTrainingArguments, model_args: ModelArguments) -> dataset_dict:
     datasets = load_dataset(
@@ -75,6 +81,7 @@ def main(cfg):
 
     # Get the metric function
     metric_function = hydra.utils.instantiate(cfg.metric)
+    predict_metric_func = hydra.utils.instantiate()
 
     training_args.output_dir = main_output_dir / 'original'
     logger.info('STARTING THE MODEL WITH THE ORIGINAL TRAIN DATA')
@@ -86,6 +93,7 @@ def main(cfg):
         training_args,
         datasets,
         metric_func=metric_function,
+        predict_metric_func=predict_metric_func,
         train_preprocessing_func=original_preprocessing,
         test_preprocessing_func=original_preprocessing
     )
@@ -103,7 +111,8 @@ def main(cfg):
                 training_args,
                 datasets,
                 metric_func=metric_function,
-                train_preprocessing_func=original_preprocessing,
+                predict_metric_func=predict_metric_func,
+                train_preprocessing_func=generated_preprocessing,
                 test_preprocessing_func=original_preprocessing
             )
 

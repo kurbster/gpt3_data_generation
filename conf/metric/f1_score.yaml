@@ -1,2 +1,2 @@
-_target_: "main.compute_metrics"
+_target_: "our_metrics.compute_metrics"
 _partial_: True

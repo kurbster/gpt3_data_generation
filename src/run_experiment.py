@@ -10,13 +10,10 @@ import pandas as pd
 
 import hydra
 import torch
-import transformers
 from transformers import (
     AutoConfig,
-    AutoTokenizer,
     AutoModel,
-    AutoModelForSequenceClassification,
-    AutoModelForMultipleChoice,
+    AutoTokenizer,
     DataCollatorWithPadding,
     EarlyStoppingCallback,
     HfArgumentParser,
@@ -27,34 +24,15 @@ from transformers import (
 )
 from transformers.trainer_utils import get_last_checkpoint
 
-import datasets
 from datasets import load_dataset, dataset_dict
 
 from sklearn.metrics import classification_report
 
 from config import ModelArguments, DataTrainingArguments
-from custom_trainer import DataCollatorForMultipleChoice, LogCallBack, LogMetricsTrainer
-from util import setup_logging
+from custom_trainer import LogCallBack, LogMetricsTrainer
+from util import setup_logging, get_auto_model_type
 
 logger = logging.getLogger("myLogger")
-
-# DEPRECATED
-# task_model_types = {
-    # 'mc': AutoModelForMultipleChoice,
-    # 'sent_cls': AutoModelForSequenceClassification,
-# }
-
-# DEPRECATED
-# Follow this https://huggingface.co/docs/transformers/v4.19.2/en/tasks/multiple_choice#preprocess
-# task_data_collator_types = {
-    # 'sent_cls': DataCollatorWithPadding,
-    # 'mc': DataCollatorForMultipleChoice,
-# }
-# 
-# model_types = {
-    # 'bert': 'bert-base-cased',
-    # 'roberta': 'roberta-base'
-# }
 
 def get_checkpoint(training_args: TrainingArguments) -> Union[None, str]:
     # Detecting last checkpoint.
@@ -86,7 +64,7 @@ def get_model_and_tokenizer(model_args: ModelArguments, data_args: DataTrainingA
         model_args.config_name if model_args.config_name else model_name,
         cache_dir=model_args.cache_dir,
         revision=model_args.model_revision,
-        num_labels=data_args.num_labels
+        num_labels=data_args.num_labels,
     )
 
     tokenizer = AutoTokenizer.from_pretrained(
@@ -96,10 +74,8 @@ def get_model_and_tokenizer(model_args: ModelArguments, data_args: DataTrainingA
         revision=model_args.model_revision,
     )
 
-    # model_type = task_model_types[model_args.task.lower()]
-    # model = model_type.from_pretrained(model_name, config=config)
-    # Just use the AutoModel class now.
-    model = AutoModel.from_pretrained(model_name, config=config)
+    model_type = get_auto_model_type(model_args.model_name)
+    model = model_type.from_pretrained(model_name, config=config)
 
     logger.info(f'Len of tokenizer {len(tokenizer)}')
     model.resize_token_embeddings(len(tokenizer))
@@ -190,7 +166,7 @@ def get_callbacks(
 def get_trainer(
     data_args: DataTrainingArguments,
     training_args: TrainingArguments,
-    model: AutoModelForSequenceClassification,
+    model: AutoModel,
     tokenizer: AutoTokenizer,
     train_dataset,
     eval_dataset,
@@ -217,12 +193,7 @@ def run_training_loop(
     train_dataset
 ):
     logger.info("***Training ***")
-    # This doesn't work because of our original/generated models
-    # Best fix would be have 2 instances of training args for orig and gen
-    # if training_args.resume_from_checkpoint is not None:
-        # checkpoint = training_args.resume_from_checkpoint
     train_result = trainer.train(resume_from_checkpoint=last_checkpoint)
-    # trainer.save_model()  # Saves the tokenizer too for easy upload
 
     metrics = train_result.metrics
     max_train_samples = (
@@ -232,12 +203,14 @@ def run_training_loop(
 
     trainer.log_metrics("train", metrics)
     trainer.save_metrics("train", metrics)
-    # trainer.save_state()
+    trainer.save_state()
 
 def run_eval_loop(trainer: Trainer, data_args: DataTrainingArguments, eval_dataset):
     logger.info("*** Evaluate ***")
     metrics = trainer.evaluate(metric_key_prefix="eval")
-    max_eval_samples = data_args.max_eval_samples if data_args.max_eval_samples is not None else len(eval_dataset)
+    max_eval_samples = (
+        data_args.max_eval_samples if data_args.max_eval_samples is not None else len(eval_dataset)
+    )
     metrics["eval_samples"] = min(max_eval_samples, len(eval_dataset))
 
     trainer.log_metrics("eval", metrics)
@@ -247,8 +220,9 @@ def run_test_loop(
     trainer: Trainer,
     data_args: DataTrainingArguments,
     training_args: TrainingArguments,
-    predict_dataset
-    ):
+    predict_metric_func: Callable,
+    predict_dataset,
+):
     logger.info("*** Predict ***")
     predict_results = trainer.predict(predict_dataset, metric_key_prefix="predict")
     metrics = predict_results.metrics
@@ -261,6 +235,9 @@ def run_test_loop(
     trainer.save_metrics("predict", metrics)
 
     if trainer.is_world_process_zero():
+        results = predict_metric_func(predict_results)
+        logger.info(f'I am the prediction results: {results}')
+
         preds = predict_results.predictions
         preds = torch.from_numpy(preds)
         y_pred_softmax = torch.log_softmax(preds, dim=1)
@@ -275,7 +252,8 @@ def run_test_loop(
         #Save label list and prediction list
         label_list = predict_dataset[data_args.label_column]
 
-        df = pd.DataFrame(label_list, columns = ["labels"])
+        df = pd.DataFrame()
+        df["labels"] = label_list
         df["predictions"] = predictions
         df["text"] = predict_dataset[data_args.text_column]
         output_prediction_list_file = os.path.join(training_args.output_dir, "prediction_list.csv")
@@ -294,57 +272,13 @@ def run_test_loop(
             num_correct = (y_pred == 1) & (label_list == 1)
             logger.info(f'raw accuracy: {num_correct.sum().item() / (label_list == 1).sum().item()}')
 
-def compute_metrics(eval_preds):
-    preds, labels = eval_preds
-
-    preds = torch.from_numpy(preds)
-    y_pred_softmax = torch.log_softmax(preds, dim=1)
-    _, y_pred = torch.max(y_pred_softmax, dim=1)
-
-    results = classification_report(labels, y_pred, output_dict=True, zero_division=0)
-    flattened_results = dict()
-
-    for key, value in results.items():
-        # cls report returns a report for every label.
-        # Ignore them and only get the overall results
-        if isinstance(value, dict):
-            for k, v in value.items():
-                flattened_results[f"{key}_{k}"] = v
-        else:
-            flattened_results[key] = value
-
-    return flattened_results
-    
-def compute_record_metrics(eval_preds):
-    preds, labels = eval_preds
-
-    preds = torch.from_numpy(preds)
-    y_pred_softmax = torch.log_softmax(preds, dim=1)
-    _, y_pred = torch.max(y_pred_softmax, dim=1)
-
-    results = classification_report(labels, y_pred, output_dict=True, zero_division=0)
-    flattened_results = dict()
-
-    for key, value in results.items():
-        # cls report returns a report for every label.
-        # Ignore them an only get the overall results
-        if isinstance(value, dict):
-            for k, v in value.items():
-                flattened_results[f"{key}_{k}"] = v
-        else:
-            flattened_results[key] = value
-
-    num_correct = (y_pred == 1) & (labels == 1)
-    flattened_results['raw_accuracy'] = num_correct.sum().item() / (labels == 1).sum().item()
-
-    return flattened_results
-
 def run_model(
     model_args: ModelArguments,
     data_args: DataTrainingArguments,
     training_args: TrainingArguments,
     datasets: dataset_dict,
     metric_func: Callable,
+    predict_metric_func: Callable,
     train_preprocessing_func: Callable,
     test_preprocessing_func: Callable,
 ):
@@ -359,6 +293,7 @@ def run_model(
         training_args (TrainingArguments): The specification of the training parameters.
         datasets (dataset_dict): The datasets to use.
         metric_func (Callable): The callable object to calculate metrics.
+        predict_metric_func (Callable): The callable object to calculate metrics for prediction.
         train_preprocessing_func (Callable): The preprocessing function for the train set.
         test_preprocessing_func (Callable): The preprocessing function for the test set.
     """
@@ -459,6 +394,7 @@ def run_model(
             data_args=data_args,
             training_args=training_args,
             predict_dataset=predict_dataset,
+            predict_metric_func=predict_metric_func,
         )
 
 @hydra.main(config_path="../conf", config_name="wic", version_base="1.2")
