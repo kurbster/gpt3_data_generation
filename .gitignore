@@ -1,3 +1,7 @@
+tmp/
+# Saved models
+models/
+
 # Hydra output files
 outputs/
 
