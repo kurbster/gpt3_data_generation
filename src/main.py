@@ -13,7 +13,7 @@ import hydra
 from datasets import load_dataset, dataset_dict
 from transformers import (
     HfArgumentParser,
-    TrainingArguments,
+    Seq2SeqTrainingArguments,
     set_seed,
 )
 
@@ -52,7 +52,7 @@ def get_generated_dataset(train_file: Path, data_args: DataTrainingArguments, mo
 
 @hydra.main(config_path="../conf", config_name="wic", version_base="1.2")
 def main(cfg):
-    parser = HfArgumentParser((ModelArguments, DataTrainingArguments, TrainingArguments))
+    parser = HfArgumentParser((ModelArguments, DataTrainingArguments, Seq2SeqTrainingArguments))
     model_args, data_args, training_args = parser.parse_dict(cfg)
 
     logger.warning(
@@ -120,6 +120,22 @@ def main(cfg):
                 train_preprocessing_func=generated_preprocessing,
                 test_preprocessing_func=original_preprocessing
             )
+
+    logger.info('STARTING THE MODEL WITHOUT TRAINING')
+    logger.info('*'*75)
+    training_args.output_dir = str(main_output_dir / 'no_train')
+    training_args.do_train = False
+    training_args.do_eval = False
+    run_model(
+        model_args,
+        data_args,
+        training_args,
+        datasets,
+        metric_func=metric_function,
+        predict_metric_func=predict_metric_func,
+        train_preprocessing_func=original_preprocessing,
+        test_preprocessing_func=original_preprocessing
+    )
 
 if __name__ == '__main__':
     # Change cwd to the main dir so the outputs/ dir

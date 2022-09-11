@@ -11,10 +11,6 @@ hydra:
     dataset_name: "rte"
     save_name: "${hydra:env.dataset_name}_${hydra:env.model_name}"
 
-do_train: True
-do_eval: True
-do_predict: True
-
 model_name: "${hydra:env.model_name}"
 
 # This is used by run_experiment.py file to run a singular experiment

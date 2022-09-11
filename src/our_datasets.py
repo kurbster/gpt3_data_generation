@@ -6,7 +6,7 @@ from dataclasses import dataclass, field
 @dataclass
 class Dataset:
     tokenizer: Callable
-    delim: str = " [SEP] "
+    delim: str = " "
     text_col: str = "text"
     label_col: str = "label"
     columns: List[str] = field(default_factory=list)
@@ -18,27 +18,34 @@ class Dataset:
         input[self.text_col] = text # Save the text for analysis later.
         # This is unneeded because label col is already in dataset
         # input[self.label_col] = example[self.label_col]
+        input[self.label_col] = self.tokenizer(example[self.label_col])['input_ids']
         return input
+
+@dataclass
+class WicOriginalDataset(Dataset):
+    def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
+        example[self.label_col] = str(example[self.label_col])
+        return super().__call__(example)
 
 @dataclass
 class WicGeneratedDataset(Dataset):
     def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
+        example[self.label_col] = '1' if example['label'] == 'T' else '0'
         input = super().__call__(example)
-        input[self.label_col] = 1 if example['label'] == 'T' else 0
         return input
 
 @dataclass
 class RteGeneratedDataset(Dataset):
     def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
+        example[self.label_col] = '1' if example['label'] == 'entailment' else '0'
         input = super().__call__(example)
-        input[self.label_col] = 1 if example['label'] == 'entailment' else 0
         return input
 
 @dataclass
 class BoolQGeneratedDataset(Dataset):
     def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
+        example[self.label_col] = '1' if example['label'] else '0'
         input = super().__call__(example)
-        input[self.label_col] = 1 if example['label'] else 0
         return input
 
 # TODO: Finish implementing COPA dataset

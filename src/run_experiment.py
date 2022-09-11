@@ -16,6 +16,7 @@ from transformers import (
     AutoModel,
     AutoTokenizer,
     DataCollatorWithPadding,
+    DataCollatorForSeq2Seq,
     EarlyStoppingCallback,
     HfArgumentParser,
     Trainer,
@@ -146,7 +147,9 @@ def prepare_dataset(
             desc="Running tokenizer on dataset",
         )
 
-    logger.debug(f'Dataset label after {dataset["label"][0]}')
+    # TODO: Check if this works with BERT and RoBERTA if we are using them
+    dataset = dataset.rename_column(data_args.label_column, "labels")
+    logger.debug(f'Dataset label after {dataset["labels"][0]}')
     logger.debug(f'columns in cleaned dataset {dataset.features}')
     logger.debug(f'number of input_ids {len(dataset["input_ids"])}')
     logger.debug(f'length of first input ids {len(dataset["input_ids"][0])}')
@@ -280,11 +283,15 @@ def run_model(
         logger.info("There is nothing to do. Please pass `do_train`, `do_eval` and/or `do_predict`.")
         return
 
+    padding = "max_length" if data_args.pad_to_max_length else "longest"
     tokenizer_func = functools.partial(
         tokenizer, max_length=data_args.max_source_length,
-        # padding=True, truncation=True
         padding=False, truncation=True
+        # padding=padding, truncation=True
     )
+
+    metric_func = functools.partial(metric_func, tokenizer=tokenizer)
+    predict_metric_func = functools.partial(predict_metric_func, tokenizer=tokenizer)
 
     train_preprocessing = train_preprocessing_func(tokenizer=tokenizer_func)
     test_preprocessing = test_preprocessing_func(tokenizer=tokenizer_func)
@@ -321,10 +328,13 @@ def run_model(
             data_args.max_predict_samples
         )
 
-    # Set max_target_length for training.
+    # TODO: See if this still works with BERT and RoBERTA if we use them
+    # Also check for other models.
+    # data_collator = DataCollatorWithPadding(
     padding = "max_length" if data_args.pad_to_max_length else "longest"
-    data_collator = DataCollatorWithPadding(
+    data_collator = DataCollatorForSeq2Seq(
         tokenizer,
+        model=model,
         padding=padding,
         pad_to_multiple_of=8 if training_args.fp16 else None,
     )

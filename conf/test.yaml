@@ -2,18 +2,16 @@ defaults:
   - outputs
   - experiment_defaults
   - preprocessing_config: wic
-  - metric: f1_score
-  - prediction_metric: ../metric/prediction_f1_score
+  # - metric: f1_score
+  # - prediction_metric: ../metric/prediction_f1_score
+  - metric: seq2seq_f1_score
+  - prediction_metric: ../metric/seq2seq_prediction_f1_score
   - _self_
 hydra:
   env:
     model_name: "bert-base-cased"
     dataset_name: "wic"
     save_name: "${hydra:env.dataset_name}_${hydra:env.model_name}"
-
-do_train: True
-do_eval: True
-do_predict: True
 
 model_name: "${hydra:env.model_name}"
 

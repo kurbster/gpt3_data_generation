@@ -24,3 +24,8 @@ num_train_epochs: 200
 
 early_stopping_patience: 50
 early_stopping_threshold: 0.0001
+
+do_train: True
+do_eval: True
+do_predict: True
+predict_with_generate: True
