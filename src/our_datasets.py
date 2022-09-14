@@ -30,14 +30,14 @@ class WicOriginalDataset(Dataset):
 @dataclass
 class WicGeneratedDataset(Dataset):
     def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
-        example[self.label_col] = '1' if example['label'] == 'T' else '0'
+        example[self.label_col] = '1' if example[self.label_col] == 'T' else '0'
         input = super().__call__(example)
         return input
 
 @dataclass
 class RteGeneratedDataset(Dataset):
     def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
-        example[self.label_col] = '1' if example['label'] == 'entailment' else '0'
+        example[self.label_col] = '1' if example[self.label_col] == 'entailment' else '0'
         input = super().__call__(example)
         return input
 
@@ -50,7 +50,7 @@ class BoolQOriginalDataset(Dataset):
 @dataclass
 class BoolQGeneratedDataset(Dataset):
     def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
-        example[self.label_col] = '1' if example['label'] == 'True' else '0'
+        example[self.label_col] = '1' if example[self.label_col] == 'True' else '0'
         input = super().__call__(example)
         return input
 
