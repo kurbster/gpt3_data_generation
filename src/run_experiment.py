@@ -130,12 +130,9 @@ def prepare_dataset(
     preprocess_callable,
     data_args: DataTrainingArguments,
     training_args: TrainingArguments,
-    max_samples: int
     ):
     columns_to_remove = get_columns_to_remove(dataset, data_args)
     logger.info(f'I am columns to remove: {columns_to_remove}')
-    if max_samples is not None:
-        dataset = dataset.select(range(max_samples))
 
     with training_args.main_process_first(desc="dataset map pre-processing"):
         dataset = dataset.map(
@@ -148,7 +145,8 @@ def prepare_dataset(
         )
 
     # TODO: Check if this works with BERT and RoBERTA if we are using them
-    dataset = dataset.rename_column(data_args.label_column, "labels")
+    #dataset = dataset.rename_column(data_args.label_column, "labels")
+    dataset = dataset.rename_column(preprocess_callable.label_col, "labels")
     logger.debug(f'Dataset label after {dataset["labels"][0]}')
     logger.debug(f'columns in cleaned dataset {dataset.features}')
     logger.debug(f'number of input_ids {len(dataset["input_ids"])}')
@@ -276,9 +274,6 @@ def run_model(
     logger.info(f'Checkpoint for model: {last_checkpoint}')
     model, tokenizer = get_model_and_tokenizer(model_args, data_args, last_checkpoint)
 
-    eval_output_path = Path(training_args.output_dir, 'evaluation_results')
-    eval_output_path.mkdir(parents=True, exist_ok=True)
-
     if not (training_args.do_train or training_args.do_eval or training_args.do_predict):
         logger.info("There is nothing to do. Please pass `do_train`, `do_eval` and/or `do_predict`.")
         return
@@ -305,7 +300,6 @@ def run_model(
             train_preprocessing,
             data_args,
             training_args,
-            data_args.max_train_samples
         )
 
     if training_args.do_eval:
@@ -315,7 +309,6 @@ def run_model(
             test_preprocessing,
             data_args,
             training_args,
-            data_args.max_eval_samples
         )
 
     if training_args.do_predict:
@@ -325,7 +318,6 @@ def run_model(
             test_preprocessing,
             data_args,
             training_args,
-            data_args.max_predict_samples
         )
 
     # TODO: See if this still works with BERT and RoBERTA if we use them
@@ -346,6 +338,9 @@ def run_model(
         eval_dataset=eval_dataset, data_collator=data_collator,
         metric_function=metric_func, data_args=data_args
     )
+
+    eval_output_path = Path(training_args.output_dir, 'evaluation_results')
+    eval_output_path.mkdir(parents=True, exist_ok=True)
 
     # Training
     if training_args.do_train:

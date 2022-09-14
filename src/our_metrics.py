@@ -105,7 +105,7 @@ def seq2seq_prediction_metrics(
     input_text: List[str],
     tokenizer
 ):
-    preds = tokenizer.batch_decode(
+    predictions = tokenizer.batch_decode(
         predict_results.predictions,
         skip_special_tokens=True,
         clean_up_tokenization_spaces=True
@@ -117,7 +117,6 @@ def seq2seq_prediction_metrics(
     )
 
     # Output the generated predictions
-    predictions = list(map(lambda x: str(x.item()), preds))
     with open(output_dir / "generated_predictions.txt", "w") as writer:
         writer.write("\n".join(predictions))
 
@@ -128,6 +127,6 @@ def seq2seq_prediction_metrics(
     df["text"] = input_text
     df.to_csv(output_dir / "prediction_list.csv")
 
-    results = classification_report(labels, preds, output_dict=True, zero_division=0)
+    results = classification_report(labels, predictions, output_dict=True, zero_division=0)
     df = pd.DataFrame(results).transpose()
     df.to_csv(output_dir / "performance.csv")

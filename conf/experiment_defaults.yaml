@@ -15,7 +15,7 @@ load_best_model_at_end: True # Load the best model at the end of training
 
 seed: 42
 per_device_eval_batch_size: 32
-per_device_train_batch_size: 4  # To match the 8 batch size of eariler experiments
+per_device_train_batch_size: 8
 
 optim: "adamw_torch"
 warmup_ratio: .20

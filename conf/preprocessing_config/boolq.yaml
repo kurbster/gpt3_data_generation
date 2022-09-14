@@ -6,3 +6,4 @@ generated:
   _target_: src.our_datasets.BoolQGeneratedDataset
   _partial_: True
   columns: [passage, question]
+  label_col: "answer"

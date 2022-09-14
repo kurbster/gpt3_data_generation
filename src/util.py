@@ -26,6 +26,11 @@ model_types = {
     "roberta-base": AutoModelForSequenceClassification,
     "bert-base-cased": AutoModelForSequenceClassification,
     "allenai/tk-instruct-3b-pos": AutoModelForSeq2SeqLM,
+    "allenai/tk-instruct-3b-def": AutoModelForSeq2SeqLM,
+    "allenai/tk-instruct-3b-def-pos": AutoModelForSeq2SeqLM,
+    "allenai/tk-instruct-base-pos": AutoModelForSeq2SeqLM,
+    "allenai/tk-instruct-base-def": AutoModelForSeq2SeqLM,
+    "allenai/tk-instruct-base-def-pos": AutoModelForSeq2SeqLM,
     "facebook/bart-base": AutoModelForSeq2SeqLM,
 }
 
@@ -33,6 +38,11 @@ trainer_types = {
     "roberta-base": LogMetricsTrainer,
     "bert-base-cased": LogMetricsTrainer,
     "allenai/tk-instruct-3b-pos": LogMetricsSeq2SeqTrainer,
+    "allenai/tk-instruct-3b-def": LogMetricsSeq2SeqTrainer,
+    "allenai/tk-instruct-3b-def-pos": LogMetricsSeq2SeqTrainer,
+    "allenai/tk-instruct-base-pos": LogMetricsSeq2SeqTrainer,
+    "allenai/tk-instruct-base-def": LogMetricsSeq2SeqTrainer,
+    "allenai/tk-instruct-base-def-pos": LogMetricsSeq2SeqTrainer,
     "facebook/bart-base": LogMetricsSeq2SeqTrainer,
 }
 

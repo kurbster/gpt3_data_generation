@@ -29,10 +29,6 @@ def get_original_datasets(data_args: DataTrainingArguments, model_args: ModelArg
         cache_dir=model_args.cache_dir
     ).shuffle(seed=data_args.random_seed)
 
-    logger.info(f'Len of Original train before {len(datasets["train"])}')
-    datasets['train'] = datasets['train'].select(range(data_args.max_train_samples))
-    logger.info(f'Len of Original train after {len(datasets["train"])}')
-
     # Set the validation as the test set first before modifying it
     datasets['test'] = datasets[data_args.test_set_key]
 
@@ -40,6 +36,12 @@ def get_original_datasets(data_args: DataTrainingArguments, model_args: ModelArg
     datasets['validation'] = datasets['train'].select(
         range(data_args.max_train_samples, data_args.max_train_samples + data_args.max_eval_samples)
     )
+
+    logger.info(f'Len of Original train after {datasets["train"].num_rows}')
+    datasets['train'] = datasets['train'].select(range(data_args.max_train_samples))
+    logger.info(f'Len of Original train after {datasets["train"].num_rows}')
+    logger.info(f'Len of Validation set: {datasets["validation"].num_rows}')
+    logger.info(f'Len of Test set: {datasets["test"].num_rows}')
 
     return datasets
 
@@ -83,13 +85,15 @@ def main(cfg):
     # Get the original and generated preprocessing functions.
     original_preprocessing = hydra.utils.instantiate(
         cfg.preprocessing_config.original,
-        text_col=data_args.text_column,
-        label_col=data_args.label_column,
+        # By including these values we override whatever is in the config
+        #text_col=data_args.text_column,
+        #label_col=data_args.label_column,
     )
     generated_preprocessing = hydra.utils.instantiate(
         cfg.preprocessing_config.generated,
-        text_col=data_args.text_column,
-        label_col=data_args.label_column,
+        # By including these values we override whatever is in the config
+        #text_col=data_args.text_column,
+        #label_col=data_args.label_column,
     )
 
     # Get the metric function

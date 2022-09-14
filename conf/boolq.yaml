@@ -9,7 +9,7 @@ defaults:
   - _self_
 hydra:
   env:
-    model_name: "bert-base-cased"
+    model_name: "facebook/bart-base"
     dataset_name: "boolq"
     save_name: "${hydra:env.dataset_name}_${hydra:env.model_name}"
 
