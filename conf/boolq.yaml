@@ -2,8 +2,10 @@ defaults:
   - outputs
   - experiment_defaults
   - preprocessing_config: boolq
-  - metric: f1_score
-  - prediction_metric: ../metric/prediction_f1_score
+  # - metric: f1_score
+  # - prediction_metric: ../metric/prediction_f1_score
+  - metric: seq2seq_f1_score
+  - prediction_metric: ../metric/seq2seq_prediction_f1_score
   - _self_
 hydra:
   env:
@@ -18,9 +20,11 @@ train_file: "datasets/${hydra:env.dataset_name}/gpt3_generated.json"
 # This is used by main.py to run multiple experiments
 train_files:
   - "datasets/${hydra:env.dataset_name}/gpt3_generated.json"
+  - "datasets/${hydra:env.dataset_name}/gpt3_generated_500sample.json"
 dataset_name: "${hydra:env.dataset_name}"
 
 output_dir: "models/${hydra:env.dataset_name}/${hydra:env.model_name}"
 
 num_labels: 2
-num_samples: 345
+max_eval_samples: 400
+max_train_samples: 484

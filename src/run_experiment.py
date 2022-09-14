@@ -90,7 +90,7 @@ def get_datasets(data_args: DataTrainingArguments, model_args: ModelArguments) -
     datasets = load_dataset('super_glue', data_args.dataset_name).shuffle(seed=data_args.random_seed)
 
     logger.info(f'Len of train before {len(datasets["train"])}')
-    datasets['train'] = datasets['train'].select(range(data_args.num_samples))
+    datasets['train'] = datasets['train'].select(range(data_args.max_train_samples))
     logger.info(f'Len of train after {len(datasets["train"])}')
 
     datasets["generated_train"] = load_dataset(
@@ -321,7 +321,7 @@ def run_model(
     if training_args.do_predict:
         logger.info("Preparing test dataset")
         predict_dataset = prepare_dataset(
-            datasets[data_args.test_set_key],
+            datasets["test"],
             test_preprocessing,
             data_args,
             training_args,

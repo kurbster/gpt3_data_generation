@@ -42,9 +42,15 @@ class RteGeneratedDataset(Dataset):
         return input
 
 @dataclass
+class BoolQOriginalDataset(Dataset):
+    def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
+        example[self.label_col] = str(example[self.label_col])
+        return super().__call__(example)
+
+@dataclass
 class BoolQGeneratedDataset(Dataset):
     def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
-        example[self.label_col] = '1' if example['label'] else '0'
+        example[self.label_col] = '1' if example['label'] == 'True' else '0'
         input = super().__call__(example)
         return input
 

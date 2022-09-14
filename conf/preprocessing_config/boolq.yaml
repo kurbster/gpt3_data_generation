@@ -1,5 +1,5 @@
 original:
-  _target_: src.our_datasets.Dataset
+  _target_: src.our_datasets.BoolQOriginalDataset
   _partial_: True
   columns: [passage, question]
 generated:

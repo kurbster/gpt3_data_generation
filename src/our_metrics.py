@@ -82,10 +82,6 @@ def prediction_metrics(
 def compute_seq2seq_metrics(eval_preds, tokenizer):
     preds, labels = eval_preds
 
-    # idk why, but sometimes the preds is a tuple
-    if isinstance(preds, tuple):
-        preds = preds[0]
-
     decoded_preds = tokenizer.batch_decode(preds, skip_special_tokens=True)
     decoded_labels = tokenizer.batch_decode(labels, skip_special_tokens=True)
 

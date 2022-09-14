@@ -46,11 +46,17 @@ class DataTrainingArguments:
     """
     Arguments pertaining to what data we are going to input our model for training and eval.
     """
-    num_samples: int = field(
-        metadata={"help": "The number of training samples to use for the original train dataset."}
+    max_train_samples: Optional[int] = field(
+        metadata={
+            "help": "For debugging purposes or quicker training, truncate the number of training examples to this "
+            "value if set."
+        },
     )
-    num_generated_samples: int = field(
-        default=-1, metadata={"help": "The number of training samples to use for the generated train dataset. -1 means sample everything."}
+    max_eval_samples: Optional[int] = field(
+        metadata={
+            "help": "For debugging purposes or quicker training, truncate the number of evaluation examples to this "
+            "value if set."
+        },
     )
     run_original: bool = field(
         default=True, metadata={"help": "Whether or not to run training on the original dataset."}
@@ -129,20 +135,6 @@ class DataTrainingArguments:
             "help": "Whether to pad all samples to model maximum sentence length. "
             "If False, will pad the samples dynamically when batching to the maximum length in the batch. More "
             "efficient on GPU but very bad for TPU."
-        },
-    )
-    max_train_samples: Optional[int] = field(
-        default=None,
-        metadata={
-            "help": "For debugging purposes or quicker training, truncate the number of training examples to this "
-            "value if set."
-        },
-    )
-    max_eval_samples: Optional[int] = field(
-        default=None,
-        metadata={
-            "help": "For debugging purposes or quicker training, truncate the number of evaluation examples to this "
-            "value if set."
         },
     )
     max_predict_samples: Optional[int] = field(

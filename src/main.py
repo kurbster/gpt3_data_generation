@@ -30,8 +30,16 @@ def get_original_datasets(data_args: DataTrainingArguments, model_args: ModelArg
     ).shuffle(seed=data_args.random_seed)
 
     logger.info(f'Len of Original train before {len(datasets["train"])}')
-    datasets['train'] = datasets['train'].select(range(data_args.num_samples))
+    datasets['train'] = datasets['train'].select(range(data_args.max_train_samples))
     logger.info(f'Len of Original train after {len(datasets["train"])}')
+
+    # Set the validation as the test set first before modifying it
+    datasets['test'] = datasets[data_args.test_set_key]
+
+    # Select from the end of the train set until the max eval samples
+    datasets['validation'] = datasets['train'].select(
+        range(data_args.max_train_samples, data_args.max_train_samples + data_args.max_eval_samples)
+    )
 
     return datasets
 
@@ -44,9 +52,9 @@ def get_generated_dataset(train_file: Path, data_args: DataTrainingArguments, mo
         cache_dir=model_args.cache_dir
     ).shuffle(seed=data_args.random_seed)
 
-    # Sample the generated dataset accordingly.
-    if data_args.num_generated_samples != -1:
-        dataset = dataset.select(range(data_args.num_generated_samples))
+    # Ensure max value is the length of the dataset
+    num_generated_samples = min(data_args.max_train_samples, dataset.num_rows)
+    dataset = dataset.select(range(num_generated_samples))
     
     return dataset
 

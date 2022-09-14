@@ -20,10 +20,10 @@ per_device_train_batch_size: 4  # To match the 8 batch size of eariler experimen
 optim: "adamw_torch"
 warmup_ratio: .20
 learning_rate: .00001 # 1e-5
-num_train_epochs: 200
+num_train_epochs: 100
 
-early_stopping_patience: 50
-early_stopping_threshold: 0.0001
+early_stopping_patience: 25
+early_stopping_threshold: 0.001
 
 do_train: True
 do_eval: True
