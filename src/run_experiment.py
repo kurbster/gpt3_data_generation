@@ -226,6 +226,7 @@ def run_test_loop(
     training_args: TrainingArguments,
     predict_metric_func: Callable,
     predict_dataset,
+    log_predictions: bool,
 ):
     logger.info("*** Predict ***")
     predict_results = trainer.predict(predict_dataset, metric_key_prefix="predict")
@@ -235,7 +236,8 @@ def run_test_loop(
     )
     metrics["predict_samples"] = min(max_predict_samples, len(predict_dataset))
 
-    trainer.log_metrics("predict", metrics)
+    if log_predictions:
+        trainer.log_metrics("predict", metrics)
     trainer.save_metrics("predict", metrics)
 
     if trainer.is_world_process_zero():
@@ -254,6 +256,7 @@ def run_model(
     predict_metric_func: Callable,
     train_preprocessing_func: Callable,
     test_preprocessing_func: Callable,
+    log_predictions: bool = True,
 ):
     """Train the model specified by model_args with options specified
     under training_args with the datasets stored in datasets. The
@@ -366,6 +369,7 @@ def run_model(
             training_args=training_args,
             predict_dataset=predict_dataset,
             predict_metric_func=predict_metric_func,
+            log_predictions=log_predictions,
         )
 
 @hydra.main(config_path="../conf", config_name="wic", version_base="1.2")

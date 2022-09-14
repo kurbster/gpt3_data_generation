@@ -146,7 +146,8 @@ def main(cfg):
         metric_func=metric_function,
         predict_metric_func=predict_metric_func,
         train_preprocessing_func=original_preprocessing,
-        test_preprocessing_func=original_preprocessing
+        test_preprocessing_func=original_preprocessing,
+        log_predictions=False,
     )
 
 if __name__ == '__main__':
