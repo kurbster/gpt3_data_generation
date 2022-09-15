@@ -22,6 +22,7 @@ from transformers import (
     Trainer,
     TrainerCallback,
     TrainingArguments,
+    Seq2SeqTrainingArguments,
     set_seed,
 )
 from transformers.trainer_utils import get_last_checkpoint
@@ -374,7 +375,7 @@ def run_model(
 
 @hydra.main(config_path="../conf", config_name="wic", version_base="1.2")
 def main(cfg):
-    parser = HfArgumentParser((ModelArguments, DataTrainingArguments, TrainingArguments))
+    parser = HfArgumentParser((ModelArguments, DataTrainingArguments, Seq2SeqTrainingArguments))
     model_args, data_args, training_args = parser.parse_dict(cfg)
 
     setup_logging(training_args)
