@@ -15,8 +15,6 @@ from transformers import (
     AutoConfig,
     AutoModel,
     AutoTokenizer,
-    DataCollatorWithPadding,
-    DataCollatorForSeq2Seq,
     EarlyStoppingCallback,
     HfArgumentParser,
     Trainer,
@@ -30,8 +28,8 @@ from transformers.trainer_utils import get_last_checkpoint
 from datasets import load_dataset, dataset_dict
 
 from src.config import ModelArguments, DataTrainingArguments
-from src.custom_trainer import LogCallBack, LogMetricsTrainer
-from src.util import setup_logging, get_auto_model_type, get_trainer_type
+from src.custom_trainer import LogCallBack
+from src.util import setup_logging, ExperimentType
 
 logger = logging.getLogger("myLogger")
 
@@ -59,7 +57,12 @@ def get_checkpoint(training_args: TrainingArguments) -> Union[None, str]:
         last_checkpoint = None
     return last_checkpoint
 
-def get_model_and_tokenizer(model_args: ModelArguments, data_args: DataTrainingArguments, checkpoint: str) -> Tuple[AutoModel, AutoTokenizer]:
+def get_model_and_tokenizer(
+    model_args: ModelArguments,
+    data_args: DataTrainingArguments,
+    checkpoint: str,
+    experiment: ExperimentType,
+) -> Tuple[AutoModel, AutoTokenizer]:
     model_name = checkpoint if checkpoint else model_args.model_name
     logger.info('Loading Model Config')
     config = AutoConfig.from_pretrained(
@@ -78,7 +81,7 @@ def get_model_and_tokenizer(model_args: ModelArguments, data_args: DataTrainingA
     )
 
     logger.info('Loading Model')
-    model_type = get_auto_model_type(model_args.model_name)
+    model_type = experiment.model_type(model_args.model_name)
     model = model_type.from_pretrained(model_name, config=config)
 
     logger.info(f'Len of tokenizer {len(tokenizer)}')
@@ -131,7 +134,7 @@ def prepare_dataset(
     preprocess_callable,
     data_args: DataTrainingArguments,
     training_args: TrainingArguments,
-    ):
+):
     columns_to_remove = get_columns_to_remove(dataset, data_args)
     logger.info(f'I am columns to remove: {columns_to_remove}')
 
@@ -172,15 +175,14 @@ def get_trainer(
     training_args: TrainingArguments,
     model: AutoModel,
     tokenizer: AutoTokenizer,
-    model_name: str,
+    experiment: ExperimentType,
     train_dataset,
     eval_dataset,
     data_collator,
     metric_function,
 ) -> Trainer:
     callbacks = get_callbacks(data_args)
-    trainer_type = get_trainer_type(model_name)
-    return trainer_type(
+    return experiment.trainer_type(
         model=model,
         args=training_args,
         train_dataset=train_dataset,
@@ -257,6 +259,7 @@ def run_model(
     predict_metric_func: Callable,
     train_preprocessing_func: Callable,
     test_preprocessing_func: Callable,
+    experiment: ExperimentType,
     log_predictions: bool = True,
 ):
     """Train the model specified by model_args with options specified
@@ -276,7 +279,7 @@ def run_model(
     """
     last_checkpoint = get_checkpoint(training_args)
     logger.info(f'Checkpoint for model: {last_checkpoint}')
-    model, tokenizer = get_model_and_tokenizer(model_args, data_args, last_checkpoint)
+    model, tokenizer = get_model_and_tokenizer(model_args, data_args, last_checkpoint, experiment)
 
     if not (training_args.do_train or training_args.do_eval or training_args.do_predict):
         logger.info("There is nothing to do. Please pass `do_train`, `do_eval` and/or `do_predict`.")
@@ -326,9 +329,8 @@ def run_model(
 
     # TODO: See if this still works with BERT and RoBERTA if we use them
     # Also check for other models.
-    # data_collator = DataCollatorWithPadding(
     padding = "max_length" if data_args.pad_to_max_length else "longest"
-    data_collator = DataCollatorForSeq2Seq(
+    data_collator = experiment.data_collator(
         tokenizer,
         model=model,
         padding=padding,
@@ -337,10 +339,10 @@ def run_model(
 
     trainer = get_trainer(
         training_args=training_args, model=model,
-        model_name=model_args.model_name,
         tokenizer=tokenizer, train_dataset=train_dataset,
         eval_dataset=eval_dataset, data_collator=data_collator,
-        metric_function=metric_func, data_args=data_args
+        metric_function=metric_func, data_args=data_args,
+        experiment=experiment
     )
 
     eval_output_path = Path(training_args.output_dir, 'evaluation_results')
@@ -388,6 +390,8 @@ def main(cfg):
     logger.info(f"Model parameters {model_args}")
     logger.info(f"Data parameters {data_args}")
 
+    experiment = ExperimentType(model_args.model_name)
+
     set_seed(training_args.seed)
 
     # TODO: Change to only grab to specified train set. Not both
@@ -399,13 +403,17 @@ def main(cfg):
 
     original_preprocessing = hydra.utils.instantiate(
         cfg.preprocessing_config.original,
-        text_col=data_args.text_column,
-        label_col=data_args.label_column,
+        tokenize_labels=experiment.tokenize_labels,
+        # By including these values we override whatever is in the config
+        #text_col=data_args.text_column,
+        #label_col=data_args.label_column,
     )
     generated_preprocessing = hydra.utils.instantiate(
         cfg.preprocessing_config.generated,
-        text_col=data_args.text_column,
-        label_col=data_args.label_column,
+        tokenize_labels=experiment.tokenize_labels,
+        # By including these values we override whatever is in the config
+        #text_col=data_args.text_column,
+        #label_col=data_args.label_column,
     )
 
     metric_function = hydra.utils.instantiate(cfg.metric)

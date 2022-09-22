@@ -19,6 +19,7 @@ from transformers import (
 
 from src.config import ModelArguments, DataTrainingArguments
 from src.run_experiment import run_model
+from src.util import ExperimentType
 
 logger = logging.getLogger("myLogger")
 
@@ -74,6 +75,8 @@ def main(cfg):
     logger.info(f"Model parameters {model_args}")
     logger.info(f"Data parameters {data_args}")
 
+    experiment = ExperimentType(model_args.model_name)
+
     set_seed(training_args.seed)
 
     main_output_dir = Path(training_args.output_dir)
@@ -85,12 +88,14 @@ def main(cfg):
     # Get the original and generated preprocessing functions.
     original_preprocessing = hydra.utils.instantiate(
         cfg.preprocessing_config.original,
+        tokenize_labels=experiment.tokenize_labels,
         # By including these values we override whatever is in the config
         #text_col=data_args.text_column,
         #label_col=data_args.label_column,
     )
     generated_preprocessing = hydra.utils.instantiate(
         cfg.preprocessing_config.generated,
+        tokenize_labels=experiment.tokenize_labels,
         # By including these values we override whatever is in the config
         #text_col=data_args.text_column,
         #label_col=data_args.label_column,
@@ -112,7 +117,8 @@ def main(cfg):
             metric_func=metric_function,
             predict_metric_func=predict_metric_func,
             train_preprocessing_func=original_preprocessing,
-            test_preprocessing_func=original_preprocessing
+            test_preprocessing_func=original_preprocessing,
+            experiment=experiment,
         )
 
     if len(data_args.train_files) > 0:
@@ -130,25 +136,26 @@ def main(cfg):
                 metric_func=metric_function,
                 predict_metric_func=predict_metric_func,
                 train_preprocessing_func=generated_preprocessing,
-                test_preprocessing_func=original_preprocessing
+                test_preprocessing_func=original_preprocessing,
+                experiment=experiment,
             )
 
-    logger.info('STARTING THE MODEL WITHOUT TRAINING')
-    logger.info('*'*75)
-    training_args.output_dir = str(main_output_dir / 'no_train')
-    training_args.do_train = False
-    training_args.do_eval = False
-    run_model(
-        model_args,
-        data_args,
-        training_args,
-        datasets,
-        metric_func=metric_function,
-        predict_metric_func=predict_metric_func,
-        train_preprocessing_func=original_preprocessing,
-        test_preprocessing_func=original_preprocessing,
-        log_predictions=False,
-    )
+    # logger.info('STARTING THE MODEL WITHOUT TRAINING')
+    # logger.info('*'*75)
+    # training_args.output_dir = str(main_output_dir / 'no_train')
+    # training_args.do_train = False
+    # training_args.do_eval = False
+    # run_model(
+        # model_args,
+        # data_args,
+        # training_args,
+        # datasets,
+        # metric_func=metric_function,
+        # predict_metric_func=predict_metric_func,
+        # train_preprocessing_func=original_preprocessing,
+        # test_preprocessing_func=original_preprocessing,
+        # log_predictions=False,
+    # )
 
 if __name__ == '__main__':
     # Change cwd to the main dir so the outputs/ dir
