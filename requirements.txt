@@ -1,6 +1,6 @@
 torch
 datasets
-transformers
+transformers==4.20.0
 pandas
 scikit-learn
-hydra-core
+hydra-core==1.2.0

@@ -84,7 +84,7 @@ def get_model_and_tokenizer(model_args: ModelArguments, data_args: DataTrainingA
     logger.info(f'Len of tokenizer {len(tokenizer)}')
     model.resize_token_embeddings(len(tokenizer))
 
-    return model, tokenizer
+    return model, tokenizer, config
 
 def get_datasets(data_args: DataTrainingArguments, model_args: ModelArguments) -> dataset_dict:
     extension = data_args.train_file.split(".")[-1]
@@ -130,8 +130,9 @@ def prepare_dataset(
     dataset,
     preprocess_callable,
     data_args: DataTrainingArguments,
+    model_config: AutoConfig,
     training_args: TrainingArguments,
-    ):
+):
     columns_to_remove = get_columns_to_remove(dataset, data_args)
     logger.info(f'I am columns to remove: {columns_to_remove}')
 
@@ -152,6 +153,11 @@ def prepare_dataset(
     logger.debug(f'columns in cleaned dataset {dataset.features}')
     logger.debug(f'number of input_ids {len(dataset["input_ids"])}')
     logger.debug(f'length of first input ids {len(dataset["input_ids"][0])}')
+
+    max_length = min(model_config.max_position_embeddings, data_args.max_source_length)
+    dataset = dataset.filter(
+        lambda example: example['input_ids'] > max_length
+    )
 
     return dataset
 
@@ -276,7 +282,7 @@ def run_model(
     """
     last_checkpoint = get_checkpoint(training_args)
     logger.info(f'Checkpoint for model: {last_checkpoint}')
-    model, tokenizer = get_model_and_tokenizer(model_args, data_args, last_checkpoint)
+    model, tokenizer, model_config = get_model_and_tokenizer(model_args, data_args, last_checkpoint)
 
     if not (training_args.do_train or training_args.do_eval or training_args.do_predict):
         logger.info("There is nothing to do. Please pass `do_train`, `do_eval` and/or `do_predict`.")
@@ -284,8 +290,10 @@ def run_model(
 
     padding = "max_length" if data_args.pad_to_max_length else "longest"
     tokenizer_func = functools.partial(
-        tokenizer, max_length=data_args.max_source_length,
-        padding=False, truncation=True
+        tokenizer,
+        padding=False,
+        # max_length=max_length,
+        # padding=False, truncation=True
         # padding=padding, truncation=True
     )
 
@@ -303,6 +311,7 @@ def run_model(
             datasets["train"],
             train_preprocessing,
             data_args,
+            model_config,
             training_args,
         )
 
@@ -312,6 +321,7 @@ def run_model(
             datasets["validation"],
             test_preprocessing,
             data_args,
+            model_config,
             training_args,
         )
 
@@ -321,6 +331,7 @@ def run_model(
             datasets["test"],
             test_preprocessing,
             data_args,
+            model_config,
             training_args,
         )
 
