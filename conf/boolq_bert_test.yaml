@@ -1,16 +1,16 @@
 defaults:
   - outputs
   - experiment_defaults
-  - preprocessing_config: wic
-  # - metric: f1_score
-  # - prediction_metric: ../metric/prediction_f1_score
-  - metric: seq2seq_f1_score
-  - prediction_metric: ../metric/seq2seq_prediction_f1_score
+  - preprocessing_config: boolq
+  - metric: f1_score
+  - prediction_metric: ../metric/prediction_f1_score
+  # - metric: seq2seq_f1_score
+  # - prediction_metric: ../metric/seq2seq_prediction_f1_score
   - _self_
 hydra:
   env:
     model_name: "bert-base-cased"
-    dataset_name: "wic"
+    dataset_name: "boolq"
     save_name: "${hydra:env.dataset_name}_${hydra:env.model_name}"
 
 model_name: "${hydra:env.model_name}"
@@ -20,16 +20,15 @@ train_file: "datasets/${hydra:env.dataset_name}/gpt3_generated.json"
 # This is used by main.py to run multiple experiments
 train_files:
   - "datasets/${hydra:env.dataset_name}/gpt3_generated.json"
-  - "datasets/${hydra:env.dataset_name}/removed_gpt3_generated.json"
 dataset_name: "${hydra:env.dataset_name}"
 
 output_dir: "models/${hydra:env.dataset_name}/${hydra:env.model_name}"
 
 num_labels: 2
-num_samples: 100
-num_generated_samples: 100
+max_train_samples: 468
 
 run_original: False
+# run_original: True
 overwrite_cache: True
 overwrite_output_dir: True
 

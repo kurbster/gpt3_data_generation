@@ -26,4 +26,4 @@ dataset_name: "${hydra:env.dataset_name}"
 output_dir: "models/${hydra:env.dataset_name}/${hydra:env.model_name}"
 
 num_labels: 2
-num_samples: 410
+max_train_samples: 410

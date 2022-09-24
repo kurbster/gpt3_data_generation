@@ -7,7 +7,7 @@ import pandas as pd
 from sklearn.metrics import classification_report
 
 # This was the function to calculate metrics for BERT and RoBERTA
-def compute_metrics(eval_preds):
+def compute_metrics(eval_preds, **kw):
     preds, labels = eval_preds
 
     preds = torch.from_numpy(preds)
@@ -28,7 +28,7 @@ def compute_metrics(eval_preds):
 
     return flattened_results
     
-def compute_record_metrics(eval_preds):
+def compute_record_metrics(eval_preds, **kw):
     preds, labels = eval_preds
 
     preds = torch.from_numpy(preds)
@@ -55,7 +55,8 @@ def compute_record_metrics(eval_preds):
 def prediction_metrics(
     predict_results: NamedTuple,
     output_dir: Path,
-    input_text: List[str]
+    input_text: List[str],
+    **kw
 ):
     preds = torch.from_numpy(predict_results.predictions)
     labels = torch.from_numpy(predict_results.label_ids)

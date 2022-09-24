@@ -46,13 +46,20 @@ class DataTrainingArguments:
     """
     Arguments pertaining to what data we are going to input our model for training and eval.
     """
-    max_train_samples: Optional[int] = field(
+    max_train_samples: int = field(
         metadata={
             "help": "For debugging purposes or quicker training, truncate the number of training examples to this "
             "value if set."
         },
     )
-    max_eval_samples: Optional[int] = field(
+    max_removed_samples_warning: float = field(
+        default=0.25,
+        metadata={
+            "help": "For debugging purposes if the number of removed samples by our filter is greater than this proportion."
+        },
+    )
+    eval_split_percent: Optional[float] = field(
+        default=0.2,
         metadata={
             "help": "For debugging purposes or quicker training, truncate the number of evaluation examples to this "
             "value if set."

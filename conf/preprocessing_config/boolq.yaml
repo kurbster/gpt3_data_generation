@@ -1,9 +1,12 @@
 original:
   _target_: src.our_datasets.BoolQOriginalDataset
   _partial_: True
+  # TODO: Make this configurable
+  delim: "[SEP]"
   columns: [passage, question]
 generated:
   _target_: src.our_datasets.BoolQGeneratedDataset
   _partial_: True
   columns: [passage, question]
+  delim: "[SEP]"
   label_col: "answer"

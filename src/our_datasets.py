@@ -6,6 +6,9 @@ from dataclasses import dataclass, field
 @dataclass
 class Dataset:
     tokenizer: Callable
+    tokenize_labels: bool
+    # TODO: Make the delim configurable
+    # TODO: ADD prompting
     delim: str = " "
     text_col: str = "text"
     label_col: str = "label"
@@ -18,7 +21,8 @@ class Dataset:
         input[self.text_col] = text # Save the text for analysis later.
         # This is unneeded because label col is already in dataset
         # input[self.label_col] = example[self.label_col]
-        input[self.label_col] = self.tokenizer(example[self.label_col])['input_ids']
+        if self.tokenize_labels:
+            input[self.label_col] = self.tokenizer(str(example[self.label_col]))['input_ids']
         return input
 
 @dataclass
@@ -30,14 +34,16 @@ class WicOriginalDataset(Dataset):
 @dataclass
 class WicGeneratedDataset(Dataset):
     def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
-        example[self.label_col] = '1' if example[self.label_col] == 'T' else '0'
+        # example[self.label_col] = '1' if example[self.label_col] == 'T' else '0'
+        example[self.label_col] = 1 if example[self.label_col] == 'T' else 0
         input = super().__call__(example)
         return input
 
 @dataclass
 class RteGeneratedDataset(Dataset):
     def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
-        example[self.label_col] = '1' if example[self.label_col] == 'entailment' else '0'
+        # example[self.label_col] = '1' if example[self.label_col] == 'entailment' else '0'
+        example[self.label_col] = 1 if example[self.label_col] == 'entailment' else 0
         input = super().__call__(example)
         return input
 
@@ -50,7 +56,8 @@ class BoolQOriginalDataset(Dataset):
 @dataclass
 class BoolQGeneratedDataset(Dataset):
     def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
-        example[self.label_col] = '1' if example[self.label_col] == 'True' else '0'
+        # example[self.label_col] = '1' if example[self.label_col] == 'True' else '0'
+        example[self.label_col] = 1 if example[self.label_col] == 'True' else 0
         input = super().__call__(example)
         return input
 
