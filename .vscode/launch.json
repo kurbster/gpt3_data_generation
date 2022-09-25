@@ -1,0 +1,77 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run BoolQ BERT",
+            "type": "python",
+            "request": "launch",
+            "env":{
+                "HYDRA_FULL_ERROR": "1",
+            },
+            "module": "src.main",
+            "args": [
+                "hydra.env.model_name=bert-base-cased",
+            ],
+            "justMyCode": true
+        },
+        {
+            "name": "Run BoolQ BART TEST",
+            "type": "python",
+            "request": "launch",
+            "env":{
+                "HYDRA_FULL_ERROR": "1",
+            },
+            "module": "src.main",
+            "args": [
+                "hydra.env.model_name=facebook/bart-base",
+                "run_original=False",
+                "--config-name=boolq_bert_test",
+            ],
+            "justMyCode": true
+        },
+        {
+            "name": "Run BoolQ BERT TEST",
+            "type": "python",
+            "request": "launch",
+            "env":{
+                "HYDRA_FULL_ERROR": "1",
+            },
+            "module": "src.main",
+            "args": [
+                "--config-name=boolq_bert_test",
+            ],
+            "justMyCode": true
+        },
+        {
+            "name": "Run Wic BART",
+            "type": "python",
+            "request": "launch",
+            "module": "src.main",
+            "args": [
+                "--config-name=boolq_bert_test",
+                "hydra.env.dataset_name=wic",
+                "hydra.env.model_name=facebook/bart-base",
+            ],
+            "justMyCode": true
+        },
+        {
+            "name": "Run Wic AllenAI",
+            "type": "python",
+            "request": "launch",
+            "module": "src.main",
+            "env":{
+                "CUDA_LAUNCH_BLOCKING": "1",
+                "HYDRA_FULL_ERROR": "1"
+            },
+            "args": [
+                "--config-name=boolq_bert_test",
+                "hydra.env.dataset_name=wic",
+                "hydra.env.model_name=allenai/tk-instruct-3b-def",
+            ],
+            "justMyCode": true
+        },
+    ]
+}

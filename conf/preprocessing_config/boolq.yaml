@@ -1,12 +1,12 @@
+common_config:
+  header: "Given a passage and a question generate 1 if the question is correct based
+  on the passage of 0 if it in incorrect."
+  footer: "Answer: "
+  columns:
+    passage: "Passage: "
+    question: "Question: "
 original:
-  _target_: src.our_datasets.BoolQOriginalDataset
-  _partial_: True
-  # TODO: Make this configurable
-  delim: "[SEP]"
-  columns: [passage, question]
+  _target_: src.our_datasets.Dataset
 generated:
   _target_: src.our_datasets.BoolQGeneratedDataset
-  _partial_: True
-  columns: [passage, question]
-  delim: "[SEP]"
   label_col: "answer"

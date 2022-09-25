@@ -1,8 +1,12 @@
+common_config:
+  header: "Given a premise and hypothesis generate 0 if the premise
+  entails the hypothesis, generate 1 if the premise contradicts the
+  hypothesis, or generate 2 if the premise is neutral to the hypothesis."
+  footer: "Answer: "
+  columns:
+    premise: "Premise: "
+    hypothesis: "Hypothesis: "
 original:
   _target_: src.our_datasets.Dataset
-  _partial_: True
-  columns: [premise, hypothesis]
 generated:
   _target_: src.our_datasets.Dataset
-  _partial_: True
-  columns: [premise, hypothesis]

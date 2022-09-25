@@ -1,21 +1,21 @@
 defaults:
   - outputs
   - experiment_defaults
-  - preprocessing_config: boolq
+  - preprocessing_config: cb
   - _self_
 hydra:
   env:
     model_name: "facebook/bart-base"
-    dataset_name: "boolq"
+    dataset_name: "cb"
     save_name: "${hydra:env.dataset_name}_${hydra:env.model_name}"
 
 model_name: "${hydra:env.model_name}"
 
 train_files:
-  - "datasets/${hydra:env.dataset_name}/gpt3_generated_500sample.json"
+  - "datasets/${hydra:env.dataset_name}/gpt3_generated.json"
 dataset_name: "${hydra:env.dataset_name}"
 
 output_dir: "models/${hydra:env.dataset_name}/${hydra:env.model_name}"
 
-num_labels: 2
-max_train_samples: 468
+num_labels: 3
+max_train_samples: 94

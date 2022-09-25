@@ -1,8 +1,17 @@
+common_config:
+  header: "Given a passage, a question, and an answer, generate 0 if
+  the answer to the question is incorrect based on the paragraph. Generate
+  1 if the answer to the question if correct."
+  footer: "Is the answer correct? "
 original:
   _target_: src.our_datasets.Dataset
-  _partial_: True
-  columns: [paragraph, question, answer]
+  columns:
+    paragraph: "Passage: "
+    question: "Question: "
+    answer: "Answer: "
 generated:
   _target_: src.our_datasets.Dataset
-  _partial_: True
-  columns: [paragraph, question, answer]
+  columns:
+    passage: "Passage: "
+    question: "Question: "
+    answer: "Answer: "

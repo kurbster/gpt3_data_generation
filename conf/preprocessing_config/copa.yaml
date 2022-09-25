@@ -1,8 +1,14 @@
+common_config:
+  header: "Given a premise, two choices, and either cause or effect, generate 0
+  if choice 1 was the cause or effect of the premise. Generate 1 if choice 2 was
+  the cause or effect of the premise."
+  footer: "Answer: "
+  columns:
+    premise: "Premise: "
+    choice1: "Choice 1: "
+    choice2: "Choice 2: "
+    question: "Cause/Effect: "
 original:
-  _target_: src.our_datasets.CopaOriginalDataset
-  _partial_: True
-  columns: [sentence1, sentence2, word]
+  _target_: src.our_datasets.Dataset
 generated:
-  _target_: src.our_datasets.CopaOriginalDataset
-  _partial_: True
-  columns: [sentence1, sentence2, word]
+  _target_: src.our_datasets.Dataset

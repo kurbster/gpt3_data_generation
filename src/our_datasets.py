@@ -1,40 +1,53 @@
 #!/usr/bin/env python3
-import numpy as np
 from typing import Callable, Dict, List
-from dataclasses import dataclass, field
+from dataclasses import dataclass
+
+import numpy as np
 
 @dataclass
 class Dataset:
+    header: str
+    footer: str
+    columns: Dict[str, str]
     tokenizer: Callable
-    tokenize_labels: bool
-    # TODO: Make the delim configurable
-    # TODO: ADD prompting
-    delim: str = " "
+    is_generative_model: bool
     text_col: str = "text"
     label_col: str = "label"
-    columns: List[str] = field(default_factory=list)
-    # TODO: Maybe add prefix. For boolq the question does not end
-    # With a '?' so maybe we should have a features to append a suffix
+    generative_delim: str = "\n"
+    discriminative_delim: str = " [SEP] "
+    def _make_generative_model_input(self, example: Dict[str, str]) -> Dict[str, str]:
+        # Add the prefix to each column
+        for column_name, column_prefix in self.columns.items():
+            example[column_name] = column_prefix + example[column_name] 
+
+        # Join the columns together
+        text = self.generative_delim.join(
+            [example[column_name] for column_name in self.columns]
+        )
+
+        # Add the header and footer
+        text = self.generative_delim.join([self.header, text, self.footer])
+        return text
+
+    def _make_discriminative_model_input(self, example: Dict[str, str]) -> Dict[str, str]:
+        return self.discriminative_delim.join(
+            [example[column_name] for column_name in self.columns]
+        )
+
     def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
-        text = self.delim.join([example[label] for label in self.columns])
+        if self.is_generative_model:
+            text = self._make_generative_model_input(example)
+        else:
+            text = self._make_discriminative_model_input(example)
         input = self.tokenizer(text)
         input[self.text_col] = text # Save the text for analysis later.
-        # This is unneeded because label col is already in dataset
-        # input[self.label_col] = example[self.label_col]
-        if self.tokenize_labels:
+        if self.is_generative_model:
             input[self.label_col] = self.tokenizer(str(example[self.label_col]))['input_ids']
         return input
 
 @dataclass
-class WicOriginalDataset(Dataset):
-    def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
-        example[self.label_col] = str(example[self.label_col])
-        return super().__call__(example)
-
-@dataclass
 class WicGeneratedDataset(Dataset):
     def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
-        # example[self.label_col] = '1' if example[self.label_col] == 'T' else '0'
         example[self.label_col] = 1 if example[self.label_col] == 'T' else 0
         input = super().__call__(example)
         return input
@@ -42,30 +55,16 @@ class WicGeneratedDataset(Dataset):
 @dataclass
 class RteGeneratedDataset(Dataset):
     def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
-        # example[self.label_col] = '1' if example[self.label_col] == 'entailment' else '0'
         example[self.label_col] = 1 if example[self.label_col] == 'entailment' else 0
         input = super().__call__(example)
         return input
 
 @dataclass
-class BoolQOriginalDataset(Dataset):
-    def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
-        example[self.label_col] = str(example[self.label_col])
-        return super().__call__(example)
-
-@dataclass
 class BoolQGeneratedDataset(Dataset):
     def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
-        # example[self.label_col] = '1' if example[self.label_col] == 'True' else '0'
         example[self.label_col] = 1 if example[self.label_col] == 'True' else 0
         input = super().__call__(example)
         return input
-
-# TODO: Finish implementing COPA dataset
-@dataclass
-class CopaOriginalDataset(Dataset):
-    def __call__(self, example: Dict[str, str]) -> Dict[str, str]:
-        return super().__call__(example)
 
 @dataclass
 class RecordOriginalDataset(Dataset):

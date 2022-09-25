@@ -1,6 +1,4 @@
 original:
   _target_: src.our_datasets.RecordOriginalDataset
-  _partial_: True
 generated:
   _target_: src.our_datasets.RecordOriginalDataset
-  _partial_: True

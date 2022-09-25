@@ -1,4 +1,5 @@
-.vscode/
+unit_test.err
+unit_test.out
 
 tmp/
 # Saved models

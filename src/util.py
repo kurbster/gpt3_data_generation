@@ -1,16 +1,13 @@
 import sys
-import logging
 import functools
 
 from typing import Type
 from pathlib import Path
-from dataclasses import dataclass
 
 MAIN_DIR = Path(__file__, '../..').resolve()
 sys.path.append(str(MAIN_DIR))
 
-import datasets
-import transformers
+import torch
 
 from transformers import (
     AutoModelForSeq2SeqLM,
@@ -24,22 +21,6 @@ from src.custom_trainer import (
     LogMetricsSeq2SeqTrainer
 )
 
-logger = logging.getLogger("myLogger")
-
-def setup_logging(training_args):
-    # log_level = training_args.get_process_log_level()
-    log_level = logging.DEBUG
-    logger.setLevel(log_level)
-    datasets.utils.logging.set_verbosity(log_level)
-    transformers.utils.logging.set_verbosity(log_level)
-    # transformers.utils.logging.enable_default_handler()
-    # transformers.utils.logging.enable_explicit_format()
-
-    logger.warning(
-        f"Process rank: {training_args.local_rank}, device: {training_args.device}, n_gpu: {training_args.n_gpu} "
-        + f"distributed training: {bool(training_args.local_rank != -1)}, 16-bits training: {training_args.fp16}"
-    )
-
 encoder_models = ["roberta-base", "bert-base-cased"]
 
 enc_dec_models = [
@@ -52,43 +33,74 @@ enc_dec_models = [
     "facebook/bart-base",
 ]
 
-# If we start using casual LM models put them here
-decoder_models = []
-
-@dataclass
 class ExperimentType:
-    model_name: str
-    is_encoder_model: bool = False
-    is_enc_dec_model: bool = False
-    is_decoder_model: bool = False
+    is_generative_model: bool = False
 
-    def __post_init__(self):
-        if self.model_name in encoder_models:
-            self.is_encoder_model = True
-        elif self.model_name in enc_dec_models:
-            self.is_enc_dec_model = True
-        elif self.model_name in decoder_models:
-            self.is_decoder_model = True
-        else:
-            raise ValueError(f"The model name '{self.model_name}' needs to be classified in the util.py file.")
+    def __init__(self, model_name):
+        if model_name in enc_dec_models:
+            self.is_generative_model = True
+        elif model_name not in encoder_models:
+            raise ValueError(f"The model name '{model_name}' needs to be classified in the util.py file.")
     
     @property
-    def tokenize_labels(self) -> bool:
-        return False if self.is_encoder_model else True
-
-    @property
     def model_type(self) -> Type:
-        return AutoModelForSequenceClassification if self.is_encoder_model else AutoModelForSeq2SeqLM
+        return AutoModelForSeq2SeqLM if self.is_generative_model else AutoModelForSequenceClassification
 
     @property
     def trainer_type(self) -> Type:
-        return LogMetricsTrainer if self.is_encoder_model else LogMetricsSeq2SeqTrainer
+        return LogMetricsSeq2SeqTrainer if self.is_generative_model else LogMetricsTrainer
 
-    @property
-    def data_collator(self) -> Type:
-        return DataCollatorWithPadding if self.is_encoder_model else DataCollatorForSeq2Seq
-    
     def get_data_collator(self, model):
-        if self.is_encoder_model:
-            return DataCollatorWithPadding
-        return functools.partial(DataCollatorForSeq2Seq, model=model)
+        if self.is_generative_model:
+            return functools.partial(DataCollatorForSeq2Seq, model=model)
+        return DataCollatorWithPadding
+
+    def generative_model_postprocess(self, preds, labels, tokenizer):
+        predictions = tokenizer.batch_decode(
+            preds,
+            skip_special_tokens=True,
+            clean_up_tokenization_spaces=True
+        )
+        labels = tokenizer.batch_decode(
+            labels,
+            skip_special_tokens=True,
+            clean_up_tokenization_spaces=True
+        )
+        return predictions, labels
+
+    def discriminative_postprocess(self, preds, labels):
+        preds = torch.from_numpy(preds)
+        y_pred_softmax = torch.log_softmax(preds, dim=1)
+        _, y_pred = torch.max(y_pred_softmax, dim=1)
+        
+        # We need to map the labels and predictions to strings
+        labels = list(map(str, labels))
+        predictions = list(map(lambda x: str(x.item()), y_pred))
+        return predictions, labels
+
+    def postprocess_output(self, preds, labels, tokenizer):
+        # If the model is generative then postprocess the
+        # predictions and labels with tokenizer decoding
+        if self.is_generative_model:
+            preds, labels = self.generative_model_postprocess(
+                preds, labels, tokenizer
+            )
+        # If the model is discriminative then only postprocess
+        # the predictions from logits to class labels
+        else:
+            preds, labels = self.discriminative_postprocess(preds, labels)
+        return preds, labels
+
+    def eval_postprocess_output(self, func):
+        def wrapper(eval_results, tokenizer):
+            preds, labels = eval_results
+            preds, labels = self.postprocess_output(preds, labels, tokenizer)
+            return func(preds, labels)
+        return wrapper
+
+    def predict_postprocess_output(self, func):
+        def wrapper(predict_results, output_dir, input_text, tokenizer):
+            preds, labels = predict_results.predictions, predict_results.label_ids
+            preds, labels = self.postprocess_output(preds, labels, tokenizer)
+            return func(preds, labels, output_dir, input_text)
+        return wrapper

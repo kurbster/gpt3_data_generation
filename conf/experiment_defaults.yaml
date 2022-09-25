@@ -1,3 +1,8 @@
+metric: 
+  _target_: "src.our_metrics.compute_f1_metrics"
+prediction_metric:
+  _target_: "src.our_metrics.compute_f1_prediction_metrics"
+
 cache_dir: "./.cache"
 
 save_strategy: "epoch"

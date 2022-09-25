@@ -1,8 +1,14 @@
+common_config:
+  header: "Given two different sentences and a word that appears in
+  both sentences, generate 0 if the word has a different meaning in
+  both sentences. Generate 1 if the word has the same meaning in both
+  sentences."
+  footer: "Answer: "
+  columns:
+    sentence1: "Sentence 1: "
+    sentence2: "Sentence 2: "
+    word: "Word: "
 original:
-  _target_: src.our_datasets.WicOriginalDataset
-  _partial_: True
-  columns: [sentence1, sentence2, word]
+  _target_: src.our_datasets.Dataset
 generated:
   _target_: src.our_datasets.WicGeneratedDataset
-  _partial_: True
-  columns: [sentence1, sentence2, word]

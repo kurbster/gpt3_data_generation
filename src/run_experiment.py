@@ -1,6 +1,5 @@
 import os
 import sys
-import copy
 import logging
 import functools
 
@@ -10,18 +9,14 @@ from pathlib import Path
 MAIN_DIR = Path(__file__, '../..').resolve()
 sys.path.append(str(MAIN_DIR))
 
-import hydra
 from transformers import (
     AutoConfig,
     AutoModel,
     AutoTokenizer,
     EarlyStoppingCallback,
-    HfArgumentParser,
     Trainer,
     TrainerCallback,
     TrainingArguments,
-    Seq2SeqTrainingArguments,
-    set_seed,
 )
 from transformers.trainer_utils import get_last_checkpoint
 
@@ -29,7 +24,7 @@ from datasets import load_dataset, dataset_dict
 
 from src.config import ModelArguments, DataTrainingArguments
 from src.custom_trainer import LogCallBack
-from src.util import setup_logging, ExperimentType
+from src.util import ExperimentType
 
 logger = logging.getLogger("myLogger")
 
@@ -141,7 +136,6 @@ def prepare_dataset(
     with training_args.main_process_first(desc="dataset map pre-processing"):
         dataset = dataset.map(
             preprocess_callable,
-            batched=data_args.batch_tokenization,
             num_proc=data_args.preprocessing_num_workers,
             remove_columns=columns_to_remove,
             load_from_cache_file=not data_args.overwrite_cache,
@@ -149,7 +143,6 @@ def prepare_dataset(
         )
 
     # TODO: Check if this works with BERT and RoBERTA if we are using them
-    #dataset = dataset.rename_column(data_args.label_column, "labels")
     dataset = dataset.rename_column(preprocess_callable.label_col, "labels")
     logger.debug(f'Dataset label after {dataset["labels"][0]}')
     logger.debug(f'columns in cleaned dataset {dataset.features}')
@@ -189,7 +182,7 @@ def get_trainer(
     train_dataset,
     eval_dataset,
     data_collator,
-    metric_function,
+    metric_function: Callable,
 ) -> Trainer:
     callbacks = get_callbacks(data_args)
     return experiment.trainer_type(
@@ -222,13 +215,13 @@ def run_training_loop(
     trainer.save_metrics("train", metrics)
     trainer.save_state()
 
-def run_eval_loop(trainer: Trainer, data_args: DataTrainingArguments, eval_dataset):
+def run_eval_loop(trainer: Trainer, eval_dataset):
     logger.info("*** Evaluate ***")
     metrics = trainer.evaluate(metric_key_prefix="eval")
     metrics["eval_samples"] = len(eval_dataset)
 
     trainer.log_metrics("eval", metrics)
-    trainer.save_metrics("eval", metrics)
+    trainer.save_metrics("hf_eval", metrics)
 
 def run_test_loop(
     trainer: Trainer,
@@ -248,7 +241,7 @@ def run_test_loop(
 
     if log_predictions:
         trainer.log_metrics("predict", metrics)
-    trainer.save_metrics("predict", metrics)
+    trainer.save_metrics("hf_predict", metrics)
 
     if trainer.is_world_process_zero():
         predict_metric_func(
@@ -302,6 +295,7 @@ def run_model(
     metric_func = functools.partial(metric_func, tokenizer=tokenizer)
     predict_metric_func = functools.partial(predict_metric_func, tokenizer=tokenizer)
 
+    # Instantiate the preprocessing class with the tokenizer
     train_preprocessing = train_preprocessing_func(tokenizer=tokenizer_func)
     test_preprocessing = test_preprocessing_func(tokenizer=tokenizer_func)
 
@@ -337,10 +331,7 @@ def run_model(
             training_args,
         )
 
-    # TODO: See if this still works with BERT and RoBERTA if we use them
-    # Also check for other models.
     padding = "max_length" if data_args.pad_to_max_length else "longest"
-    # data_collator = experiment.data_collator(
     data_collator_type = experiment.get_data_collator(model)
     data_collator = data_collator_type(
         tokenizer,
@@ -371,7 +362,6 @@ def run_model(
     if training_args.do_eval:
         run_eval_loop(
             trainer=trainer,
-            data_args=data_args,
             eval_dataset=eval_dataset
         )
 
@@ -385,77 +375,3 @@ def run_model(
             predict_metric_func=predict_metric_func,
             log_predictions=log_predictions,
         )
-
-@hydra.main(config_path="../conf", config_name="wic", version_base="1.2")
-def main(cfg):
-    parser = HfArgumentParser((ModelArguments, DataTrainingArguments, Seq2SeqTrainingArguments))
-    model_args, data_args, training_args = parser.parse_dict(cfg)
-
-    setup_logging(training_args)
-    logger.warning(
-        f"Process rank: {training_args.local_rank}, device: {training_args.device}, n_gpu: {training_args.n_gpu} "
-        + f"distributed training: {bool(training_args.local_rank != -1)}, 16-bits training: {training_args.fp16}"
-    )
-
-    logger.info(f"Training/evaluation parameters {training_args}")
-    logger.info(f"Model parameters {model_args}")
-    logger.info(f"Data parameters {data_args}")
-
-    experiment = ExperimentType(model_args.model_name)
-
-    set_seed(training_args.seed)
-
-    # TODO: Change to only grab to specified train set. Not both
-    datasets = get_datasets(data_args, model_args)
-
-    generated_training_args = copy.copy(training_args)
-    training_args.output_dir += '/original'
-    generated_training_args.output_dir += '/generated'
-
-    original_preprocessing = hydra.utils.instantiate(
-        cfg.preprocessing_config.original,
-        tokenize_labels=experiment.tokenize_labels,
-        # By including these values we override whatever is in the config
-        #text_col=data_args.text_column,
-        #label_col=data_args.label_column,
-    )
-    generated_preprocessing = hydra.utils.instantiate(
-        cfg.preprocessing_config.generated,
-        tokenize_labels=experiment.tokenize_labels,
-        # By including these values we override whatever is in the config
-        #text_col=data_args.text_column,
-        #label_col=data_args.label_column,
-    )
-
-    metric_function = hydra.utils.instantiate(cfg.metric)
-
-    logger.info('STARTING THE MODEL WITH THE ORIGINAL TRAIN DATA')
-    logger.info('*'*75)
-    run_model(
-        model_args,
-        data_args,
-        training_args,
-        datasets,
-        metric_func=metric_function,
-        train_preprocessing_func=original_preprocessing,
-        test_preprocessing_func=original_preprocessing
-    )
-
-    datasets["train"] = datasets["generated_train"]
-    logger.info('STARTING THE MODEL WITH THE GENERATED TRAIN DATA')
-    logger.info('*'*75)
-    run_model(
-        model_args,
-        data_args,
-        generated_training_args,
-        datasets,
-        metric_func=metric_function,
-        train_preprocessing_func=generated_preprocessing,
-        test_preprocessing_func=original_preprocessing
-    )
-
-if __name__ == '__main__':
-    # Change cwd to the main dir so the outputs/ dir
-    # Is in the same place every run
-    os.chdir(MAIN_DIR)
-    main()
