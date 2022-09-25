@@ -5,17 +5,15 @@ defaults:
   - _self_
 hydra:
   env:
-    model_name: "facebook/bart-base"
-    dataset_name: "boolq"
-    save_name: "${hydra:env.dataset_name}_${hydra:env.model_name}"
+    save_name: "${dataset_name}_${model_name}"
 
-model_name: "${hydra:env.model_name}"
+model_name: "facebook/bart-base"
+dataset_name: "boolq"
 
 train_files:
-  - "datasets/${hydra:env.dataset_name}/gpt3_generated_500sample.json"
-dataset_name: "${hydra:env.dataset_name}"
+  - "datasets/${dataset_name}/gpt3_generated_500sample.json"
 
-output_dir: "models/${hydra:env.dataset_name}/${hydra:env.model_name}"
+output_dir: "models/${dataset_name}/${model_name}"
 
 num_labels: 2
 max_train_samples: 468
