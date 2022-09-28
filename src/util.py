@@ -85,8 +85,8 @@ class ExperimentType:
             preds, labels = self.generative_model_postprocess(
                 preds, labels, tokenizer
             )
-        # If the model is discriminative then only postprocess
-        # the predictions from logits to class labels
+        # If the model is discriminative then the output is not tokens
+        # and doesn't need the tokenizer to postprocess
         else:
             preds, labels = self.discriminative_postprocess(preds, labels)
         return preds, labels
